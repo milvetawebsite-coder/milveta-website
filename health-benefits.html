@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Milveta International | Health Benefits
+    </title>
+
+
+    <!-- GOOGLE FONT -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- HEALTH BENEFITS CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/health-benefits.css">
+
+</head>
+
+
+<body>
+
+
+<div class="website-main-window">
+
+
+    <!-- ==================================================
+         ANNOUNCEMENT BAR
+    ================================================== -->
+
+    <div class="top-bar">
+
+        <span>🌿 100% Natural</span>
+
+        <span class="top-separator">|</span>
+
+        <span>🥣 22 Powerful Ingredients</span>
+
+        <span class="top-separator">|</span>
+
+        <span>🚫 No Added Sugar</span>
+
+        <span class="top-separator">|</span>
+
+        <span>✅ No Side Effects</span>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         HEADER / NAVIGATION
+    ================================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+
+            <!-- ==================================================
+                 LOGO
+            ================================================== -->
+
+            <a
+                href="index.html"
+                class="logo">
+
+                <img
+                    src="images/millet.png"
+                    alt="Milveta International Logo">
+
+                <div class="logo-text">
+
+                    <h1>MILVETA</h1>
+
+                    <p>INTERNATIONAL</p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- ==================================================
+                 NAVIGATION LINKS
+            ================================================== -->
+
+            <ul
+                class="nav-links"
+                id="navLinks">
+
+
+                <!-- HOME -->
+
+                <li>
+
+                    <a href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <!-- VISION & MISSION -->
+
+                <li>
+
+                    <a href="vision.html">
+
+                        Vision &amp; Mission
+
+                    </a>
+
+                </li>
+
+
+                <!-- HEALTH BENEFITS -->
+
+                <li>
+
+                    <a
+                        href="health-benefits.html"
+                        class="active">
+
+                        Health Benefits
+
+                    </a>
+
+                </li>
+
+
+                <!-- INGREDIENTS -->
+
+                <li>
+
+                    <a href="ingredients.html">
+
+                        Ingredients
+
+                    </a>
+
+                </li>
+
+
+                <!-- CONTACT US -->
+
+                <li>
+
+                    <a href="contactus.html">
+
+                        Contact Us
+
+                    </a>
+
+                </li>
+
+
+                <!-- USER MANUAL -->
+
+                <li>
+
+                    <a
+                        href="pdf/Milveta-User-Manual.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        User Manual
+
+                    </a>
+
+                </li>
+
+
+                <!-- BLOGS -->
+
+                <li>
+
+                    <a href="blogs.html">
+
+                        Blogs
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+
+            <!-- ==================================================
+                 BUY NOW
+            ================================================== -->
+
+            <a
+                href="buynow.html"
+                class="buy-btn">
+
+                Buy Now
+
+            </a>
+
+
+
+            <!-- ==================================================
+                 MOBILE MENU
+            ================================================== -->
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <main class="health-main">
+
+
+        <!-- ==================================================
+             HEALTH BENEFITS HERO / CANVA DESIGN
+
+             Original Canva design:
+             DAHRtSG9Dk0
+
+             Aspect ratio:
+             75.1445%
+        ================================================== -->
+
+        <section class="health-hero">
+
+            <div class="health-banner">
+
+                <iframe
+                    loading="lazy"
+                    src="https://www.canva.com/design/DAHRtSG9Dk0/AKq7Ab-vSr7Jzh_rEFZa9A/view?embed"
+                    title="Milveta International Health Benefits"
+                    allowfullscreen
+                    allow="fullscreen">
+                </iframe>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="health-footer">
+
+        <p>
+
+            © 2026 Milveta International.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     MOBILE MENU JAVASCRIPT
+================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        const menuIcon =
+            menuToggle.querySelector("i");
+
+
+        /* =================================================
+           OPEN / CLOSE MOBILE MENU
+        ================================================= */
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+
+                navLinks.classList.toggle("active");
+
+
+                const isOpen =
+                    navLinks.classList.contains("active");
+
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
+
+
+                if (isOpen) {
+
+                    menuIcon.classList.remove(
+                        "fa-bars"
+                    );
+
+                    menuIcon.classList.add(
+                        "fa-xmark"
+                    );
+
+                }
+
+                else {
+
+                    menuIcon.classList.remove(
+                        "fa-xmark"
+                    );
+
+                    menuIcon.classList.add(
+                        "fa-bars"
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        /* =================================================
+           CLOSE MENU AFTER CLICKING A LINK
+        ================================================= */
+
+        const navigationLinks =
+            navLinks.querySelectorAll("a");
+
+
+        navigationLinks.forEach(
+            function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        navLinks.classList.remove(
+                            "active"
+                        );
+
+
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+
+                        menuIcon.classList.remove(
+                            "fa-xmark"
+                        );
+
+
+                        menuIcon.classList.add(
+                            "fa-bars"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+    }
+
+);
+
+</script>
+
+
+</body>
+
+</html>

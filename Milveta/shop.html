@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Milveta International | Products</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* ================= PRODUCT BANNER ================= */
+
+        .product-banner {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .product-banner img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        /* ================= PRODUCTS SECTION ================= */
+
+        .products-section {
+            padding: 60px 7%;
+            background: #f8f9f4;
+            text-align: center;
+        }
+
+        .products-section h2 {
+            font-size: 36px;
+            color: #245c35;
+            margin-bottom: 10px;
+        }
+
+        .products-section .section-subtitle {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 45px;
+        }
+
+
+        /* ================= PRODUCT GRID ================= */
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* ================= PRODUCT CARD ================= */
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            color: #245c35;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .product-btn {
+            display: inline-block;
+            padding: 11px 25px;
+            background: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .product-btn:hover {
+            background: #1b5e20;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .product-banner img {
+                height: 300px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-banner img {
+                height: 220px;
+            }
+
+            .products-section {
+                padding: 40px 5%;
+            }
+
+            .products-section h2 {
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= TOP HEADER BAR ================= -->
+
+<div class="top-bar">
+
+    <span>🌿 100%</span>
+    <span>|</span>
+    <span>🥣 22 Ingredients</span>
+    <span>|</span>
+    <span>🚫 No Added Sugar</span>
+    <span>|</span>
+    <span>✅ No Side Effects</span>
+
+</div>
+
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <img src="images/millet.png" alt="Milveta Logo">
+
+            <div class="logo-text">
+
+                <h1>MILVETA</h1>
+
+                <p>INTERNATIONAL</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- NAVIGATION LINKS -->
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="#">Vision & Mission</a>
+            </li>
+
+            <li>
+                <a href="shop.html" class="active">
+                    Products
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">Health Benefits</a>
+            </li>
+
+            <li>
+                <a href="#">Ingredients</a>
+            </li>
+
+            <li>
+                <a href="#">About Us</a>
+            </li>
+
+            <li>
+                <a href="#">Reviews</a>
+            </li>
+
+            <li>
+                <a href="contactus.html">Contact Us</a>
+            </li>
+
+        </ul>
+
+
+        <!-- BUY NOW -->
+
+        <a href="buy.html" class="buy-btn">
+            Buy Now
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= PRODUCT BANNER ================= -->
+
+<section class="product-banner">
+
+    <img
+        src="images/product-banner.jpg"
+        alt="Milveta Products ">
+
+</section>
+
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products-section">
+
+    <h2>Our Products</h2>
+
+    <p class="section-subtitle">
+        Healthy and nutritious millet-based food for your everyday wellness.
+    </p>
+
+
+    <div class="product-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+            <img
+                src="images/product.png"
+                alt="Milveta Millet Powder">
+
+            <h3>Milveta Millet Powder</h3>
+
+            <p>
+                A nutritious blend made with carefully selected
+                natural ingredients and wholesome millets.
+            </p>
+
+            <a href="buy.html" class="product-btn">
+                Buy Now
+            </a>
+
+        </div>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+            <img
+                src="images/product.png"
+                alt="Milveta Healthy Millet Mix">
+
+            <h3>Milveta Healthy Millet Mix</h3>
+
+            <p>
+                A wholesome nutrition mix designed to support
+                a healthy and balanced lifestyle.
+            </p>
+
+            <a href="buy.html" class="product-btn">
+                Buy Now
+            </a>
+
+        </div>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <img
+                src="images/product.png"
+                alt="Milveta Nutrition Mix">
+
+            <h3>Milveta Nutrition Mix</h3>
+
+            <p>
+                Made with natural ingredients to provide
+                delicious and wholesome everyday nutrition.
+            </p>
+
+            <a href="buy.html" class="product-btn">
+                Buy Now
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 Milveta International. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- ================= MOBILE MENU JAVASCRIPT ================= -->
+
+<script>
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+</script>
+
+
+<script src="js/auto-scroll.js"></script>
+
+
+</body>
+</html>

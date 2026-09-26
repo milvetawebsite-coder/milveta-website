@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MILVETA | Admin Login</title>
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-card">
+      <div class="brand-mark">M</div>
+      <div class="brand-name">MILVETA</div>
+      <p class="brand-subtitle">INTERNATIONAL • ADMIN PORTAL</p>
+      <h1>Welcome back</h1>
+      <p class="muted">Sign in to manage your MILVETA operations.</p>
+
+      <form id="loginForm" class="login-form">
+        <label>Email
+          <input id="email" type="email" placeholder="admin@milveta.com" required>
+        </label>
+        <label>Password
+          <input id="password" type="password" placeholder="Enter password" required>
+        </label>
+        <div id="loginError" class="form-error" hidden></div>
+        <button class="primary-btn full" type="submit">Sign in</button>
+      </form>
+
+      <div class="demo-note">
+        <strong>Client Preview</strong>
+        <span>Demo login: admin1@milveta.com / Demo@123</span>
+        <span>Second admin: admin2@milveta.com / Demo@123</span>
+      </div>
+      <p class="security-note">Preview build only. Production authentication will use the secured backend and database.</p>
+    </section>
+  </main>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

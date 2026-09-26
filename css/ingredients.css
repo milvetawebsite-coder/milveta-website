@@ -1,0 +1,814 @@
+/* =========================================================
+   MILVETA INTERNATIONAL
+   INGREDIENTS PAGE CSS
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: #333333;
+    min-height: 100vh;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   WEBSITE MAIN WINDOW
+========================================================= */
+
+.website-main-window {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   SECOND WINDOW
+========================================================= */
+
+.second-window {
+    width: 100%;
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   TOP ANNOUNCEMENT BAR
+========================================================= */
+
+.top-bar {
+    width: 100%;
+    min-height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 8px 15px;
+
+    background: #102d24;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-align: center;
+}
+
+
+.top-separator {
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+    max-width: 1500px;
+
+    min-height: 78px;
+
+    margin: 0 auto;
+
+    padding: 10px 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+
+.logo img {
+    width: 52px;
+    height: 52px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+}
+
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+
+.logo-text h1 {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+
+    color: #163d2e;
+}
+
+
+.logo-text p {
+    margin-top: 5px;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #777777;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    margin-left: auto;
+}
+
+
+.nav-links li {
+    list-style: none;
+}
+
+
+.nav-links a {
+    position: relative;
+
+    display: inline-block;
+
+    padding: 8px 0;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    color: #333333;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.nav-links a:hover {
+    color: #6b8e23;
+}
+
+
+.nav-links a.active {
+    color: #6b8e23;
+    font-weight: 600;
+}
+
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 2px;
+
+    background: #6b8e23;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   BUY NOW BUTTON
+========================================================= */
+
+.buy-btn {
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 90px;
+
+    padding: 11px 20px;
+
+    border-radius: 25px;
+
+    background: #6b4a4a;
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.buy-btn:hover {
+    background: #513737;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #163d2e;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   INGREDIENTS PAGE
+========================================================= */
+
+.ingredients-page {
+    width: 100%;
+    flex: 1;
+
+    background: #f7faf5;
+}
+
+
+/* =========================================================
+   INGREDIENTS INTRODUCTION
+========================================================= */
+
+.ingredients-intro {
+    width: 100%;
+
+    padding:
+        35px
+        30px
+        25px;
+
+    background: #f7faf5;
+}
+
+
+.ingredients-intro-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+.ingredients-intro h2 {
+    margin-bottom: 8px;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #173c2e;
+}
+
+
+.ingredients-intro p {
+    max-width: 1000px;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #606b65;
+}
+
+
+/* =========================================================
+   CANVA SECTION
+========================================================= */
+
+.canva-section {
+    width: 100%;
+
+    padding:
+        5px
+        30px
+        50px;
+
+    background: #f7faf5;
+}
+
+
+.canva-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CANVA EMBED WRAPPER
+========================================================= */
+
+/*
+   Canva's embed uses a responsive iframe.
+
+   56.25% = 16:9
+
+   We use 75% here so the Canva presentation
+   has more vertical space on the Ingredients page.
+*/
+
+.canva-embed-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    height: 0;
+
+    padding-top: 75%;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 2px 8px
+        rgba(63, 69, 81, 0.16);
+
+    will-change: transform;
+}
+
+
+.canva-embed-wrapper iframe {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    border: none;
+
+    padding: 0;
+    margin: 0;
+
+    display: block;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    width: 100%;
+
+    min-height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 20px;
+
+    background: #102d24;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+footer p {
+    font-size: 13px;
+    line-height: 1.5;
+
+    opacity: 0.95;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding:
+            10px
+            20px;
+
+        gap: 15px;
+    }
+
+
+    .nav-links {
+        gap: 16px;
+    }
+
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+
+    .buy-btn {
+        min-width: 75px;
+
+        padding:
+            10px
+            15px;
+
+        font-size: 11px;
+    }
+
+
+    .ingredients-intro h2 {
+        font-size: 28px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    /* ---------------------------------------------
+       TOP BAR
+    --------------------------------------------- */
+
+    .top-bar {
+        gap: 7px;
+
+        font-size: 10px;
+
+        flex-wrap: wrap;
+    }
+
+
+    /* ---------------------------------------------
+       NAVBAR
+    --------------------------------------------- */
+
+    .navbar {
+        min-height: 70px;
+
+        padding:
+            10px
+            15px;
+
+        position: relative;
+    }
+
+
+    /* ---------------------------------------------
+       LOGO
+    --------------------------------------------- */
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .logo-text h1 {
+        font-size: 17px;
+    }
+
+
+    .logo-text p {
+        font-size: 7px;
+    }
+
+
+    /* ---------------------------------------------
+       MOBILE MENU BUTTON
+    --------------------------------------------- */
+
+    .menu-toggle {
+        display: block;
+
+        margin-left: 5px;
+    }
+
+
+    /* ---------------------------------------------
+       BUY BUTTON
+    --------------------------------------------- */
+
+    .buy-btn {
+        margin-left: auto;
+
+        min-width: 75px;
+
+        padding:
+            9px
+            13px;
+
+        font-size: 10px;
+    }
+
+
+    /* ---------------------------------------------
+       NAVIGATION
+    --------------------------------------------- */
+
+    .nav-links {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        margin: 0;
+
+        padding:
+            10px
+            20px
+            15px;
+
+        background: #ffffff;
+
+        border-top: 1px solid #eeeeee;
+
+        box-shadow:
+            0 8px 20px
+            rgba(0, 0, 0, 0.08);
+
+        z-index: 1000;
+    }
+
+
+    .nav-links.active {
+        display: flex;
+    }
+
+
+    .nav-links li {
+        width: 100%;
+    }
+
+
+    .nav-links a {
+        display: block;
+
+        width: 100%;
+
+        padding:
+            12px
+            5px;
+
+        font-size: 14px;
+    }
+
+
+    .nav-links a.active::after {
+        display: none;
+    }
+
+
+    /* ---------------------------------------------
+       INTRO
+    --------------------------------------------- */
+
+    .ingredients-intro {
+        padding:
+            25px
+            18px
+            15px;
+    }
+
+
+    .ingredients-intro h2 {
+        font-size: 25px;
+    }
+
+
+    .ingredients-intro p {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    /* ---------------------------------------------
+       CANVA
+    --------------------------------------------- */
+
+    .canva-section {
+        padding:
+            5px
+            12px
+            35px;
+    }
+
+
+    .canva-embed-wrapper {
+        padding-top: 100%;
+
+        border-radius: 7px;
+    }
+
+
+    /* ---------------------------------------------
+       FOOTER
+    --------------------------------------------- */
+
+    footer {
+        min-height: 55px;
+
+        padding:
+            12px
+            15px;
+    }
+
+
+    footer p {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .top-bar {
+        font-size: 8px;
+        gap: 4px;
+    }
+
+
+    .navbar {
+        padding:
+            8px
+            12px;
+    }
+
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .logo-text h1 {
+        font-size: 15px;
+    }
+
+
+    .logo-text p {
+        font-size: 6px;
+    }
+
+
+    .buy-btn {
+        min-width: 65px;
+
+        padding:
+            8px
+            10px;
+
+        font-size: 9px;
+    }
+
+
+    .ingredients-intro {
+        padding:
+            22px
+            15px
+            12px;
+    }
+
+
+    .ingredients-intro h2 {
+        font-size: 22px;
+    }
+
+
+    .ingredients-intro p {
+        font-size: 12px;
+    }
+
+
+    .canva-section {
+        padding:
+            5px
+            8px
+            25px;
+    }
+
+
+    .canva-embed-wrapper {
+        padding-top: 110%;
+    }
+
+
+    footer p {
+        font-size: 10px;
+    }
+
+}

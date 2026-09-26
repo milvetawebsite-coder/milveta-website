@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Milveta | Milveta International</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- ORIGINAL CSS -->
+    <link rel="stylesheet" href="css/buynow.css">
+
+    <!-- MATCHED NAVIGATION & HOTSPOT STYLES -->
+    <style>
+        /* TOP BAR */
+        .top-bar {
+            background-color: #163A2A;
+            color: #FAF7F0;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            padding: 8px 16px;
+            text-align: center;
+            letter-spacing: 0.04em;
+        }
+
+        /* NAVIGATION CONTAINER */
+        .design-nav {
+            background: #ffffff !important;
+            border-bottom: 1px solid rgba(22, 58, 42, 0.12);
+            position: relative;
+            z-index: 1000;
+        }
+
+        .design-nav-inner {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            min-height: 68px;
+            padding: 9px 20px;
+        }
+
+        /* LOGO */
+        .design-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            margin-left: -6px;
+            text-decoration: none;
+        }
+
+        .design-logo-image {
+            width: 52px;
+            height: 52px;
+            flex: 0 0 52px;
+            object-fit: contain;
+            display: block;
+            border-radius: 50%;
+        }
+
+        .design-logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            line-height: 1;
+            white-space: nowrap;
+        }
+
+        .design-logo-text strong {
+            display: block;
+            color: #163A2A;
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            line-height: 1;
+        }
+
+        .design-logo-text small {
+            display: block;
+            margin-top: 6px;
+            color: #C99A3D;
+            font-family: "Poppins", sans-serif;
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 2.4px;
+            line-height: 1;
+        }
+
+        /* LINKS */
+        .design-nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1 1 auto;
+            gap: 18px;
+            min-width: 0;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .design-nav-links li {
+            position: relative;
+        }
+
+        .design-nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: rgba(22, 58, 42, 0.86) !important;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.09em;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .design-nav-link:hover,
+        .design-nav-link.active {
+            color: #C99A3D !important;
+        }
+
+        .dropdown-caret {
+            font-size: 9px;
+            transition: transform 0.2s ease;
+        }
+
+        /* DROPDOWNS */
+        .design-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #ffffff;
+            border: 1px solid rgba(22, 58, 42, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 10px 0;
+            min-width: 180px;
+            list-style: none;
+            display: none;
+            z-index: 1001;
+        }
+
+        .design-dropdown.mega {
+            min-width: 280px;
+            display: none;
+            padding: 16px 20px;
+            gap: 20px;
+        }
+
+        .dropdown-col h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #C99A3D;
+            margin: 0 0 8px 0;
+        }
+
+        .dropdown-col ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .design-dropdown a {
+            display: block;
+            color: #163A2A;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .design-dropdown a:hover {
+            color: #C99A3D;
+        }
+
+        .has-dropdown:hover > .design-dropdown {
+            display: block;
+        }
+
+        .has-dropdown:hover > .design-dropdown.mega {
+            display: flex;
+        }
+
+        /* BUY NOW BUTTON */
+        @keyframes navBlinkPulse {
+            0% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(201, 154, 61, 0.7); }
+            50% { transform: scale(1.05); opacity: 0.9; box-shadow: 0 0 0 10px rgba(201, 154, 61, 0); }
+            100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(201, 154, 61, 0); }
+        }
+
+        .design-buy-btn {
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 10px 24px !important;
+            background-color: #C99A3D !important;
+            color: #163A2A !important;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.08em !important;
+            text-decoration: none;
+            white-space: nowrap;
+            animation: navBlinkPulse 1.8s infinite ease-in-out;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .design-buy-btn:hover {
+            animation: none !important;
+            background-color: #B8862C !important;
+            color: #163A2A !important;
+            transform: translateY(-1px) scale(1.04);
+        }
+
+        /* MOBILE MENU TOGGLE BUTTON */
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            font-size: 20px;
+            color: #163A2A;
+            cursor: pointer;
+        }
+
+        /* =====================================================
+           CLICKABLE PLATFORM HOTSPOTS
+        ====================================================== */
+        .buy-page {
+            width: 100%;
+            background-color: #FAF7F0;
+        }
+
+        /* DESKTOP BANNER CONTAINER */
+        .buy-banner-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px 70px;
+        }
+
+        .banner-wrapper {
+            position: relative;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(22, 58, 42, 0.12);
+        }
+
+        .shop-banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* DESKTOP HOTSPOT ANCHORS */
+        .platform-hotspot {
+            position: absolute;
+            display: block;
+            z-index: 100;
+            cursor: pointer;
+            pointer-events: auto;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.001);
+            transition: outline 0.2s ease, background-color 0.2s ease;
+        }
+
+        .platform-hotspot:hover,
+        .platform-hotspot:focus-visible {
+            outline: none;
+            background: transparent;
+        }
+
+        /* DESKTOP HOTSPOTS — aligned to the actual vertical buttons in the banner. */
+        /* Coordinates are percentages of the FULL desktop banner image.
+           They are deliberately separated so one platform can never capture
+           a click intended for the next platform. */
+        .whatsapp-hotspot { top: 7.6%;  left: 78.4%; width: 18.1%; height: 9.0%; }
+        .amazon-hotspot   { top: 16.8%; left: 78.4%; width: 18.1%; height: 12.5%; }
+        .flipkart-hotspot { top: 33.2%; left: 78.4%; width: 18.1%; height: 9.4%; }
+        .jiomart-hotspot  { top: 46.0%; left: 78.4%; width: 18.1%; height: 9.4%; }
+        .bigbasket-hotspot{ top: 58.9%; left: 78.4%; width: 18.1%; height: 9.4%; }
+        .blinkit-hotspot  { top: 71.7%; left: 78.4%; width: 18.1%; height: 9.4%; }
+        .zepto-hotspot    { top: 84.6%; left: 78.4%; width: 18.1%; height: 9.4%; }
+
+        /* These platforms are not displayed in the current desktop banner. */
+        .swiggy-hotspot,
+        .indiamart-hotspot { display: none; }
+
+        /* MOBILE BANNER CONTAINER */
+        .mobile-buy-banner {
+            display: none;
+            width: 100%;
+            padding: 16px 12px 30px;
+        }
+
+        .mobile-banner-wrapper {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(22, 58, 42, 0.1);
+        }
+
+        .mobile-banner-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* MOBILE PLATFORM HOTSPOTS - MATCHED TO THE ACTUAL MOBILE BANNER IMAGE */
+        .mobile-platform-hotspot {
+            position: absolute !important;
+            display: block !important;
+            box-sizing: border-box !important;
+            z-index: 210 !important;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: 0;
+            padding: 0;
+            margin: 0;
+            pointer-events: auto !important;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Coordinates are percentages of the FULL 1152 x 2048 image. */
+        @media (max-width: 768px) {
+            .mobile-whatsapp-hotspot { left: 56.0% !important; top: 20.3% !important; width: 36.0% !important; height: 6.0% !important; }
+            .mobile-amazon-hotspot   { left: 56.0% !important; top: 32.0% !important; width: 36.0% !important; height: 6.2% !important; }
+            .mobile-flipkart-hotspot { left: 56.0% !important; top: 44.0% !important; width: 36.0% !important; height: 6.0% !important; }
+            .mobile-jiomart-hotspot  { left: 56.0% !important; top: 56.0% !important; width: 36.0% !important; height: 7.0% !important; }
+            .mobile-bigbasket-hotspot{ left: 56.0% !important; top: 68.0% !important; width: 36.0% !important; height: 6.8% !important; }
+            .mobile-blinkit-hotspot  { left: 56.0% !important; top: 80.0% !important; width: 36.0% !important; height: 6.5% !important; }
+            .mobile-zepto-hotspot    { left: 56.0% !important; top: 91.3% !important; width: 36.0% !important; height: 6.8% !important; }
+        }
+
+        .mobile-hidden-platform {
+            display: none !important;
+            pointer-events: none !important;
+        }
+
+        /* RESPONSIVE BREAKPOINTS */
+        @media (max-width: 1100px) {
+            .design-nav-inner { gap: 12px; padding-left: 16px; padding-right: 16px; }
+            .design-nav-links { gap: 12px; }
+            .design-nav-link { font-size: 10px; letter-spacing: 0.06em; }
+            .design-buy-btn { padding-left: 16px !important; padding-right: 16px !important; font-size: 11px !important; }
+        }
+
+        @media (max-width: 768px) {
+            .buy-banner-section { display: none; }
+            .mobile-buy-banner { display: block; }
+
+            .design-nav-inner {
+                min-height: 78px;
+                padding: 8px 12px;
+                gap: 7px;
+            }
+
+            .design-logo {
+                margin-left: -3px;
+                gap: 8px;
+                flex: 1 1 auto;
+                min-width: 0;
+            }
+
+            .design-logo-image {
+                width: 45px;
+                height: 45px;
+                flex-basis: 45px;
+            }
+
+            .design-logo-text strong { font-size: 21px; }
+            .design-logo-text small { font-size: 7px; letter-spacing: 2px; margin-top: 5px; }
+
+            .design-nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: #ffffff;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+                padding: 8px 0;
+                max-height: calc(100vh - 96px);
+                overflow-y: auto;
+                z-index: 1002;
+            }
+
+            .design-nav-links.active { display: flex; }
+
+            .design-nav-links li { width: 100%; }
+
+            .design-nav-link {
+                display: block;
+                width: 100%;
+                padding: 14px 22px;
+                font-size: 13px;
+                color: #163A2A !important;
+            }
+
+            .has-dropdown .design-dropdown,
+            .has-dropdown .design-dropdown.mega {
+                position: static;
+                display: none;
+                box-shadow: none;
+                border: none;
+                padding: 0 0 10px 32px;
+                background: #F7F5F0;
+            }
+
+            .has-dropdown.open .design-dropdown,
+            .has-dropdown.open .design-dropdown.mega {
+                display: block;
+            }
+
+            .design-buy-btn {
+                display: inline-flex !important;
+                order: 2;
+                flex: 0 0 auto;
+                min-height: 40px;
+                height: 40px;
+                padding: 0 16px !important;
+                margin: 0 2px;
+                font-size: 11px !important;
+                letter-spacing: 0.06em !important;
+                animation: none;
+            }
+
+            .menu-toggle {
+                order: 3;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 44px;
+                height: 44px;
+                flex: 0 0 44px;
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .design-nav-inner { min-height: 74px; padding: 7px 10px; }
+            .design-logo { gap: 6px; }
+            .design-logo-image { width: 41px; height: 41px; flex-basis: 41px; }
+            .design-logo-text strong { font-size: 19px; }
+            .design-logo-text small { font-size: 6.5px; letter-spacing: 1.7px; }
+            .design-buy-btn { height: 38px; min-height: 38px; padding: 0 13px !important; font-size: 10px !important; }
+            .menu-toggle { width: 41px; height: 41px; flex-basis: 41px; }
+        }
+    
+</style>
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         TOP ANNOUNCEMENT BAR
+    ====================================================== -->
+    <div class="top-bar">
+        <span>Nourish your family’s future with the generations-proven power of Milveta.</span>
+    </div>
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+    <header>
+        <nav class="design-nav">
+            <div class="design-nav-inner">
+
+                <!-- LOGO -->
+                <a href="index.html#home" class="design-logo" aria-label="Milveta International Home">
+                    <img src="images/milveta-logo.webp" alt="Milveta International Logo" class="design-logo-image" onerror="this.src='images/millet.png';">
+                    <span class="design-logo-text">
+                        <strong>MILVETA</strong>
+                        <small>INTERNATIONAL</small>
+                    </span>
+                </a>
+
+                <!-- NAVIGATION LINKS -->
+                <ul class="design-nav-links" id="navLinks">
+                    <li>
+                        <a href="index.html#home" class="design-nav-link" data-section="home">Home</a>
+                    </li>
+
+                    <li class="has-dropdown">
+                        <a href="index.html#vision-mission" class="design-nav-link dropdown-toggle" data-section="vision-mission" aria-haspopup="true" aria-expanded="false">
+                            About Milveta
+                            <i class="fa-solid fa-chevron-down dropdown-caret"></i>
+                        </a>
+                        <div class="design-dropdown mega">
+                            <div class="dropdown-col">
+                                <h4>The Brand</h4>
+                                <ul>
+                                    <li><a href="index.html#our-story">Our Story</a></li>
+                                    <li><a href="index.html#our-vision">Vision</a></li>
+                                    <li><a href="index.html#our-mission">Mission</a></li>
+                                    <li><a href="index.html#our-purpose">Our Purpose</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="index.html#health-benefits" class="design-nav-link" data-section="health-benefits">Why Milveta</a>
+                    </li>
+
+                    <li class="has-dropdown">
+                        <a href="index.html#ingredients" class="design-nav-link dropdown-toggle" data-section="ingredients" aria-haspopup="true" aria-expanded="false">
+                            Ingredients
+                            <i class="fa-solid fa-chevron-down dropdown-caret"></i>
+                        </a>
+                        <ul class="design-dropdown">
+                            <li><a href="index.html#ingredients">22 Ingredients</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-dropdown">
+                        <a href="#" class="design-nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                            How To Use
+                            <i class="fa-solid fa-chevron-down dropdown-caret"></i>
+                        </a>
+                        <div class="design-dropdown mega">
+                            <div class="dropdown-col">
+                                <h4>Recipes</h4>
+                                <ul>
+                                    <li><a href="howtouse-healthdrink.html">Health Drink</a></li>
+                                    <li><a href="howtouse-dosa.html">Dosa</a></li>
+                                    <li><a href="howtouse-idli.html">Idli</a></li>
+                                    <li><a href="howtouse-chapati.html">Chapati</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-col">
+                                <h4>Guide</h4>
+                                <ul>
+                                    <li><a href="pdf/Milveta-User-Manual.pdf" class="pdf-link">User Manual</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="index.html#milveta-people" class="design-nav-link" data-section="milveta-people">Milveta People</a>
+                    </li>
+
+                    <li class="has-dropdown">
+                        <a href="index.html#journal" class="design-nav-link dropdown-toggle" data-section="journal" aria-haspopup="true" aria-expanded="false">
+                            Journal
+                            <i class="fa-solid fa-chevron-down dropdown-caret"></i>
+                        </a>
+                        <ul class="design-dropdown">
+                            <li><a href="index.html#journal">Blogs</a></li>
+                            <li><a href="index.html#journal-videos">YouTube Videos</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="index.html#faq" class="design-nav-link" data-section="faq">FAQ</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#contact" class="design-nav-link" data-section="contact">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- BUY NOW -->
+                <a href="buynow.html" class="design-buy-btn">BUY NOW</a>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- =====================================================
+         BUY PAGE
+    ====================================================== -->
+    <main class="buy-page">
+
+        <!-- =================================================
+             MOBILE BANNER
+        ================================================== -->
+        <section class="mobile-buy-banner" id="mobileBuyBanner">
+            <div class="mobile-banner-wrapper" id="mobileBannerWrapper">
+                <img src="images/mobile-banner.jpg" alt="Milveta Shopping Platforms" id="mobileBannerImage">
+
+                <!-- Each hotspot matches exactly one visible platform button in the image. -->
+                <a id="mobileWhatsAppLink"
+                   href="https://wa.me/917892029691?text=Hello%20Milveta!%20%F0%9F%91%8B%0AI%E2%80%99d%20like%20to%20order%20Milveta%20Multi%20Millet%20Powder.%20%F0%9F%8C%BE%0APlease%20share%20the%20available%20pack%20sizes%2C%20price%2C%20and%20ordering%20details.%20Thank%20you!%20%F0%9F%98%8A"
+                   class="mobile-platform-hotspot mobile-whatsapp-hotspot"
+                   target="_blank" rel="noopener noreferrer" aria-label="Order Milveta through WhatsApp"></a>
+
+                <a id="mobileAmazonLink"
+                   href="https://www.amazon.in/dp/B0H7RRDGT1"
+                   class="mobile-platform-hotspot mobile-amazon-hotspot"
+                   target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Amazon"></a>
+
+                <a id="mobileFlipkartLink"
+                   href="https://www.flipkart.com/product/p/itme?pid=RYMHQ4V9BT7EZMMG"
+                   class="mobile-platform-hotspot mobile-flipkart-hotspot"
+                   target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Flipkart"></a>
+
+                <a id="mobileJioMartLink"
+                   href="https://www.jiomart.com/"
+                   class="mobile-platform-hotspot mobile-jiomart-hotspot"
+                   target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on JioMart"></a>
+
+                <a id="mobileBigBasketLink"
+                   href="https://www.bigbasket.com/"
+                   class="mobile-platform-hotspot mobile-bigbasket-hotspot"
+                   target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on BigBasket"></a>
+
+                <a id="mobileBlinkitLink"
+                   href="https://blinkit.com/"
+                   class="mobile-platform-hotspot mobile-blinkit-hotspot"
+                   target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Blinkit"></a>
+
+                <a id="mobileZeptoLink"
+                   href="https://www.zeptonow.com/"
+                   class="mobile-platform-hotspot mobile-zepto-hotspot"
+                   target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Zepto"></a>
+            </div>
+        </section>
+
+        <!-- =================================================
+             DESKTOP BANNER
+        ================================================== -->
+        <section class="buy-banner-section">
+            <div class="banner-wrapper">
+                <img src="images/shop-banner.jpg" alt="Milveta Multi Millet Powder" class="shop-banner">
+
+                <!-- DESKTOP HOTSPOTS -->
+                <a class="platform-hotspot amazon-hotspot" href="https://www.amazon.in/dp/B0H7RRDGT1" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Amazon"></a>
+                <a class="platform-hotspot flipkart-hotspot" href="https://www.flipkart.com/product/p/itme?pid=RYMHQ4V9BT7EZMMG" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Flipkart"></a>
+                <a class="platform-hotspot jiomart-hotspot" href="https://www.jiomart.com/" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on JioMart"></a>
+
+                <a class="platform-hotspot bigbasket-hotspot" href="https://www.bigbasket.com/" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on BigBasket"></a>
+                <a class="platform-hotspot blinkit-hotspot" href="https://blinkit.com/" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Blinkit"></a>
+                <a class="platform-hotspot zepto-hotspot" href="https://www.zeptonow.com/" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Zepto"></a>
+
+                <a class="platform-hotspot swiggy-hotspot" href="https://www.swiggy.com/instamart" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Swiggy Instamart"></a>
+                <a class="platform-hotspot indiamart-hotspot" href="https://www.indiamart.com/" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on IndiaMART"></a>
+                <a class="platform-hotspot whatsapp-hotspot" href="https://api.whatsapp.com/send?phone=917892029691&text=Hello%20Milveta!%20%F0%9F%91%8B%0AI%E2%80%99d%20like%20to%20order%20Milveta%20Multi%20Millet%20Powder.%20%F0%9F%8C%BE%0APlease%20share%20the%20available%20pack%20sizes%2C%20price%2C%20and%20ordering%20details.%20Thank%20you!%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer" aria-label="Order Milveta through WhatsApp"></a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="footer">
+        <p>© 2026 Milveta International. All Rights Reserved.</p>
+    </footer>
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+    <script>
+        /* PLATFORM LINKS USE THEIR OWN <a> ELEMENTS.
+           No JavaScript redirects are used, preventing one platform
+           from accidentally redirecting to another. */
+
+        /* NAVIGATION INTERACTION */
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menuToggle");
+            const navLinks = document.getElementById("navLinks");
+            const menuIcon = menuToggle ? menuToggle.querySelector("i") : null;
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener("click", function () {
+                    navLinks.classList.toggle("active");
+                    const isOpen = navLinks.classList.contains("active");
+                    menuToggle.setAttribute("aria-expanded", isOpen);
+
+                    if (menuIcon) {
+                        if (isOpen) {
+                            menuIcon.classList.remove("fa-bars");
+                            menuIcon.classList.add("fa-xmark");
+                        } else {
+                            menuIcon.classList.remove("fa-xmark");
+                            menuIcon.classList.add("fa-bars");
+                        }
+                    }
+
+                    if (!isOpen) {
+                        document.querySelectorAll(".has-dropdown.open").forEach(function (li) {
+                            li.classList.remove("open");
+                        });
+                    }
+                });
+            }
+
+            const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+            dropdownToggles.forEach(function (toggle) {
+                toggle.addEventListener("click", function (event) {
+                    if (window.innerWidth > 768) return;
+                    const parentLi = toggle.closest(".has-dropdown");
+                    if (!parentLi) return;
+
+                    event.preventDefault();
+                    const wasOpen = parentLi.classList.contains("open");
+                    document.querySelectorAll(".has-dropdown.open").forEach(function (li) {
+                        li.classList.remove("open");
+                    });
+
+                    if (!wasOpen) {
+                        parentLi.classList.add("open");
+                    }
+                });
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

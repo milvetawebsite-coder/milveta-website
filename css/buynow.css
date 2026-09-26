@@ -1,0 +1,194 @@
+/* =========================================================
+   MOBILE BUY BANNER
+   ========================================================= */
+
+.mobile-buy-banner {
+    display: none;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#mobileBannerImage {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+/* =========================================================
+   MOBILE PLATFORM HOTSPOTS
+   ========================================================= */
+
+.mobile-platform-hotspot {
+    position: absolute;
+    display: block;
+
+    background: transparent;
+
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    z-index: 100;
+
+    pointer-events: auto;
+
+    touch-action: manipulation;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+.mobile-platform-hotspot.whatsapp-hotspot {
+    left: 56%;
+    top: 5.0%;
+    width: 36%;
+    height: 9%;
+    z-index: 110;
+}
+
+
+/* =========================================================
+   AMAZON
+   ========================================================= */
+
+/*
+   Screenshot position:
+   approximately x = 280px
+   approximately y = 250px
+*/
+
+.mobile-platform-hotspot.amazon-hotspot {
+    left: 56%;
+    top: 21.5%;
+    width: 36%;
+    height: 9%;
+
+    z-index: 120;
+}
+
+
+/* =========================================================
+   FLIPKART
+   ========================================================= */
+
+/*
+   Screenshot position:
+   approximately x = 280px
+   approximately y = 358px
+*/
+
+.mobile-platform-hotspot.flipkart-hotspot {
+    left: 56%;
+    top: 39.5%;
+    width: 36%;
+    height: 9%;
+
+    z-index: 110;
+}
+
+
+/* =========================================================
+   JIOMART
+   ========================================================= */
+
+.mobile-platform-hotspot.jiomart-hotspot {
+    left: 56%;
+    top: 57.5%;
+    width: 36%;
+    height: 9%;
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   BIGBASKET
+   ========================================================= */
+
+.mobile-platform-hotspot.bigbasket-hotspot {
+    left: 56%;
+    top: 75.5%;
+    width: 36%;
+    height: 9%;
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   BLINKIT
+   ========================================================= */
+
+.mobile-platform-hotspot.blinkit-hotspot {
+    left: 56%;
+    top: 93%;
+    width: 36%;
+    height: 7%;
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   MOBILE AMAZON HOVER / ACTIVE
+   ========================================================= */
+
+.mobile-platform-hotspot.amazon-hotspot:hover,
+.mobile-platform-hotspot.amazon-hotspot:active {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   MOBILE FLIPKART HOVER / ACTIVE
+   ========================================================= */
+
+.mobile-platform-hotspot.flipkart-hotspot:hover,
+.mobile-platform-hotspot.flipkart-hotspot:active {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   MOBILE FOCUS
+   ========================================================= */
+
+.mobile-platform-hotspot:focus {
+    outline: none;
+}
+
+.mobile-platform-hotspot:focus-visible {
+    outline: 3px solid #C99A3D;
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   MOBILE BREAKPOINT
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .buy-banner-section {
+        display: none;
+    }
+
+    .mobile-buy-banner {
+        display: block;
+    }
+}

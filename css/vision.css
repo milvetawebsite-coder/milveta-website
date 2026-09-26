@@ -1,0 +1,1066 @@
+/* =========================================================
+   MILVETA VISION & MISSION PAGE
+   vision.css
+========================================================= */
+
+
+/* =========================================================
+   VISION & MISSION PAGE WRAPPER
+========================================================= */
+
+.vision-mission-section {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.vision-main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   VISION HERO
+========================================================= */
+
+.vision-hero {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   CANVA WRAPPER - DESKTOP
+========================================================= */
+
+.canva-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    /*
+       Desktop Canva banner height.
+       Change 75vh if you want the banner
+       shorter or taller.
+    */
+
+    height: 75vh;
+
+    min-height: 600px;
+
+    max-height: 850px;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: none;
+
+    border-radius: 0;
+
+    /*
+       IMPORTANT:
+       Do not apply opacity here.
+    */
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   CANVA IFRAME
+========================================================= */
+
+.canva-wrapper iframe {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    display: block;
+
+    border: none;
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =========================================================
+   VISION CONTENT
+========================================================= */
+
+.vision-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   VISION SECTION
+========================================================= */
+
+.vision-section {
+    width: 100%;
+
+    padding:
+        clamp(70px, 8vw, 120px)
+        0;
+
+    margin: 0;
+
+    background: #efe6d4;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   VISION CONTAINER
+========================================================= */
+
+.vision-section .container {
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    padding-left:
+        clamp(20px, 5vw, 70px);
+
+    padding-right:
+        clamp(20px, 5vw, 70px);
+}
+
+
+/* =========================================================
+   VISION STATEMENT
+========================================================= */
+
+.vision-statement-container {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin:
+        0 auto 70px;
+
+    text-align: center;
+}
+
+
+.vision-statement {
+    margin: 0;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(34px, 4vw, 58px);
+
+    font-weight: 600;
+
+    line-height: 1.25;
+
+    color: #163a2a;
+}
+
+
+.vision-statement span {
+    color: #c99a3d;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.vision-section .section-label-container {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.vision-section .section-label {
+    color: #c99a3d;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+.vision-section .section-label-line {
+    width: 40px;
+
+    height: 1px;
+
+    background: #c99a3d;
+}
+
+
+/* =========================================================
+   VISION PATHWAY
+========================================================= */
+
+.pathway-container {
+    width: 100%;
+
+    max-width: 1050px;
+
+    margin:
+        50px auto 0;
+
+    padding:
+        0 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: relative;
+}
+
+
+.pathway-line {
+    position: absolute;
+
+    top: 50%;
+
+    left: 5%;
+    right: 5%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #163a2a,
+            #c99a3d
+        );
+
+    z-index: 1;
+}
+
+
+.pathway-node {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px;
+
+    background: #efe6d4;
+}
+
+
+.node-circle {
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: #163a2a;
+
+    border:
+        4px solid
+        #efe6d4;
+
+    box-shadow:
+        0 0 0 1px
+        #163a2a;
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease;
+}
+
+
+.pathway-node:hover .node-circle {
+    background: #c99a3d;
+
+    transform: scale(1.2);
+}
+
+
+.node-label {
+    max-width: 130px;
+
+    text-align: center;
+
+    color: #163a2a;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   VISION CARDS
+========================================================= */
+
+.vision-card-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+
+    margin-top: 80px;
+}
+
+
+.vision-card-grid .premium-card {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border:
+        1px solid
+        rgba(22, 58, 42, 0.06);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 45px
+        rgba(22, 58, 42, 0.08);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.vision-card-grid .premium-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 25px 60px
+        rgba(22, 58, 42, 0.12);
+}
+
+
+.vision-card-grid .card-num {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    color:
+        rgba(201, 154, 61, 0.2);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 48px;
+
+    font-weight: 700;
+}
+
+
+.vision-card-grid .card-title {
+    margin: 0 0 12px;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 20px;
+
+    color: #163a2a;
+}
+
+
+.vision-card-grid .card-text {
+    margin: 0;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #667067;
+}
+
+
+/* =========================================================
+   MISSION SECTION
+========================================================= */
+
+.mission-section {
+    width: 100%;
+
+    padding:
+        clamp(70px, 8vw, 120px)
+        0;
+
+    margin: 0;
+
+    background: #163a2a;
+
+    color: #ffffff;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.mission-section .container {
+    width: 100%;
+
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    padding-left:
+        clamp(20px, 5vw, 70px);
+
+    padding-right:
+        clamp(20px, 5vw, 70px);
+}
+
+
+/* =========================================================
+   MISSION LABEL
+========================================================= */
+
+.mission-section .section-label-container {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.mission-section .section-label-line {
+    width: 40px;
+
+    height: 1px;
+
+    background: #c99a3d;
+}
+
+
+.mission-section .section-label {
+    color: #c99a3d;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MISSION HEADING
+========================================================= */
+
+.mission-section h2,
+.mission-section .main-heading {
+    max-width: 850px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(36px, 4vw, 58px);
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   MISSION GRID
+========================================================= */
+
+.mission-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+
+    margin-top: 60px;
+}
+
+
+/* =========================================================
+   MISSION CARD
+========================================================= */
+
+.mission-card {
+    padding: 32px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 20px;
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+.mission-card:hover {
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border-color:
+        #c99a3d;
+
+    transform:
+        translateY(-5px);
+}
+
+
+/* =========================================================
+   MISSION NUMBER
+========================================================= */
+
+.mission-card .card-num {
+    position: static;
+
+    margin-bottom: 15px;
+
+    color: #c99a3d;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   MISSION CARD HEADING
+========================================================= */
+
+.mission-card h3 {
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   MISSION CARD TEXT
+========================================================= */
+
+.mission-card p {
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GLOBAL MILLETS SECTION
+========================================================= */
+
+#global-millets {
+    width: 100%;
+
+    padding:
+        clamp(70px, 8vw, 120px)
+        0;
+
+    background: #faf7f0 !important;
+}
+
+
+#global-millets .container {
+    width: 100%;
+
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    padding-left:
+        clamp(20px, 5vw, 70px);
+
+    padding-right:
+        clamp(20px, 5vw, 70px);
+}
+
+
+#global-millets .section-label-container {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+#global-millets .section-label-line {
+    width: 40px;
+
+    height: 1px;
+
+    background: #c99a3d;
+}
+
+
+#global-millets .section-label {
+    color: #c99a3d;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+}
+
+
+#global-millets .main-heading {
+    margin: 0 0 30px;
+
+    color: #163a2a;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(36px, 4vw, 58px);
+
+    line-height: 1.2;
+}
+
+
+#global-millets p {
+    max-width: 800px;
+
+    margin:
+        0 auto;
+
+    color: #667067;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+.reveal.active {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .vision-card-grid,
+    .mission-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE - 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------------------------------------------
+       CANVA HERO
+    --------------------------------------------- */
+
+    .canva-wrapper {
+        width: 100%;
+
+        /*
+           Canva banner ratio approximately 1.92:1
+        */
+
+        height: 52vw;
+
+        min-height: 0;
+
+        max-height: none;
+
+        margin: 0;
+
+        padding: 0;
+
+        overflow: hidden;
+    }
+
+
+    .canva-wrapper iframe {
+        width: 100%;
+        height: 100%;
+
+        top: 0;
+        left: 0;
+    }
+
+
+    /* ---------------------------------------------
+       VISION
+    --------------------------------------------- */
+
+    .vision-section {
+        padding:
+            70px 0;
+    }
+
+
+    .vision-statement-container {
+        margin-bottom: 45px;
+    }
+
+
+    .vision-statement {
+        font-size: 34px;
+    }
+
+
+    /* ---------------------------------------------
+       PATHWAY
+    --------------------------------------------- */
+
+    .pathway-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+
+        margin-left: 20px;
+
+        padding: 0;
+    }
+
+
+    .pathway-line {
+        top: 0;
+
+        bottom: 0;
+
+        left: 21px;
+
+        right: auto;
+
+        width: 1px;
+
+        height: auto;
+
+        background:
+            linear-gradient(
+                180deg,
+                #163a2a,
+                #c99a3d
+            );
+    }
+
+
+    .pathway-node {
+        width: 100%;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        background: #efe6d4;
+
+        padding: 4px 10px;
+    }
+
+
+    .node-label {
+        max-width: none;
+
+        text-align: left;
+    }
+
+
+    /* ---------------------------------------------
+       CARDS
+    --------------------------------------------- */
+
+    .vision-card-grid,
+    .mission-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    /* ---------------------------------------------
+       MISSION
+    --------------------------------------------- */
+
+    .mission-section {
+        padding:
+            70px 0;
+    }
+
+
+    .mission-section .main-heading {
+        font-size: 34px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE - 500px
+========================================================= */
+
+@media (max-width: 500px) {
+
+    /* ---------------------------------------------
+       CANVA
+    --------------------------------------------- */
+
+    .canva-wrapper {
+        width: 100%;
+
+        height: 52vw;
+
+        min-height: 0;
+
+        max-height: none;
+    }
+
+
+    .canva-wrapper iframe {
+        width: 100%;
+
+        height: 100%;
+
+        top: 0;
+        left: 0;
+    }
+
+
+    /* ---------------------------------------------
+       VISION
+    --------------------------------------------- */
+
+    .vision-section {
+        padding:
+            60px 0;
+    }
+
+
+    .vision-statement {
+        font-size: 30px;
+    }
+
+
+    /* ---------------------------------------------
+       CARDS
+    --------------------------------------------- */
+
+    .vision-card-grid .premium-card,
+    .mission-card {
+        padding:
+            26px 22px;
+    }
+
+
+    /* ---------------------------------------------
+       MISSION
+    --------------------------------------------- */
+
+    .mission-section {
+        padding:
+            60px 0;
+    }
+
+
+    .mission-section .main-heading {
+        font-size: 30px;
+    }
+
+
+    /* ---------------------------------------------
+       GLOBAL MILLETS
+    --------------------------------------------- */
+
+    #global-millets {
+        padding:
+            60px 0;
+    }
+
+
+    #global-millets .main-heading {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .reveal {
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+    }
+
+
+    .pathway-node:hover .node-circle,
+    .mission-card:hover,
+    .vision-card-grid .premium-card:hover {
+        transform: none;
+    }
+
+}

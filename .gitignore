@@ -1,0 +1,20 @@
+﻿# Dependencies
+backend/node_modules/
+Milveta/backend/node_modules/
+
+# Admin
+admin/
+Milveta/admin/
+
+# Environment/secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/

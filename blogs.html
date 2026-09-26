@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The MILVETA Journey & Story</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           MILVETA JOURNEY & STORY
+           Premium Editorial Design
+        ===================================================== */
+
+        :root {
+            --green: #163A2A;
+            --green-light: #3F5B45;
+            --gold: #C99A3D;
+            --gold-light: #E4C98A;
+
+            --ivory: #FAF7F0;
+            --beige: #F2EBDD;
+            --white: #FFFFFF;
+
+            --text: #242A26;
+            --muted: #667066;
+            --border: #DDD5C6;
+
+            --max-width: 1200px;
+            --reading-width: 760px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: var(--ivory);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(250, 247, 240, 0.94);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(221, 213, 198, 0.7);
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
+            margin: auto;
+
+            min-height: 78px;
+
+            padding: 0 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 34px;
+            font-weight: 700;
+            letter-spacing: 3px;
+
+            color: var(--green);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            position: relative;
+            color: var(--green);
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+
+            left: 0;
+            bottom: -7px;
+
+            width: 0;
+            height: 1px;
+
+            background: var(--gold);
+
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* =====================================================
+           COMMON
+        ===================================================== */
+
+        .container {
+            max-width: var(--max-width);
+            margin: auto;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .eyebrow {
+            display: inline-block;
+
+            margin-bottom: 20px;
+
+            color: var(--gold);
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2,
+        h3,
+        .quote {
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 500;
+        }
+
+        h2 {
+            color: var(--green);
+
+            font-size: clamp(38px, 5vw, 58px);
+            line-height: 1.08;
+
+            margin-bottom: 28px;
+        }
+
+        .body-text {
+            max-width: var(--reading-width);
+
+            font-size: 18px;
+            line-height: 1.9;
+
+            color: var(--text);
+        }
+
+        .body-text + .body-text {
+            margin-top: 24px;
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            padding: 110px 0 100px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            color: var(--green);
+
+            font-size: clamp(52px, 8vw, 86px);
+            line-height: 0.95;
+
+            margin-bottom: 28px;
+        }
+
+        .hero h1 span {
+            display: block;
+        }
+
+        .hero-subtitle {
+            max-width: 650px;
+            margin: auto;
+
+            color: var(--muted);
+
+            font-size: 21px;
+            line-height: 1.7;
+        }
+
+        .gold-line {
+            width: 70px;
+            height: 1px;
+
+            background: var(--gold);
+
+            margin: 35px auto;
+        }
+
+        .hero-image {
+            max-width: 1200px;
+
+            margin: 70px auto 0;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+        }
+
+        .hero-image img {
+            height: 560px;
+            object-fit: cover;
+
+            transition: transform 1s ease;
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.02);
+        }
+
+        /* =====================================================
+           STORY SECTION
+        ===================================================== */
+
+        .story-section {
+            background: var(--ivory);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.4fr;
+
+            gap: 100px;
+
+            align-items: start;
+        }
+
+        .story-number {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 120px;
+            line-height: 0.8;
+
+            color: rgba(201, 154, 61, 0.25);
+        }
+
+        .story-location {
+            margin-top: 25px;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            color: var(--gold);
+
+            text-transform: uppercase;
+        }
+
+        /* =====================================================
+           IMAGE + TEXT
+        ===================================================== */
+
+        .image-text-section {
+            background: var(--beige);
+        }
+
+        .image-text-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+        .story-image {
+            overflow: hidden;
+            border-radius: 16px;
+        }
+
+        .story-image img {
+            min-height: 500px;
+            object-fit: cover;
+
+            transition: transform 0.8s ease;
+        }
+
+        .story-image:hover img {
+            transform: scale(1.025);
+        }
+
+        /* =====================================================
+           DARK QUOTE
+        ===================================================== */
+
+        .quote-section {
+            background: var(--green);
+
+            padding: 140px 30px;
+
+            text-align: center;
+        }
+
+        .quote-container {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .quote {
+            color: var(--gold-light);
+
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.15;
+        }
+
+        .quote-author {
+            margin-top: 35px;
+
+            color: rgba(250, 247, 240, 0.65);
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* =====================================================
+           THREE WORDS
+        ===================================================== */
+
+        .three-words {
+            margin-top: 55px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            border-top: 1px solid rgba(201, 154, 61, 0.4);
+            border-bottom: 1px solid rgba(201, 154, 61, 0.4);
+        }
+
+        .word {
+            padding: 25px 15px;
+
+            color: var(--ivory);
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 27px;
+
+            border-right: 1px solid rgba(201, 154, 61, 0.25);
+        }
+
+        .word:last-child {
+            border-right: none;
+        }
+
+        /* =====================================================
+           QUESTION SECTION
+        ===================================================== */
+
+        .question-section {
+            padding: 140px 30px;
+
+            text-align: center;
+        }
+
+        .question {
+            max-width: 950px;
+            margin: auto;
+
+            color: var(--green);
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(40px, 6vw, 68px);
+            line-height: 1.1;
+        }
+
+        .question::before,
+        .question::after {
+            content: "";
+
+            display: block;
+
+            width: 80px;
+            height: 1px;
+
+            margin: 0 auto 35px;
+
+            background: var(--gold);
+        }
+
+        .question::after {
+            margin: 35px auto 0;
+        }
+
+        /* =====================================================
+           MILLET SECTION
+        ===================================================== */
+
+        .millet-section {
+            background: var(--beige);
+        }
+
+        .millet-header {
+            max-width: 760px;
+            margin-bottom: 60px;
+        }
+
+        .millet-gallery {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .millet-card {
+            overflow: hidden;
+            border-radius: 14px;
+        }
+
+        .millet-card img {
+            height: 400px;
+            object-fit: cover;
+
+            transition: transform 0.8s ease;
+        }
+
+        .millet-card:hover img {
+            transform: scale(1.04);
+        }
+
+        /* =====================================================
+           TIMELINE
+        ===================================================== */
+
+        .timeline-section {
+            background: var(--ivory);
+        }
+
+        .timeline-heading {
+            max-width: 700px;
+            margin-bottom: 80px;
+        }
+
+        .timeline {
+            position: relative;
+
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+            top: 0;
+            bottom: 0;
+
+            width: 1px;
+
+            background: var(--gold);
+
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+
+            width: 50%;
+
+            padding: 30px 55px;
+
+            opacity: 0;
+            transform: translateY(30px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-dot {
+            position: absolute;
+
+            top: 45px;
+
+            width: 13px;
+            height: 13px;
+
+            border-radius: 50%;
+
+            background: var(--green);
+
+            border: 3px solid var(--ivory);
+
+            box-shadow: 0 0 0 1px var(--gold);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -7px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -6px;
+        }
+
+        .timeline-year {
+            color: var(--gold);
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+        .timeline-title {
+            margin-top: 10px;
+
+            color: var(--green);
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 32px;
+            line-height: 1.1;
+        }
+
+        .timeline-text {
+            margin-top: 12px;
+
+            color: var(--muted);
+
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* =====================================================
+           MISSION SECTION
+        ===================================================== */
+
+        .mission-section {
+            background: var(--beige);
+        }
+
+        .mission-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+        .mission-list {
+            margin-top: 40px;
+
+            display: grid;
+
+            gap: 20px;
+        }
+
+        .mission-item {
+            display: flex;
+            gap: 18px;
+
+            padding-bottom: 20px;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mission-icon {
+            flex-shrink: 0;
+
+            width: 30px;
+            height: 30px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--green);
+
+            color: var(--gold-light);
+
+            font-size: 13px;
+        }
+
+        .mission-item strong {
+            display: block;
+
+            margin-bottom: 3px;
+
+            color: var(--green);
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+
+            letter-spacing: 1px;
+        }
+
+        .mission-item span {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        /* =====================================================
+           MILESTONE
+        ===================================================== */
+
+        .milestone {
+            background: var(--green);
+
+            color: var(--ivory);
+
+            padding: 150px 30px;
+
+            text-align: center;
+        }
+
+        .milestone-date {
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            color: var(--gold-light);
+
+            font-family: "Cormorant Garamond", serif;
+
+            line-height: 0.85;
+        }
+
+        .milestone-day {
+            font-size: clamp(100px, 15vw, 180px);
+            font-weight: 500;
+        }
+
+        .milestone-month {
+            margin-top: 10px;
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            letter-spacing: 7px;
+
+            text-transform: uppercase;
+        }
+
+        .milestone-year {
+            margin-top: 18px;
+
+            font-size: 50px;
+        }
+
+        .milestone h2 {
+            margin-top: 60px;
+
+            color: var(--ivory);
+
+            font-size: clamp(38px, 5vw, 60px);
+        }
+
+        .milestone p {
+            max-width: 650px;
+
+            margin: auto;
+
+            color: rgba(250, 247, 240, 0.72);
+
+            font-size: 18px;
+        }
+
+        /* =====================================================
+           FINAL SECTION
+        ===================================================== */
+
+        .final-section {
+            background: var(--ivory);
+
+            padding: 150px 30px;
+
+            text-align: center;
+        }
+
+        .final-section h2 {
+            max-width: 900px;
+
+            margin: auto;
+
+            font-size: clamp(42px, 6vw, 70px);
+        }
+
+        .final-statement {
+            margin-top: 35px;
+
+            color: var(--green);
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(40px, 6vw, 70px);
+            line-height: 1.05;
+        }
+
+        .final-statement strong {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            padding: 50px 30px;
+
+            background: var(--green);
+
+            text-align: center;
+        }
+
+        .footer-logo {
+            color: var(--gold-light);
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 36px;
+            font-weight: 600;
+
+            letter-spacing: 4px;
+        }
+
+        .footer-text {
+            margin-top: 12px;
+
+            color: rgba(250, 247, 240, 0.55);
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+        }
+
+        /* =====================================================
+           SCROLL REVEAL
+        ===================================================== */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .nav-container {
+                min-height: 68px;
+                padding: 0 20px;
+            }
+
+            .logo {
+                font-size: 29px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .hero {
+                padding: 75px 20px 70px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .hero-subtitle {
+                font-size: 17px;
+            }
+
+            .hero-image {
+                margin-top: 45px;
+            }
+
+            .hero-image img {
+                height: 360px;
+            }
+
+            .story-grid,
+            .image-text-grid,
+            .mission-grid {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+            .story-number {
+                font-size: 85px;
+            }
+
+            .body-text {
+                font-size: 16px;
+                line-height: 1.85;
+            }
+
+            .quote-section {
+                padding: 90px 20px;
+            }
+
+            .quote {
+                font-size: 38px;
+            }
+
+            .three-words {
+                grid-template-columns: 1fr;
+            }
+
+            .word {
+                border-right: none;
+                border-bottom: 1px solid rgba(201, 154, 61, 0.25);
+            }
+
+            .word:last-child {
+                border-bottom: none;
+            }
+
+            .question-section {
+                padding: 90px 20px;
+            }
+
+            .question {
+                font-size: 42px;
+            }
+
+            .millet-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .millet-card img {
+                height: 350px;
+            }
+
+            /* Mobile Timeline */
+
+            .timeline::before {
+                left: 10px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                width: 100%;
+
+                left: 0;
+
+                padding: 30px 20px 30px 45px;
+
+                text-align: left;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: 4px;
+                right: auto;
+            }
+
+            .timeline-title {
+                font-size: 29px;
+            }
+
+            .milestone {
+                padding: 100px 20px;
+            }
+
+            .milestone-day {
+                font-size: 110px;
+            }
+
+            .milestone-year {
+                font-size: 42px;
+            }
+
+            .final-section {
+                padding: 100px 20px;
+            }
+
+            .final-statement {
+                font-size: 43px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#" class="logo">
+                MILVETA
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="#journey">Journey</a>
+
+                <a href="#millets">Millets</a>
+
+                <a href="#mission">Mission</a>
+
+                <a href="#beginning">Beginning</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content reveal">
+
+                <span class="eyebrow">
+                    Our Journey
+                </span>
+
+                <h1>
+                    <span>The MILVETA</span>
+                    <span>Journey & Story</span>
+                </h1>
+
+                <div class="gold-line"></div>
+
+                <p class="hero-subtitle">
+                    Every meaningful journey begins with a simple
+                    experience — and sometimes, a simple question.
+                </p>
+
+            </div>
+
+
+            <!-- Replace this image URL with your real image -->
+            <div class="hero-image reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=85"
+                    alt="MILVETA journey"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DELHI
+        ================================================= -->
+
+        <section class="section story-section" id="journey">
+
+            <div class="container">
+
+                <div class="story-grid">
+
+                    <div class="reveal">
+
+                        <div class="story-number">
+                            01
+                        </div>
+
+                        <div class="story-location">
+                            Delhi
+                        </div>
+
+                    </div>
+
+
+                    <div class="reveal">
+
+                        <span class="eyebrow">
+                            Where It Began
+                        </span>
+
+                        <h2>
+                            Where the Question Began
+                        </h2>
+
+                        <p class="body-text">
+                            Every journey begins somewhere.
+                            For MILVETA, it began with an experience
+                            that made us look at food, health and
+                            everyday nourishment differently.
+                        </p>
+
+                        <p class="body-text">
+                            In the middle of everyday life, one
+                            question slowly became impossible to ignore:
+                            how can we make better nutrition a natural
+                            part of modern living?
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             RISHIKESH
+        ================================================= -->
+
+        <section class="section image-text-section">
+
+            <div class="container">
+
+                <div class="image-text-grid">
+
+                    <div class="story-image reveal">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85"
+                            alt="A moment of reflection"
+                        >
+
+                    </div>
+
+
+                    <div class="reveal">
+
+                        <span class="eyebrow">
+                            Rishikesh
+                        </span>
+
+                        <h2>
+                            A Question That Changed My Thinking
+                        </h2>
+
+                        <p class="body-text">
+                            Sometimes the most important ideas don't
+                            arrive in a meeting room. They arrive in
+                            moments of reflection.
+                        </p>
+
+                        <p class="body-text">
+                            In Rishikesh, a simple thought became a
+                            deeper realization — food is not merely
+                            about filling the stomach or satisfying
+                            the tongue.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             QUOTE
+        ================================================= -->
+
+        <section class="quote-section">
+
+            <div class="quote-container reveal">
+
+                <div class="quote">
+                    “Food is not merely about filling the stomach
+                    or satisfying the tongue.”
+                </div>
+
+                <div class="quote-author">
+                    A realization that became a purpose
+                </div>
+
+
+                <div class="three-words">
+
+                    <div class="word">
+                        Nourishment
+                    </div>
+
+                    <div class="word">
+                        Energy
+                    </div>
+
+                    <div class="word">
+                        Wellbeing
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MILLETS
+        ================================================= -->
+
+        <section class="section millet-section" id="millets">
+
+            <div class="container">
+
+                <div class="millet-header reveal">
+
+                    <span class="eyebrow">
+                        Rediscovery
+                    </span>
+
+                    <h2>
+                        Rediscovering the Power of Millets
+                    </h2>
+
+                    <p class="body-text">
+                        India has a rich history of nourishing foods.
+                        Among them, millets have quietly remained a
+                        powerful part of traditional diets.
+                    </p>
+
+                    <p class="body-text">
+                        We began looking at these grains not simply
+                        as ingredients, but as an opportunity to
+                        reconnect traditional nourishment with the
+                        pace of modern life.
+                    </p>
+
+                </div>
+
+
+                <div class="millet-gallery">
+
+                    <div class="millet-card reveal">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85"
+                            alt="Traditional Indian food"
+                        >
+
+                    </div>
+
+                    <div class="millet-card reveal">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85"
+                            alt="Healthy grain based food"
+                        >
+
+                    </div>
+
+                    <div class="millet-card reveal">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85"
+                            alt="Nourishing food"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             QUESTION
+        ================================================= -->
+
+        <section class="question-section">
+
+            <div class="question reveal">
+
+                Why can't traditional Indian food be made
+                convenient for modern life?
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TIMELINE
+        ================================================= -->
+
+        <section class="section timeline-section">
+
+            <div class="container">
+
+                <div class="timeline-heading reveal">
+
+                    <span class="eyebrow">
+                        The Journey
+                    </span>
+
+                    <h2>
+                        From an Idea to a Mission
+                    </h2>
+
+                    <p class="body-text">
+                        Turning an idea into something meaningful
+                        takes time, persistence and a willingness
+                        to keep moving forward.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline">
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-year">
+                            The Beginning
+                        </div>
+
+                        <div class="timeline-title">
+                            A Simple Question
+                        </div>
+
+                        <p class="timeline-text">
+                            A desire to understand how traditional
+                            nourishment could become easier to
+                            incorporate into everyday life.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-year">
+                            Discovery
+                        </div>
+
+                        <div class="timeline-title">
+                            The Millet Journey
+                        </div>
+
+                        <p class="timeline-text">
+                            Exploring the possibilities of millets
+                            and their place in modern Indian nutrition.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-year">
+                            2023
+                        </div>
+
+                        <div class="timeline-title">
+                            A Bigger Vision
+                        </div>
+
+                        <p class="timeline-text">
+                            The idea began taking a more definite
+                            shape, with a vision of making everyday
+                            nutrition simpler.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-year">
+                            Kolar
+                        </div>
+
+                        <div class="timeline-title">
+                            Building the Foundation
+                        </div>
+
+                        <p class="timeline-text">
+                            The journey moved from an idea toward
+                            building something real.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-year">
+                            Persistence
+                        </div>
+
+                        <div class="timeline-title">
+                            The Challenges
+                        </div>
+
+                        <p class="timeline-text">
+                            Like every meaningful journey, there
+                            were challenges, doubts and moments
+                            that demanded persistence.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-year">
+                            2025
+                        </div>
+
+                        <div class="timeline-title">
+                            MILVETA
+                        </div>
+
+                        <p class="timeline-text">
+                            The vision became a company with a
+                            clear purpose: bringing thoughtful
+                            millet nutrition into everyday life.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MISSION
+        ================================================= -->
+
+        <section class="section mission-section" id="mission">
+
+            <div class="container">
+
+                <div class="mission-grid">
+
+                    <div class="reveal">
+
+                        <span class="eyebrow">
+                            Our Purpose
+                        </span>
+
+                        <h2>
+                            From an Idea to a Mission
+                        </h2>
+
+                        <p class="body-text">
+                            MILVETA was not created simply to make
+                            another food product.
+                        </p>
+
+                        <p class="body-text">
+                            It was created from a belief that better
+                            nourishment should feel simple,
+                            accessible and relevant to everyday life.
+                        </p>
+
+                    </div>
+
+
+                    <div class="mission-list reveal">
+
+                        <div class="mission-item">
+
+                            <div class="mission-icon">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    TRADITION
+                                </strong>
+
+                                <span>
+                                    Inspired by India's rich food heritage.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="mission-item">
+
+                            <div class="mission-icon">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    SIMPLICITY
+                                </strong>
+
+                                <span>
+                                    Making everyday nourishment easier.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="mission-item">
+
+                            <div class="mission-icon">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    QUALITY
+                                </strong>
+
+                                <span>
+                                    Thoughtful ingredients and processes.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="mission-item">
+
+                            <div class="mission-icon">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    PURPOSE
+                                </strong>
+
+                                <span>
+                                    Creating something that matters.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             2025 MILESTONE
+        ================================================= -->
+
+        <section class="milestone" id="beginning">
+
+            <div class="reveal">
+
+                <span class="eyebrow">
+                    The Beginning of MILVETA
+                </span>
+
+
+                <div class="milestone-date">
+
+                    <div class="milestone-day">
+                        10
+                    </div>
+
+                    <div class="milestone-month">
+                        October
+                    </div>
+
+                    <div class="milestone-year">
+                        2025
+                    </div>
+
+                </div>
+
+
+                <h2>
+                    The Next Chapter Began
+                </h2>
+
+                <p>
+                    What started as a question became a vision,
+                    and the vision became MILVETA.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FINAL
+        ================================================= -->
+
+        <section class="final-section">
+
+            <div class="reveal">
+
+                <span class="eyebrow">
+                    More Than a Product
+                </span>
+
+                <h2>
+                    This is not just the story of how
+                    a company started.
+                </h2>
+
+                <div class="gold-line"></div>
+
+                <div class="final-statement">
+
+                    This is the story of
+                    <strong>why it started.</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            MILVETA
+        </div>
+
+        <div class="footer-text">
+            Thoughtful nourishment for everyday life.
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+        /*
+         * Scroll Reveal
+         */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const observer =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach((entry) => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("active");
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        revealElements.forEach((element) => {
+
+            observer.observe(element);
+
+        });
+
+
+        /*
+         * Timeline Animation
+         */
+
+        const timelineItems =
+            document.querySelectorAll(".timeline-item");
+
+
+        const timelineObserver =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach((entry) => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("visible");
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.2
+                }
+            );
+
+
+        timelineItems.forEach((item) => {
+
+            timelineObserver.observe(item);
+
+        });
+
+    </script>
+
+</body>
+</html>

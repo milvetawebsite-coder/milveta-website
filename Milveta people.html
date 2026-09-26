@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script>
+    window["__codeletBootstrap__"] = JSON.parse('{"A":"A","B":"20260901-05-1a916a1","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');
+  </script>
+
+  <script
+    src="/_sdk/50d846425a1e5082.telemetry_sdk.js"
+    integrity="sha512-Otbex+ztlVbcEGql0rXGd/3E3ee/hqAntg6DeuUEMG6pIPbXGOSvZbFZVzknAXi1tH/itQ+ijEhOTr2aWj6CXg==">
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MILVETA People</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
+    rel="stylesheet">
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .milveta-section-wrapper {
+      background-color: #EAE6DF;
+      color: #1F2421;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 80px 24px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .milveta-container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .milveta-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .milveta-brand-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 600;
+      color: #18221B;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .milveta-brand-trust {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #2D5A27;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(45, 90, 39, 0.08);
+      border: 1px solid rgba(45, 90, 39, 0.2);
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+
+    .milveta-brand-subtitle {
+      font-size: 1.05rem;
+      color: #4A534D;
+      max-width: 620px;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+
+    .milveta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 1024px) {
+      .milveta-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .milveta-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .milveta-section-wrapper {
+        padding: 50px 16px;
+      }
+    }
+
+    .milveta-card {
+      background: #F7F5F0;
+      border: 1px solid #D5CFC5;
+      border-radius: 12px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .milveta-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
+    }
+
+    .milveta-image-frame {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 22px;
+      border: 3px solid #C4BCAC;
+      background-color: #DDD7CD;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .milveta-person-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .milveta-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #121A15;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .milveta-designation {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #2D5A27;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 16px;
+    }
+
+    .milveta-divider {
+      width: 36px;
+      height: 2px;
+      background: #C4BCAC;
+      margin: 12px auto 18px auto;
+    }
+
+    .milveta-statement {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 0.98rem;
+      line-height: 1.65;
+      font-style: italic;
+      color: #2D3631;
+      margin-top: auto;
+    }
+  </style>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"
+    type="text/javascript">
+  </script>
+
+  <script
+    src="https://cdn.tailwindcss.com/3.4.17"
+    type="text/javascript">
+  </script>
+
+  <script
+    src="/_sdk/b3bf9e8ac58e6ad6.data_sdk.js"
+    type="text/javascript"
+    integrity="sha512-otc1u9NYq9Ms5Jt//7vmhrrqR5CLPr8Jdgs6741gqniClfLMcfmC+jK/cKuQdhLv6G0esJ/FzaMS9tv0T/vj/Q==">
+  </script>
+
+  <script
+    src="/_sdk/2cfae6c35b9820dc.resizing_sdk.js"
+    type="text/javascript"
+    integrity="sha512-Oy+wKa9tloayelgS18tBfR707QfWMdeA8unVpm1M0/W/edVyjcRCNO6/jCvDwt/HpUta1v7sfMHiF1mAVr5RIA==">
+  </script>
+</head>
+
+<body
+  data-template-id="__page-root"
+  style="background: rgb(234, 230, 223);">
+
+  <section class="milveta-section-wrapper">
+
+    <div class="milveta-container">
+
+      <header class="milveta-header">
+
+        <div
+          data-template-id="brand-trust"
+          class="milveta-brand-trust canva-tag"
+          style="color: rgb(45, 90, 39); font-weight: 600; font-style: normal; font-size: 15px;">
+          4.9 / 5 Rating • Arogya Utsav Expo 2026
+        </div>
+
+        <h2
+          data-template-id="brand-title"
+          class="milveta-brand-title canva-text"
+          style="color: rgb(24, 34, 27); font-weight: 600; font-style: normal; font-size: 24px;">
+          The People of Milveta
+        </h2>
+
+        <p
+          data-template-id="brand-subtitle"
+          class="milveta-brand-subtitle canva-text"
+          style="color: rgb(74, 83, 77); font-weight: 400; font-style: normal; font-size: 16px;">
+          United by nutritional wisdom, authentic heritage, and a shared commitment to wellness.
+        </p>
+
+      </header>
+
+
+      <div class="milveta-grid">
+
+
+        <!-- =========================================================
+             1. SANTHOSH JS
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="santhosh-img"
+              class="milveta-person-img canva-image"
+              src="images/SANTHOSH JS.png"
+              alt="SANTHOSH JS">
+          </div>
+
+          <h3
+            data-template-id="santhosh-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            SANTHOSH JS
+          </h3>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="santhosh-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            “Milveta is more than a nutritious blend; it is a thoughtful effort to bring the goodness of traditional grains into the rhythm of modern life, making wholesome choices simpler and more accessible.”
+          </blockquote>
+
+        </article>
+
+
+        <!-- =========================================================
+             2. MADHU NARAYANAPPA
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="madhu-img"
+              class="milveta-person-img canva-image"
+              src="images/MADHU NARAYANAPPA.jpeg"
+              alt="MADHU NARAYANAPPA">
+          </div>
+
+          <h3
+            data-template-id="madhu-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            MADHU NARAYANAPPA
+          </h3>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="madhu-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            “Milveta represents a journey of continuous improvement, where tradition, thoughtful ideas, and a commitment to quality come together to create something meaningful for everyday wellness.”
+          </blockquote>
+
+        </article>
+
+
+        <!-- =========================================================
+             3. SHREEVATSAVA S
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="shreevatsava-img"
+              class="milveta-person-img canva-image"
+              src="images/SHREEVATSAVA S.jpg"
+              alt="SHREEVATSAVA S">
+          </div>
+
+          <h3
+            data-template-id="shreevatsava-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            SHREEVATSAVA S
+          </h3>
+
+          <p
+            data-template-id="shreevatsava-designation"
+            class="milveta-designation canva-text"
+            style="color: rgb(45, 90, 39); font-weight: 600; font-style: normal; font-size: 16px;">
+            Founder
+          </p>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="shreevatsava-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            "Milveta is my vision to reconnect modern life with the nutritional wisdom of our traditional grains—and take that wisdom from every Indian home to the world."
+          </blockquote>
+
+        </article>
+
+
+        <!-- =========================================================
+             4. R SRINIVASAN
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="srinivasan-img"
+              class="milveta-person-img canva-image"
+              src="images/SRINIVASAN R.jpg.jpeg"
+              alt="R SRINIVASAN">
+          </div>
+
+          <h3
+            data-template-id="srinivasan-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            R SRINIVASAN
+          </h3>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="srinivasan-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            "True progress is not forgetting where we came from; it is carrying the best of our food heritage forward. Milveta represents that bridge between tradition and tomorrow."
+          </blockquote>
+
+        </article>
+
+
+        <!-- =========================================================
+             5. LAKSHMI
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="lakshmi-img"
+              class="milveta-person-img canva-image"
+              src="images/LAKSHMI.jpg.jpeg"
+              alt="LAKSHMI">
+          </div>
+
+          <h3
+            data-template-id="lakshmi-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            LAKSHMI
+          </h3>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="lakshmi-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            "Food has always been more than something that fills our stomachs. Milveta brings back the thought that what we eat should nourish our families and become part of a healthier future."
+          </blockquote>
+
+        </article>
+
+
+        <!-- =========================================================
+             6. MANISHA MEHNDIRATTA
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="manisha-img"
+              class="milveta-person-img canva-image"
+              src="images/MANISHA MEHNDIRATTA.png"
+              alt="MANISHA MEHNDIRATTA">
+          </div>
+
+          <h3
+            data-template-id="manisha-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            MANISHA MEHNDIRATTA
+          </h3>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="manisha-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            "Milveta brings together traditional ingredients and a modern understanding of nutrition, creating a simple way for people to rediscover the value hidden in everyday grains."
+          </blockquote>
+
+        </article>
+
+
+        <!-- =========================================================
+             7. JAGADESH
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="jagadesh-img"
+              class="milveta-person-img canva-image"
+              src="images/1787303286800.jpg.jpeg"
+              alt="JAGADESH">
+          </div>
+
+          <h3
+            data-template-id="jagadesh-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            JAGADESH
+          </h3>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="jagadesh-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            "What makes Milveta special is not only the product, but the belief behind it—the determination to create something meaningful and make it accessible to people from every walk of life."
+          </blockquote>
+
+        </article>
+
+
+        <!-- =========================================================
+             8. NAVEEN KUMAR VG
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="naveen-img"
+              class="milveta-person-img canva-image"
+              src="images/NAVEEN VG.jpg.jpeg"
+              alt="NAVEEN KUMAR VG">
+          </div>
+
+          <h3
+            data-template-id="naveen-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            NAVEEN KUMAR VG
+          </h3>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="naveen-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            "Quality is not just about what goes into a product; it is about the trust that comes with every pack. Milveta has the opportunity to make that trust its greatest strength."
+          </blockquote>
+
+        </article>
+
+
+        <!-- =========================================================
+             9. VINOD KN
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="vinod-img"
+              class="milveta-person-img canva-image"
+              src="images/VINOD KN.png"
+              alt="VINOD KN">
+          </div>
+
+          <h3
+            data-template-id="vinod-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            VINOD KN
+          </h3>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="vinod-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            "The real strength of Milveta lies in its simplicity—traditional grains, meaningful nutrition and a vision that can create value for consumers, communities and the wider food ecosystem."
+          </blockquote>
+
+        </article>
+
+
+        <!-- =========================================================
+             10. ARJUN GUPTA
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="arjun-img"
+              class="milveta-person-img canva-image"
+              src="images/ARJUN GUPTA.jpg.jpeg"
+              alt="ARJUN GUPTA">
+          </div>
+
+          <h3
+            data-template-id="arjun-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            ARJUN GUPTA
+          </h3>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="arjun-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            "A strong brand is built on trust, consistency and purpose. Milveta has the potential to turn these values into a movement that reaches millions of families."
+          </blockquote>
+
+        </article>
+
+
+        <!-- =========================================================
+             11. UPENDRA SINGH NEGI
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="upendra-img"
+              class="milveta-person-img canva-image"
+              src="images/UPENDRA SINGH NEGI.png"
+              alt="UPENDRA SINGH NEGI">
+          </div>
+
+          <h3
+            data-template-id="upendra-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            UPENDRA SINGH NEGI
+          </h3>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="upendra-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            "Milveta is a reminder that our traditional food wisdom still has a meaningful place in modern life. Its journey is about preserving the past while creating possibilities for the future."
+          </blockquote>
+
+        </article>
+
+
+        <!-- =========================================================
+             12. PAVAN KUMAR
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="pavan-img"
+              class="milveta-person-img canva-image"
+              src="images/PAVAN KUMAR.png"
+              alt="PAVAN KUMAR">
+          </div>
+
+          <h3
+            data-template-id="pavan-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            PAVAN KUMAR
+          </h3>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="pavan-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            "Milveta can become more than a food brand. With the right vision and continued commitment to quality, it can become an Indian name recognised far beyond our borders."
+          </blockquote>
+
+        </article>
+
+
+        <!-- =========================================================
+             13. ARCHANA
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="archana-img"
+              class="milveta-person-img canva-image"
+              src="images/ARCHANA.jpg"
+              alt="ARCHANA">
+          </div>
+
+          <h3
+            data-template-id="archana-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            ARCHANA
+          </h3>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="archana-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            "Milveta has the potential to make nutritious traditional food a part of everyday choices, while creating a brand that can grow from local communities to a much larger audience."
+          </blockquote>
+
+        </article>
+
+
+        <!-- =========================================================
+             14. SALMAN
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="salman-img"
+              class="milveta-person-img canva-image"
+              src="/images/SALMAN.png"
+              alt="SALMAN">
+          </div>
+
+          <h3
+            data-template-id="salman-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            SALMAN
+          </h3>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="salman-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            "The future of Milveta is bigger than a market or a product. It is the possibility of taking India's traditional food story to international homes and showing the world what our grains can represent."
+          </blockquote>
+
+        </article>
+
+
+        <!-- =========================================================
+             15. YASHAWANT KUMAR
+        ========================================================== -->
+        <article class="milveta-card canva-card">
+
+          <div class="milveta-image-frame">
+            <img
+              data-template-id="yashawant-img"
+              class="milveta-person-img canva-image"
+              src="images/YASHAWANT KUMAR.png"
+              alt="YASHAWANT KUMAR">
+          </div>
+
+          <h3
+            data-template-id="yashawant-name"
+            class="milveta-name canva-text"
+            style="color: rgb(18, 26, 21); font-weight: 700; font-style: normal; font-size: 19px;">
+            YASHAWANT KUMAR
+          </h3>
+
+          <div class="milveta-divider"></div>
+
+          <blockquote
+            data-template-id="yashawant-statement"
+            class="milveta-statement canva-text"
+            style="color: rgb(45, 54, 49); font-weight: 400; font-style: normal; font-size: 16px;">
+            "True nourishment begins when we learn to live in harmony with nature. Milveta reminds us that the food we choose can become a quiet part of our journey towards balance, awareness and a healthier life."
+          </blockquote>
+
+        </article>
+
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <script
+    src="/_sdk/0aac212797dcb9a6.editing_sdk.js"
+    integrity="sha512-U1Z5TGB/MTX0fFSADhP7rVM3+UzJJjKTapiY1vm1cxcbcyWo4eBuCJNJO6zARJ5kHopP9UvWNtPszOqzRc1ICA==">
+  </script>
+
+</body>
+</html>

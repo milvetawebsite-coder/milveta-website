@@ -1,0 +1,1787 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Vision &amp; Mission | MILVETA INTERNATIONAL</title>
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&amp;family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-green: #163A2A;
+      --secondary-gold: #C99A3D;
+      --bg-ivory: #FAF7F0;
+      --bg-sand: #EFE6D4;
+      --text-charcoal: #1D2420;
+      --text-muted: #667067;
+      --text-white: #FFFFFF;
+      --accent-olive: #718355;
+      --max-width: 1280px;
+      --shadow-subtle: 0 15px 45px rgba(22, 58, 42, 0.08);
+      --transition-smooth: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-ivory);
+      color: var(--text-charcoal);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-green);
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: clamp(17px, 1.2vw, 19px);
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .text-center { text-align: center; }
+    .text-left { text-align: left; }
+
+    .accent-statement {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(30px, 3vw, 48px);
+      line-height: 1.3;
+      color: var(--primary-green);
+    }
+
+    section {
+      padding: clamp(65px, 8vw, 130px) 0;
+      position: relative;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 clamp(20px, 5vw, 70px);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .section-label-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-label-container.center {
+      justify-content: center;
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(13px, 1vw, 14px);
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: var(--secondary-gold);
+      text-transform: uppercase;
+    }
+
+    .section-label-line {
+      width: 40px;
+      height: 1px;
+      background-color: var(--secondary-gold);
+    }
+
+    .main-heading {
+      font-size: clamp(38px, 4vw, 62px);
+      margin-bottom: 2rem;
+    }
+
+    /* HEADER & NAVIGATION (PREVENTS VERTICAL STACKING) */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(250, 247, 240, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(22, 58, 42, 0.05);
+      transition: var(--transition-smooth);
+    }
+
+    header.scrolled {
+      padding: 0.25rem 0;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      width: 100%;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary-green);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1.6rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li {
+      white-space: nowrap;
+    }
+
+    .nav-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--primary-green);
+      letter-spacing: 0.04em;
+      transition: color 0.3s ease;
+      display: inline-block;
+    }
+
+    .nav-link:hover {
+      color: var(--secondary-gold);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: var(--primary-green);
+      margin: 5px 0;
+      transition: var(--transition-smooth);
+    }
+
+    /* BUTTONS */
+    .btn-group {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 54px;
+      padding: 0 32px;
+      border-radius: 999px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--secondary-gold);
+      color: var(--primary-green);
+      border: 1px solid var(--secondary-gold);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background-color: #dcae4d;
+      box-shadow: 0 10px 25px rgba(201, 154, 61, 0.3);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-white);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--secondary-gold);
+      color: var(--primary-green);
+      border-color: var(--secondary-gold);
+      transform: translateY(-3px);
+    }
+
+    .btn-dark {
+      background-color: var(--primary-green);
+      color: var(--text-white);
+      border: 1px solid var(--primary-green);
+    }
+
+    .btn-dark:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(22, 58, 42, 0.2);
+    }
+
+    /* HERO */
+    .hero {
+      background-color: var(--primary-green);
+      color: var(--text-white);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 100px;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      color: var(--text-white);
+      font-size: clamp(48px, 6vw, 88px);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 span {
+      color: var(--secondary-gold);
+    }
+
+    .hero-subheading {
+      font-size: clamp(22px, 2vw, 32px);
+      color: rgba(255, 255, 255, 0.9);
+      font-family: 'Playfair Display', serif;
+      line-height: 1.3;
+      margin-bottom: 2rem;
+    }
+
+    .hero-body {
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 600px;
+      margin-bottom: 3rem;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+    }
+
+    .organic-shape {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 154, 61, 0.15) 0%, rgba(22, 58, 42, 0) 70%);
+      animation: pulse-slow 8s infinite ease-in-out;
+    }
+
+    .shape-1 { width: 450px; height: 450px; }
+    .shape-2 { width: 300px; height: 300px; border: 1px dashed rgba(201, 154, 61, 0.3); animation-duration: 12s; }
+
+    .hero-art {
+      position: relative;
+      z-index: 2;
+      width: 80%;
+      height: 80%;
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      background: linear-gradient(45deg, var(--secondary-gold), var(--accent-olive));
+      opacity: 0.15;
+    }
+
+    .grain-particle {
+      position: absolute;
+      background-color: var(--secondary-gold);
+      width: 6px;
+      height: 12px;
+      border-radius: 50%;
+      opacity: 0.4;
+      animation: float-particle 6s infinite linear;
+    }
+
+    /* STORY SECTION */
+    .story-section {
+      background-color: var(--bg-ivory);
+    }
+
+    .story-content-right {
+      max-width: 680px;
+    }
+
+    .highlight-box {
+      border-left: 3px solid var(--secondary-gold);
+      padding-left: 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    .brand-statement {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary-green);
+    }
+
+    /* CARD GRID SYSTEM */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .premium-card {
+      background-color: var(--text-white);
+      border-radius: 20px;
+      padding: 36px;
+      border: 1px solid rgba(22, 58, 42, 0.05);
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .premium-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 60px rgba(22, 58, 42, 0.12);
+      border-color: rgba(201, 154, 61, 0.3);
+    }
+
+    .card-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: rgba(201, 154, 61, 0.15);
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      line-height: 1;
+    }
+
+    .card-icon {
+      color: var(--secondary-gold);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .card-icon svg {
+      width: 32px;
+      height: 32px;
+      stroke-width: 1.5px;
+    }
+
+    .card-title {
+      font-size: 22px;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .card-text {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
+
+    /* VISION SECTION */
+    .vision-section {
+      background-color: var(--bg-sand);
+      text-align: center;
+    }
+
+    .vision-statement-container {
+      max-width: 950px;
+      margin: 0 auto 5rem auto;
+    }
+
+    .vision-statement {
+      font-size: clamp(34px, 4vw, 58px);
+      line-height: 1.25;
+      color: var(--primary-green);
+    }
+
+    .vision-statement span {
+      color: var(--secondary-gold);
+      font-weight: 700;
+    }
+
+    .pathway-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 4rem auto 0 auto;
+      position: relative;
+      padding: 0 20px;
+    }
+
+    .pathway-line {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      right: 5%;
+      height: 1px;
+      background: linear-gradient(90deg, var(--primary-green) 0%, var(--secondary-gold) 100%);
+      z-index: 1;
+    }
+
+    .pathway-node {
+      position: relative;
+      z-index: 2;
+      background-color: var(--bg-sand);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .node-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: var(--primary-green);
+      border: 4px solid var(--bg-sand);
+      box-shadow: 0 0 0 1px var(--primary-green);
+      transition: var(--transition-smooth);
+    }
+
+    .pathway-node:hover .node-circle {
+      background-color: var(--secondary-gold);
+      transform: scale(1.2);
+    }
+
+    .node-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--primary-green);
+    }
+
+    /* MISSION SECTION */
+    .mission-section {
+      background-color: var(--primary-green);
+      color: var(--text-white);
+    }
+
+    .mission-section .main-heading {
+      color: var(--text-white);
+    }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .mission-card {
+      background-color: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 32px;
+      transition: var(--transition-smooth);
+    }
+
+    .mission-card:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      border-color: var(--secondary-gold);
+      transform: translateY(-4px);
+    }
+
+    .mission-card .card-num {
+      color: var(--secondary-gold);
+      font-size: 16px;
+      position: static;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .mission-card h3 {
+      color: var(--text-white);
+      font-size: 20px;
+      margin-bottom: 0.8rem;
+    }
+
+    .mission-card p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    /* GLOBAL MOVEMENT */
+    .global-movement-section {
+      background-color: var(--bg-ivory);
+    }
+
+    .movement-intro {
+      max-width: 800px;
+      margin: 0 auto 5rem auto;
+    }
+
+    .timeline-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 4rem auto 0 auto;
+    }
+
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: rgba(22, 58, 42, 0.15);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 50%;
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .timeline-item:nth-child(even) {
+      justify-content: flex-start;
+      padding-right: 0;
+      padding-left: 50%;
+    }
+
+    .timeline-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: var(--secondary-gold);
+      border: 4px solid var(--bg-ivory);
+      position: absolute;
+      left: 50%;
+      top: 25px;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    .timeline-content {
+      width: 85%;
+      padding: 24px 32px;
+      background-color: var(--text-white);
+      border-radius: 18px;
+      box-shadow: var(--shadow-subtle);
+      border: 1px solid rgba(22, 58, 42, 0.03);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-right: 30px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-left: 30px;
+    }
+
+    .timeline-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--secondary-gold);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-content h3 {
+      font-size: 20px;
+      margin-bottom: 0.5rem;
+    }
+
+    /* NUTRITION & DIVERSITY */
+    .nutrition-section {
+      background-color: var(--text-white);
+    }
+
+    .scientific-note {
+      background-color: var(--bg-ivory);
+      padding: 20px 30px;
+      border-radius: 12px;
+      border-left: 3px solid var(--primary-green);
+      margin-top: 4rem;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .diversity-section {
+      background-color: var(--bg-sand);
+    }
+
+    .diversity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .diversity-card {
+      background-color: var(--text-white);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: var(--shadow-subtle);
+      text-align: center;
+    }
+
+    .grain-illustration {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 1.5rem auto;
+      border-radius: 50%;
+      background-color: var(--bg-ivory);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .grain-illustration svg {
+      width: 30px;
+      height: 30px;
+      fill: var(--secondary-gold);
+    }
+
+    .diversity-card h3 {
+      font-size: 20px;
+      margin-bottom: 0.3rem;
+    }
+
+    .diversity-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--secondary-gold);
+      letter-spacing: 0.05em;
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .formulation-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 4rem;
+      padding: 2rem;
+      background-color: var(--primary-green);
+      border-radius: 20px;
+      color: var(--text-white);
+    }
+
+    .formulation-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .formulation-item svg {
+      color: var(--secondary-gold);
+      width: 20px;
+      height: 20px;
+    }
+
+    /* HEALTH UTSAV */
+    .utsav-section {
+      background-color: var(--primary-green);
+      color: var(--text-white);
+      overflow: hidden;
+    }
+
+    .utsav-section .main-heading { color: var(--text-white); }
+    .utsav-section p { color: rgba(255, 255, 255, 0.8); }
+
+    .utsav-container {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 4rem;
+    }
+
+    .utsav-diagram-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      aspect-ratio: 1;
+    }
+
+    .utsav-wheel {
+      width: 100%;
+      height: 100%;
+      border: 2px dashed rgba(201, 154, 61, 0.3);
+      border-radius: 50%;
+      position: relative;
+      animation: rotate-slow 40s linear infinite;
+    }
+
+    .wheel-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 130px;
+      height: 130px;
+      background-color: var(--secondary-gold);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 10px;
+    }
+
+    .wheel-center span {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary-green);
+      letter-spacing: 0.1em;
+    }
+
+    .wheel-node {
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      background-color: var(--primary-green);
+      border: 2px solid var(--secondary-gold);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--text-white);
+      transform: translate(-50%, -50%);
+      animation: counter-rotate 40s linear infinite;
+    }
+
+    .node-1 { top: 0%; left: 50%; }
+    .node-2 { top: 25%; left: 93.3%; }
+    .node-3 { top: 75%; left: 93.3%; }
+    .node-4 { top: 100%; left: 50%; }
+    .node-5 { top: 75%; left: 6.7%; }
+    .node-6 { top: 25%; left: 6.7%; }
+
+    .audience-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 2rem;
+    }
+
+    .audience-tag {
+      background-color: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* PHILOSOPHY & BIGGER DREAM */
+    .philosophy-section {
+      background-color: var(--bg-sand);
+      text-align: center;
+    }
+
+    .block-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .huge-typo-block {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 5vw, 72px);
+      font-weight: 700;
+      color: rgba(22, 58, 42, 0.04);
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      transition: var(--transition-smooth);
+      cursor: default;
+    }
+
+    .huge-typo-block:hover {
+      color: var(--primary-green);
+      transform: scale(1.02);
+    }
+
+    .dream-section {
+      background-color: var(--bg-ivory);
+      text-align: center;
+    }
+
+    .dream-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .future-section {
+      background-color: var(--primary-green);
+      color: var(--text-white);
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    .future-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      margin-top: 4rem;
+      align-items: center;
+    }
+
+    .future-statement {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 2.5vw, 36px);
+      color: rgba(255, 255, 255, 0.4);
+      max-width: 900px;
+      transition: color 0.6s ease;
+    }
+
+    .future-statement.active {
+      color: var(--text-white);
+    }
+
+    /* TERMS & CONDITIONS (SECTIONS 27-30 & ACKNOWLEDGEMENT) */
+    .terms-section {
+      background-color: var(--bg-ivory);
+      padding: clamp(65px, 8vw, 130px) 0;
+    }
+
+    .legal-watermark-wrapper {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #e7dfcc;
+      border-radius: 20px;
+      background: #ffffff;
+      padding: clamp(30px, 4vw, 60px);
+      box-shadow: var(--shadow-subtle);
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .legal-watermark-wrapper::before {
+      content: 'MILVETA\A MAKE YOUR HEALTH RICH';
+      white-space: pre-line;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-12deg);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-align: center;
+      color: rgba(201, 154, 61, 0.05);
+      pointer-events: none;
+      width: 100%;
+      line-height: 1.4;
+      z-index: 0;
+    }
+
+    .legal-watermark-wrapper > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .legal-clause-card {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 2.5rem;
+    }
+
+    .legal-clause-indicator {
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 12px;
+      height: 32px;
+      background-color: #C99A3D;
+      border-radius: 2px;
+    }
+
+    .legal-clause-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(20px, 2vw, 26px);
+      font-weight: 600;
+      color: var(--primary-green);
+      margin-bottom: 0.85rem;
+    }
+
+    .legal-clause-body {
+      font-size: clamp(16px, 1.1vw, 18px);
+      line-height: 1.75;
+      color: var(--text-muted);
+    }
+
+    .legal-clause-body p + p {
+      margin-top: 1rem;
+    }
+
+    .legal-divider {
+      height: 1px;
+      background: rgba(22, 58, 42, 0.08);
+      margin: 2.5rem 0;
+      width: 100%;
+    }
+
+    /* FINAL CTA */
+    .final-cta-section {
+      background-color: var(--bg-ivory);
+      text-align: center;
+      padding: 140px 0;
+    }
+
+    .final-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 4vw, 54px);
+      font-weight: 700;
+      color: var(--primary-green);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.08em;
+    }
+
+    .final-cta-section p {
+      max-width: 600px;
+      margin: 0 auto 3rem auto;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--primary-green);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 80px 0 40px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr repeat(3, 1fr);
+      gap: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .footer-brand h3 {
+      color: var(--text-white);
+      font-size: 24px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-col h4 {
+      color: var(--secondary-gold);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-white);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    /* ANIMATIONS */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes pulse-slow {
+      0%, 100% { transform: scale(1); opacity: 0.15; }
+      50% { transform: scale(1.08); opacity: 0.25; }
+    }
+
+    @keyframes rotate-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes counter-rotate {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(-360deg); }
+    }
+
+    @keyframes float-particle {
+      0% { transform: translateY(0) scale(1); opacity: 0; }
+      50% { opacity: 0.5; }
+      100% { transform: translateY(-100px) scale(0.8); opacity: 0; }
+    }
+
+    /* RESPONSIVE MEDIA QUERIES */
+    @media (max-width: 1024px) {
+      .grid-2 { gap: 2.5rem; }
+      .utsav-container { grid-template-columns: 1fr; gap: 3rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+      .nav-menu { gap: 1rem; }
+      .nav-link { font-size: 12.5px; }
+    }
+
+    @media (max-width: 768px) {
+      .grid-2 { grid-template-columns: 1fr; text-align: center; }
+      .section-label-container { justify-content: center; }
+      .hero { text-align: center; }
+      .hero .btn-group { justify-content: center; }
+      .hero-visual { height: 350px; margin-top: 3rem; }
+
+      .nav-toggle { display: block; }
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--bg-ivory);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 3rem;
+        gap: 1.5rem;
+        transition: var(--transition-smooth);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+      .nav-menu.active { left: 0; }
+
+      .timeline-container::before { left: 20px; }
+      .timeline-item { width: 100%; padding-left: 50px; padding-right: 0; justify-content: flex-start; }
+      .timeline-item:nth-child(even) { padding-left: 50px; }
+      .timeline-dot { left: 20px; }
+      .timeline-item:nth-child(odd) .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content { margin-left: 0; margin-right: 0; width: 100%; }
+
+      .pathway-container { flex-direction: column; gap: 2rem; }
+      .pathway-line { width: 1px; height: 100%; top: 0; left: 50%; right: auto; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-delay: -1s !important;
+        animation-duration: 1s !important;
+        animation-iteration-count: 1 !important;
+        background-attachment: initial !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0s !important;
+        transition-delay: 0s !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">MILVETA</a> 
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle Menu"> 
+        <span></span> <span></span> <span></span> 
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#story" class="nav-link">OUR STORY</a></li>
+        <li><a href="#purpose" class="nav-link">PURPOSE</a></li>
+        <li><a href="#vision" class="nav-link">VISION</a></li>
+        <li><a href="#mission" class="nav-link">MISSION</a></li>
+        <li><a href="#movement" class="nav-link">GLOBAL MILLETS</a></li>
+        <li><a href="#nutrition" class="nav-link">NUTRITION</a></li>
+        <li><a href="#utsav" class="nav-link">HEALTH UTSAV</a></li>
+        <li><a href="#terms" class="nav-link">TERMS</a></li>
+        <li><a href="#cta" class="btn btn-dark" style="height: 44px; padding: 0px 20px; font-size: 14px;">DISCOVER MILVETA</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="container grid-2">
+        <div class="hero-content">
+          <div class="section-label-container">
+            <span class="section-label">MILVETA INTERNATIONAL</span>
+          </div>
+          <h1>OUR VISION &amp; <span>MISSION</span></h1>
+          <p class="hero-subheading">From the wisdom of our ancestors, to the nutrition needs of today, for the generations of tomorrow.</p>
+          <p class="hero-body">Bringing the strength of traditional grains back to everyday life through an elite combination of heritage and precision nutritional science.</p>
+          <div class="btn-group">
+            <a href="#vision" class="btn btn-primary">OUR VISION</a> 
+            <a href="#mission" class="btn btn-secondary">OUR MISSION</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="organic-shape shape-1"></div>
+          <div class="organic-shape shape-2"></div>
+          <div class="hero-art"></div>
+          <div class="grain-particle" style="top: 20%; left: 30%; animation-delay: 0s;"></div>
+          <div class="grain-particle" style="top: 60%; left: 70%; animation-delay: 2s;"></div>
+          <div class="grain-particle" style="top: 40%; left: 80%; animation-delay: 4s;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section id="story" class="story-section">
+      <div class="container grid-2">
+        <div>
+          <div class="section-label-container">
+            <div class="section-label-line"></div>
+            <span class="section-label">OUR STORY</span>
+          </div>
+          <h2 class="main-heading">Can we bring the wisdom of traditional Indian grains back into modern everyday life?</h2>
+        </div>
+        <div class="story-content-right reveal">
+          <p>For generations, our ancestors built their lives around simple, traditional foods — millets, whole grains, pulses, seeds and other naturally nourishing ingredients.</p>
+          <p>Their food was not simply about taste or filling the stomach. Food was an important part of everyday life, providing nourishment and energy alongside an active lifestyle.</p>
+          <p>As lifestyles have changed, food habits have changed too. Modern life demands convenience, speed and taste. In this transformation, the nutritional purpose of everyday food can sometimes be overlooked.</p>
+          <div class="highlight-box">
+            <p class="brand-statement">Milveta was born from a simple thought: Can we bring the wisdom of traditional Indian grains back into modern everyday life?</p>
+          </div>
+          <p class="brand-statement">Our answer is Milveta.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PURPOSE -->
+    <section id="purpose" style="background: rgb(255, 255, 255);">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-label-container center">
+            <div class="section-label-line"></div>
+            <span class="section-label">OUR PURPOSE</span>
+            <div class="section-label-line"></div>
+          </div>
+          <h2 class="main-heading">Bringing the Wisdom of Traditional Food to the Modern Generation</h2>
+        </div>
+        <div class="card-grid">
+          <div class="premium-card reveal">
+            <div class="card-num">01</div>
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path></svg>
+            </div>
+            <h3 class="card-title">FOOD SHOULD NOURISH</h3>
+            <p class="card-text">Returning to core nutritional density where every meal supports physiological well-being.</p>
+          </div>
+          <div class="premium-card reveal" style="animation-delay: 0.1s;">
+            <div class="card-num">02</div>
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path></svg>
+            </div>
+            <h3 class="card-title">FOOD SHOULD ENERGIZE</h3>
+            <p class="card-text">Providing complex carbohydrates and essential nutrients for sustained, balanced physical vitality.</p>
+          </div>
+          <div class="premium-card reveal" style="animation-delay: 0.2s;">
+            <div class="card-num">03</div>
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"></path></svg>
+            </div>
+            <h3 class="card-title">FOOD SHOULD PROVIDE NUTRITION</h3>
+            <p class="card-text">Delivering native structural vitamins and trace minerals directly as nature originally intended.</p>
+          </div>
+          <div class="premium-card reveal" style="animation-delay: 0.3s;">
+            <div class="card-num">04</div>
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"></path></svg>
+            </div>
+            <h3 class="card-title">FOOD SHOULD SUPPORT AN ACTIVE LIFE</h3>
+            <p class="card-text">Fueling dynamic modern schedules with ancestral stamina and clean metabolic performance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR VISION -->
+    <section id="vision" class="vision-section">
+      <div class="container">
+        <div class="section-label-container center">
+          <div class="section-label-line"></div>
+          <span class="section-label">OUR VISION</span>
+          <div class="section-label-line"></div>
+        </div>
+        <div class="vision-statement-container reveal">
+          <h2 class="vision-statement">To bring the goodness of traditional Indian grains into <span>every home</span> and make nutritious everyday food accessible to everyone.</h2>
+        </div>
+        <div class="pathway-container reveal">
+          <div class="pathway-line"></div>
+          <div class="pathway-node"><div class="node-circle"></div><span class="node-label">TRADITION</span></div>
+          <div class="pathway-node"><div class="node-circle"></div><span class="node-label">NUTRITION</span></div>
+          <div class="pathway-node"><div class="node-circle"></div><span class="node-label">ACCESSIBILITY</span></div>
+          <div class="pathway-node"><div class="node-circle"></div><span class="node-label">EVERY HOME</span></div>
+          <div class="pathway-node"><div class="node-circle"></div><span class="node-label">FUTURE GENERATIONS</span></div>
+        </div>
+        <div class="card-grid" style="margin-top: 6rem;">
+          <div class="premium-card reveal"><div class="card-num">1</div><h3 class="card-title">RESTORE HERITAGE</h3><p class="card-text">Restore appreciation for India's traditional grains and deep structural food wisdom.</p></div>
+          <div class="premium-card reveal"><div class="card-num">2</div><h3 class="card-title">DEMOCRATIZE ACCESS</h3><p class="card-text">Make nutritious food accessible across different diverse sections of society.</p></div>
+          <div class="premium-card reveal"><div class="card-num">3</div><h3 class="card-title">DAILY INTEGRATION</h3><p class="card-text">Encourage families to integrate traditional grains seamlessly in everyday meals.</p></div>
+          <div class="premium-card reveal"><div class="card-num">4</div><h3 class="card-title">MODERN RELEVANCE</h3><p class="card-text">Bring traditional nutrition into modern lifestyles without making it complicated.</p></div>
+          <div class="premium-card reveal"><div class="card-num">5</div><h3 class="card-title">NUTRIENT AWARENESS</h3><p class="card-text">Promote precise awareness about the baseline values of millets, grains, pulses, and seeds.</p></div>
+          <div class="premium-card reveal"><div class="card-num">6</div><h3 class="card-title">VALUE ORIENTATION</h3><p class="card-text">Build a food ecosystem where meals are valued equally for pure nourishment and taste.</p></div>
+          <div class="premium-card reveal"><div class="card-num">7</div><h3 class="card-title">GLOBAL REACH</h3><p class="card-text">Create a trusted Indian nutrition brand reaching homes domestically, and eventually, the world.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR MISSION -->
+    <section id="mission" class="mission-section">
+      <div class="container">
+        <div class="section-label-container">
+          <div class="section-label-line" style="background-color: var(--secondary-gold);"></div>
+          <span class="section-label">OUR MISSION</span>
+        </div>
+        <h2 class="main-heading" style="max-width: 800px; color: rgb(255, 255, 255);">To make traditional, nutritious food simple, accessible and relevant to everyday life.</h2>
+        <div class="mission-grid">
+          <div class="mission-card reveal"><div class="card-num">01</div><h3>REACH EVERY HOME</h3><p>Scaling standard logistics to deliver wellness to urban centers and remote rural communities alike.</p></div>
+          <div class="mission-card reveal"><div class="card-num">02</div><h3>MAKE NUTRITION ACCESSIBLE</h3><p>Optimizing value chains to ensure premium ancestral health compounds remain affordable.</p></div>
+          <div class="mission-card reveal"><div class="card-num">03</div><h3>ENCOURAGE EVERYDAY CONSUMPTION</h3><p>Formulating highly versatile products designed to adapt perfectly into daily modern cuisines.</p></div>
+          <div class="mission-card reveal"><div class="card-num">04</div><h3>CELEBRATE TRADITIONAL GRAINS</h3><p>Sourcing local varieties of historic crops to anchor our production ecosystem within deep cultural integrity.</p></div>
+          <div class="mission-card reveal"><div class="card-num">05</div><h3>KEEP FOOD SIMPLE</h3><p>Honoring clean manufacturing paradigms that let authentic ingredients remain structurally pristine.</p></div>
+          <div class="mission-card reveal"><div class="card-num">06</div><h3>PROMOTE FOOD AWARENESS</h3><p>Deploying large-scale curriculum frameworks to re-educate modern consumer profiles on foundational diets.</p></div>
+          <div class="mission-card reveal"><div class="card-num">07</div><h3>BUILD TRUST THROUGH TRANSPARENCY</h3><p>Verifying processing matrices from farm sourcing blocks up to final packaging seals.</p></div>
+          <div class="mission-card reveal"><div class="card-num">08</div><h3>GROW WITH RESPONSIBILITY</h3><p>Balancing corporate advancement with strict agricultural resource metrics and environmental stewardship.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL MOVEMENT -->
+    <section id="movement" class="global-movement-section">
+      <div class="container">
+        <div class="text-center movement-intro">
+          <div class="section-label-container center">
+            <div class="section-label-line"></div>
+            <span class="section-label">GLOBAL CONTEXT</span>
+            <div class="section-label-line"></div>
+          </div>
+          <h2 class="main-heading">The Global Millet Movement</h2>
+          <p class="reveal" style="font-family: 'Playfair Display', serif; color: rgb(22, 58, 42);">From Ancient Grains to the Future of Food</p>
+          <p class="reveal" style="margin-top: 2rem;">Millets are not merely grains from the past. They are increasingly becoming part of a global conversation about the future of food. Millets gained significant global attention in 2023 through the International Year of Millets and related global conferences and initiatives, with discussions spanning nutrition, food security, climate resilience, sustainable agriculture, markets and farmer livelihoods.</p>
+        </div>
+        <div class="text-center" style="margin-top: 6rem;">
+          <span class="section-label">GLOBAL MILLETS (SHREE ANNA) CONFERENCE — 2023</span>
+          <p style="margin-top: 0.5rem;">New Delhi • March 2023</p>
+        </div>
+        <div class="timeline-container">
+          <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-tag">01</div><h3>HEALTH &amp; NUTRITION</h3><p>Analyzing micronutrient properties to safely address long-term systemic cellular wellness markers.</p></div></div>
+          <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-tag">02</div><h3>MILLETS AS SUPER FOODS</h3><p>Evaluating standard native whole grain profiles within advanced functional food classifications.</p></div></div>
+          <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-tag">03</div><h3>CLIMATE RESILIENCE</h3><p>Highlighting dry-land agricultural capacities requiring minimal irrigation inputs against global shifts.</p></div></div>
+          <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-tag">04</div><h3>FOOD &amp; NUTRITION SECURITY</h3><p>Positioning high-yield ancient cereal lines as critical strategic insurance for vulnerable breadbaskets.</p></div></div>
+          <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-tag">05</div><h3>FARMER LIVELIHOODS</h3><p>Securing sustainable socioeconomic structures for localized smallholder small-scale growers.</p></div></div>
+          <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-tag">06</div><h3>VALUE CHAIN DEVELOPMENT</h3><p>Standardizing modern processing methodologies to bridge raw rural outputs into premium finished items.</p></div></div>
+          <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-tag">07</div><h3>RESEARCH &amp; INNOVATION</h3><p>Applying modern processing sciences to isolate functional components while maintaining integrity.</p></div></div>
+          <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-tag">08</div><h3>AWARENESS &amp; CONSUMPTION</h3><p>Re-introducing macro consumer groups to ancestral meal choices via contemporary culinary adaptations.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRATEGIC ANALYSIS -->
+    <section style="background: rgb(239, 230, 212);">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label">STRATEGIC ANALYSIS</span>
+          <h2 class="main-heading" style="margin-top: 1rem;">Why are millets being discussed as a future food?</h2>
+        </div>
+        <div class="card-grid">
+          <div class="premium-card reveal"><div class="card-num">01</div><h3 class="card-title">NUTRITION</h3><p class="card-text">Naturally packed with complex matrices of essential minerals and high dietary fiber content required for daily vitality.</p></div>
+          <div class="premium-card reveal"><div class="card-num">02</div><h3 class="card-title">CLIMATE RESILIENCE</h3><p class="card-text">Thrives in arid soils with low thermal and moisture reliance, showing resistance to erratic seasonal shifts.</p></div>
+          <div class="premium-card reveal"><div class="card-num">03</div><h3 class="card-title">FOOD SECURITY</h3><p class="card-text">Acts as a robust defense line against localized supply failures with outstanding structural storage life.</p></div>
+          <div class="premium-card reveal"><div class="card-num">04</div><h3 class="card-title">FARMER OPPORTUNITIES</h3><p class="card-text">Empowers marginalized smallholders to tap predictable revenues in regions where conventional crops struggle.</p></div>
+          <div class="premium-card reveal"><div class="card-num">05</div><h3 class="card-title">BIODIVERSITY</h3><p class="card-text">Supports restorative rotation patterns that enrich depleted topsoil biomes over traditional monocultures.</p></div>
+          <div class="premium-card reveal"><div class="card-num">06</div><h3 class="card-title">TRADITION MEETS LIFE</h3><p class="card-text">Translating timeless, ancient dietary balance directly into sleek functional products for contemporary urban centers.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUTRITIONAL POWER -->
+    <section id="nutrition" class="nutrition-section">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-label-container center">
+            <div class="section-label-line"></div>
+            <span class="section-label">THE NUTRITIONAL POWER</span>
+            <div class="section-label-line"></div>
+          </div>
+          <h2 class="main-heading">The Nutritional Power of Traditional Grains</h2>
+        </div>
+        <div class="card-grid">
+          <div class="premium-card reveal"><h3 class="card-title">DIETARY FIBER</h3><p class="card-text">Supports normal digestive function and contributes to regular metabolic satiety paths.</p></div>
+          <div class="premium-card reveal"><h3 class="card-title">PLANT PROTEIN</h3><p class="card-text">Contributes directly to the body's normal muscular growth, structural maintenance, and deep cell repair.</p></div>
+          <div class="premium-card reveal"><h3 class="card-title">CALCIUM</h3><p class="card-text">An essential structural mineral matrix required for the maintenance of normal bones and teeth profiles.</p></div>
+          <div class="premium-card reveal"><h3 class="card-title">IRON</h3><p class="card-text">An essential mineral involved deeply inside normal oxygen transport pathways and regular energy metabolism.</p></div>
+          <div class="premium-card reveal"><h3 class="card-title">MAGNESIUM</h3><p class="card-text">Contributes smoothly toward regular muscle actions, nervous system safety, and clean energy release.</p></div>
+          <div class="premium-card reveal"><h3 class="card-title">PHOSPHORUS</h3><p class="card-text">Crucial for supporting biochemical energy transfer systems alongside skeletal cellular integrity.</p></div>
+          <div class="premium-card reveal"><h3 class="card-title">ZINC</h3><p class="card-text">Contributes efficiently to daily immune defenses and the systematic maintenance of clear skin and hair.</p></div>
+          <div class="premium-card reveal"><h3 class="card-title">B VITAMINS</h3><p class="card-text">Different traditional grains provide complex B-groups participating in regular cellular energy metabolic actions.</p></div>
+        </div>
+        <div class="scientific-note reveal">
+          <strong>Scientific Notice:</strong> Nutritional composition naturally varies by specific grain variety, localized cultivation conditions, regional processing, and individual final preparation methods. A balanced diet must always incorporate a broad, healthy variety of whole foods.
+        </div>
+      </div>
+    </section>
+
+    <!-- VARIETIES -->
+    <section class="diversity-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label">THE VARIETIES</span>
+          <h2 class="main-heading" style="margin-top: 1rem;">One Grain Family. Many Nutritional Possibilities.</h2>
+        </div>
+        <div class="diversity-grid">
+          <div class="diversity-card reveal">
+            <div class="grain-illustration"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg></div>
+            <h3>FINGER MILLET</h3>
+            <div class="diversity-sub">Ragi</div>
+            <p class="card-text">Known for its naturally high calcium content and provides dietary fiber and other nutrients.</p>
+          </div>
+          <div class="diversity-card reveal">
+            <div class="grain-illustration"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg></div>
+            <h3>FOXTAIL MILLET</h3>
+            <div class="diversity-sub">Navane</div>
+            <p class="card-text">Historically rich in minerals and dietary fiber, supporting traditional balanced meals.</p>
+          </div>
+          <div class="diversity-card reveal">
+            <div class="grain-illustration"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg></div>
+            <h3>PEARL MILLET</h3>
+            <div class="diversity-sub">Sajja / Bajra</div>
+            <p class="card-text">A robust traditional crop known to provide essential minerals like iron and energy.</p>
+          </div>
+          <div class="diversity-card reveal">
+            <div class="grain-illustration"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg></div>
+            <h3>BARNYARD MILLET</h3>
+            <div class="diversity-sub">Oodalu</div>
+            <p class="card-text">Highly valued for its fine dietary fiber structures and overall low glycemic profile characteristics.</p>
+          </div>
+          <div class="diversity-card reveal">
+            <div class="grain-illustration"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg></div>
+            <h3>LITTLE MILLET</h3>
+            <div class="diversity-sub">Saame</div>
+            <p class="card-text">Traditional small grain providing essential B-vitamins and trace minerals for families.</p>
+          </div>
+          <div class="diversity-card reveal">
+            <div class="grain-illustration"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg></div>
+            <h3>KODO MILLET</h3>
+            <div class="diversity-sub">Arka</div>
+            <p class="card-text">Contains native antioxidant properties alongside robust dietary fiber compositions.</p>
+          </div>
+          <div class="diversity-card reveal">
+            <div class="grain-illustration"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg></div>
+            <h3>PROSO MILLET</h3>
+            <div class="diversity-sub">Baragu</div>
+            <p class="card-text">Provides wholesome plant protein and is simple to incorporate into daily home routines.</p>
+          </div>
+          <div class="diversity-card reveal">
+            <div class="grain-illustration"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg></div>
+            <h3>SORGHUM</h3>
+            <div class="diversity-sub">Jowar</div>
+            <p class="card-text">A widely popular staple traditional grain providing complex carbohydrates and essential minerals.</p>
+          </div>
+        </div>
+        <div class="formulation-container reveal">
+          <div class="formulation-item"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>No added artificial flavouring</span></div>
+          <div class="formulation-item"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>No artificial colouring</span></div>
+          <div class="formulation-item"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>No added sugar</span></div>
+          <div class="formulation-item"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>No preservatives</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METHODOLOGY -->
+    <section style="background: rgb(250, 247, 240);">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label">THE METHODOLOGY</span>
+          <h2 class="main-heading" style="margin-top: 1rem;">From Awareness to Action</h2>
+        </div>
+        <div class="card-grid">
+          <div class="premium-card reveal"><div class="card-num">01</div><h3 class="card-title">MILLET AWARENESS PROGRAMS</h3><p class="card-text">Helping communities deeply understand traditional grains and their raw nutritional asset values.</p></div>
+          <div class="premium-card reveal"><div class="card-num">02</div><h3 class="card-title">COOKING DEMONSTRATIONS</h3><p class="card-text">Showing highly practical, straightforward ways to include millet-based foods in everyday home meals.</p></div>
+          <div class="premium-card reveal"><div class="card-num">03</div><h3 class="card-title">STUDENT NUTRITION AWARENESS</h3><p class="card-text">Introducing younger generations to early balanced diets built around historical grain varieties.</p></div>
+          <div class="premium-card reveal"><div class="card-num">04</div><h3 class="card-title">FARMER AWARENESS</h3><p class="card-text">Supporting deep structural understanding around ecological millet cultivation, market values, and opportunities.</p></div>
+          <div class="premium-card reveal"><div class="card-num">05</div><h3 class="card-title">COMMUNITY HEALTH UTSAV</h3><p class="card-text">Creating interactive community-level platforms focused exclusively on pure dietary food education.</p></div>
+          <div class="premium-card reveal"><div class="card-num">06</div><h3 class="card-title">GLOBAL MILLET AWARENESS</h3><p class="card-text">Taking India's rich, historical agricultural nutrition narrative safely outward onto wider global stages.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HEALTH UTSAV -->
+    <section id="utsav" class="utsav-section">
+      <div class="container utsav-container">
+        <div>
+          <div class="section-label-container">
+            <div class="section-label-line" style="background-color: var(--secondary-gold);"></div>
+            <span class="section-label">EDUCATION INITIATIVE</span>
+          </div>
+          <h2 class="main-heading">Milveta Health Utsav</h2>
+          <p style="font-family: 'Playfair Display', serif; color: rgb(201, 154, 61);">Celebrating the Food Wisdom of Our Ancestors</p>
+          <p style="margin-top: 1.5rem;">A specialized nationwide nutrition-awareness and food-education initiative designed to rebuild baseline metabolic understanding, entirely independent of medical treatment pathways.</p>
+          <div class="audience-tags">
+            <div class="audience-tag">CHILDREN</div>
+            <div class="audience-tag">STUDENTS</div>
+            <div class="audience-tag">FAMILIES</div>
+            <div class="audience-tag">WOMEN</div>
+            <div class="audience-tag">SENIOR CITIZENS</div>
+            <div class="audience-tag">FARMERS</div>
+            <div class="audience-tag">COMMUNITIES</div>
+            <div class="audience-tag">WORKING PROFESSIONALS</div>
+          </div>
+        </div>
+        <div class="utsav-diagram-wrapper reveal">
+          <div class="wheel-center">
+            <span>HEALTH<br>UTSAV</span>
+          </div>
+          <div class="utsav-wheel">
+            <div class="wheel-node node-1">LEARN</div>
+            <div class="wheel-node node-2">UNDERSTAND</div>
+            <div class="wheel-node node-3">CHOOSE</div>
+            <div class="wheel-node node-4">CONSUME</div>
+            <div class="wheel-node node-5">SHARE</div>
+            <div class="wheel-node node-6">INSPIRE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POSITIONING -->
+    <section style="background: rgb(255, 255, 255);">
+      <div class="container">
+        <div class="text-center" style="max-width:850px; margin:0 auto 5rem auto;">
+          <span class="section-label">OUR POSITIONING</span>
+          <h2 class="main-heading" style="margin-top: 1rem;">Milveta's Role in the Millet Movement</h2>
+          <p class="accent-statement">"The food of our ancestors can inspire the food systems of our future."</p>
+        </div>
+        <div class="pathway-container reveal" style="max-width:1100px;">
+          <div class="pathway-line" style="background: linear-gradient(90deg, var(--secondary-gold) 0%, var(--primary-green) 100%);"></div>
+          <div class="pathway-node" style="background-color: var(--text-white);"><div class="node-circle" style="background-color: var(--secondary-gold); box-shadow: 0 0 0 1px var(--secondary-gold);"></div><span class="node-label">ANCESTRAL WISDOM</span></div>
+          <div class="pathway-node" style="background-color: var(--text-white);"><div class="node-circle"></div><span class="node-label">TRADITIONAL GRAINS</span></div>
+          <div class="pathway-node" style="background-color: var(--text-white);"><div class="node-circle"></div><span class="node-label">MODERN NUTRITION</span></div>
+          <div class="pathway-node" style="background-color: var(--text-white);"><div class="node-circle"></div><span class="node-label">EVERYDAY LIFE</span></div>
+          <div class="pathway-node" style="background-color: var(--text-white);"><div class="node-circle" style="background-color: var(--secondary-gold); box-shadow: 0 0 0 1px var(--secondary-gold);"></div><span class="node-label">FUTURE GENERATIONS</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="philosophy-section">
+      <div class="container">
+        <span class="section-label">PHILOSOPHY FRAMEWORK</span>
+        <h2 class="main-heading" style="margin-top: 1rem;">Our Food Philosophy</h2>
+        <p style="font-size: 24px; font-family: 'Playfair Display', serif;" class="reveal">Returning to traditional food does not mean returning to the past.</p>
+        <p class="reveal" style="max-width: 700px; margin: 0px auto;">It means taking the best nutritional wisdom from the past and making it flawlessly relevant to the high-speed requirements of the present.</p>
+        <div class="block-container">
+          <div class="huge-typo-block">ANCIENT WISDOM</div>
+          <div class="huge-typo-block" style="color: rgba(201, 154, 61, 0.06);">MODERN CONVENIENCE</div>
+          <div class="huge-typo-block">EVERYDAY NUTRITION</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIGGER DREAM -->
+    <section class="dream-section">
+      <div class="container dream-content">
+        <span class="section-label">THE VISIONARY OUTLOOK</span>
+        <h2 class="main-heading" style="margin-top: 1rem; margin-bottom: 3rem;">Our Bigger Dream</h2>
+        <p style="font-size: 22px; line-height: 1.6;" class="reveal">We do not want Milveta to remain just a product. We want Milveta to become a movement — a movement that encourages people to deeply rethink their everyday food choices.</p>
+        <div class="highlight-box reveal" style="border:none; border-top:1px solid rgba(22,58,42,0.1); border-bottom:1px solid rgba(22,58,42,0.1); padding:2rem 0; margin:3rem 0; background: transparent;">
+          <p class="accent-statement" style="font-size: 28px; margin-bottom: 0px;">"Our food heritage has value.<br>Our traditional grains have value.<br>Our everyday choices matter."</p>
+        </div>
+        <p style="font-size: 17px; font-weight: 600; letter-spacing: 0.05em; color: rgb(201, 154, 61);" class="reveal">FROM ONE FAMILY TO ANOTHER. • FROM ONE HOME TO ANOTHER. • FROM ONE GENERATION TO THE NEXT.</p>
+      </div>
+    </section>
+
+    <!-- HORIZON / FUTURE -->
+    <section class="future-section">
+      <div class="container">
+        <span class="section-label" style="color: rgb(201, 154, 61);">THE HORIZON</span>
+        <h2 class="main-heading" style="color: rgb(255, 255, 255); margin-top: 1rem;">Our Vision For The Future</h2>
+        <div class="future-list">
+          <div class="future-statement">A future where traditional grains are not forgotten.</div>
+          <div class="future-statement">A future where nutritious food is accessible to every section of society.</div>
+          <div class="future-statement">A future where farmers receive better opportunities.</div>
+          <div class="future-statement">A future where young generations understand the value of their food heritage.</div>
+          <div class="future-statement">A future where traditional grains become part of modern, diversified diets.</div>
+          <div class="future-statement">A future where food connects people, agriculture, nutrition and the planet.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TERMS & CONDITIONS (SECTIONS 27-30 & ACKNOWLEDGEMENT) -->
+    <section id="terms" class="terms-section">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 3.5rem;">
+          <span class="section-label">LEGAL &amp; COMPLIANCE</span>
+          <h2 class="main-heading" style="margin-top: 1rem;">Terms &amp; Conditions</h2>
+        </div>
+
+        <div class="legal-watermark-wrapper reveal">
+          <!-- Clause 27: Severability -->
+          <div class="legal-clause-card">
+            <div class="legal-clause-indicator"></div>
+            <h3 class="legal-clause-title">27. SEVERABILITY</h3>
+            <div class="legal-clause-body">
+              <p>If any provision of these Terms &amp; Conditions is found to be invalid, unlawful, or unenforceable by a competent authority, that provision shall be interpreted or modified to the extent necessary to make it enforceable, where legally permissible.</p>
+              <p>The remaining provisions shall continue in full force and effect.</p>
+            </div>
+          </div>
+
+          <div class="legal-divider"></div>
+
+          <!-- Clause 28: Entire Agreement -->
+          <div class="legal-clause-card">
+            <div class="legal-clause-indicator"></div>
+            <h3 class="legal-clause-title">28. ENTIRE AGREEMENT</h3>
+            <div class="legal-clause-body">
+              <p>These Terms &amp; Conditions, together with the MILVETA Privacy Policy, Refund/Return Policy, Shipping Policy, and any other policies displayed on our website, constitute the agreement governing your use of the MILVETA website and purchase of our products, subject to applicable law.</p>
+            </div>
+          </div>
+
+          <div class="legal-divider"></div>
+
+          <!-- Clause 29: Governing Law and Jurisdiction -->
+          <div class="legal-clause-card">
+            <div class="legal-clause-indicator"></div>
+            <h3 class="legal-clause-title">29. GOVERNING LAW AND JURISDICTION</h3>
+            <div class="legal-clause-body">
+              <p>These Terms &amp; Conditions shall be governed by and interpreted in accordance with the laws applicable in India.</p>
+              <p>Subject to applicable consumer-protection laws and other mandatory legal provisions, disputes arising out of or relating to these Terms &amp; Conditions or your use of the MILVETA website shall be subject to the jurisdiction of the competent courts having jurisdiction in <strong>New Delhi, India</strong>, in accordance with applicable law.</p>
+              <p>Nothing in this clause is intended to take away any statutory rights or remedies available to consumers under applicable Indian law.</p>
+            </div>
+          </div>
+
+          <div class="legal-divider"></div>
+
+          <!-- Clause 30: Contact Us -->
+          <div class="legal-clause-card">
+            <div class="legal-clause-indicator"></div>
+            <h3 class="legal-clause-title">30. CONTACT US</h3>
+            <div class="legal-clause-body">
+              <p>If you have any questions, concerns, complaints, or requests regarding these Terms &amp; Conditions, your order, or MILVETA products, please contact us through the contact details provided on our website.</p>
+              <div style="margin: 1.25rem 0; padding: 1.2rem 1.5rem; background: rgba(22, 58, 42, 0.03); border-left: 3px solid #C99A3D; border-radius: 6px;">
+                <p style="font-weight: 700; color: #163A2A; margin: 0 0 6px 0;">MILVETA</p>
+                <p style="margin: 0; font-size: 0.95rem; color: #536B60;">Kolar Head Office: Kolar, Karnataka, India</p>
+                <p style="margin: 0; font-size: 0.95rem; color: #536B60;">Delhi Sub Office: New Delhi, India</p>
+                <p style="margin: 0.5rem 0 0 0; font-size: 0.95rem;"><strong>Website:</strong> Official MILVETA Website</p>
+                <p style="margin: 0; font-size: 0.95rem;"><strong>Email:</strong> Please use the official MILVETA customer-support email displayed on the website.</p>
+                <p style="margin: 0; font-size: 0.95rem;"><strong>Customer Support:</strong> Please use the official contact number displayed on the website.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="legal-divider"></div>
+
+          <!-- Acknowledgement -->
+          <div class="legal-clause-card" style="margin-bottom: 0;">
+            <div class="legal-clause-indicator"></div>
+            <h3 class="legal-clause-title">ACKNOWLEDGEMENT</h3>
+            <div class="legal-clause-body">
+              <p>By accessing and using the MILVETA website, placing an order, or purchasing our products, you acknowledge that you have read, understood, and agreed to these Terms &amp; Conditions, subject to your rights under applicable law.</p>
+              <p style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; font-style: italic; color: #163A2A; margin-top: 1.5rem; text-align: center;">
+                MILVETA – Trusted Food. Better Choices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="cta" class="final-cta-section">
+      <div class="container">
+        <div class="final-logo">MILVETA</div>
+        <h2 class="main-heading" style="font-size: 26px; max-width: 800px; margin: 0px auto 2rem;">Bringing the Strength of Traditional Grains Back to Everyday Life.</h2>
+        <p style="font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 24px; color: rgb(102, 112, 103);">From the wisdom of our ancestors, to the nutrition needs of today, for the generations of tomorrow.</p>
+        <div style="margin-top:3rem;">
+          <p style="font-size: 14px; color: rgb(102, 112, 103); margin-bottom: 1.5rem;">⭐ 4.9/5 Google Rating • High Repeat Customer Satisfaction<br>
+          Proud Participant of Arogya Utsav Expo 2026 at Bharat Mandapam</p>
+          <a href="#" class="btn btn-primary" style="background: rgb(22, 58, 42); color: rgb(255, 255, 255); border-color: var(--primary-green);">DISCOVER MILVETA</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>MILVETA INTERNATIONAL</h3>
+          <p>Bringing the Strength of Traditional Grains Back to Everyday Life.</p>
+        </div>
+        <div class="footer-col">
+          <h4>FOUNDATION</h4>
+          <ul class="footer-links">
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#purpose">Brand Purpose</a></li>
+            <li><a href="#vision">Vision Matrix</a></li>
+            <li><a href="#mission">Mission Manifesto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>COMPLIANCE</h4>
+          <ul class="footer-links">
+            <li><a href="#terms">Terms &amp; Conditions</a></li>
+            <li><a href="#utsav">Health Utsav</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>SCIENCE</h4>
+          <ul class="footer-links">
+            <li><a href="#nutrition">Nutritional Power</a></li>
+            <li><a href="#movement">Global Movement</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Milveta International. All Rights Reserved.</p>
+        <p style="color: rgba(255, 255, 255, 0.4);">Premium Wellness Architecture</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+
+      if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+          navToggle.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('open');
+          });
+        });
+      }
+
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealElements.forEach(element => revealObserver.observe(element));
+
+      const futureStatements = document.querySelectorAll('.future-statement');
+      const futureObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          futureStatements.forEach((statement, index) => {
+            setTimeout(() => {
+              statement.classList.add('active');
+            }, index * 400);
+          });
+        }
+      }, { threshold: 0.3 });
+
+      const futureSection = document.querySelector('.future-section');
+      if (futureSection) futureObserver.observe(futureSection);
+    });
+  </script>
+</body>
+</html>

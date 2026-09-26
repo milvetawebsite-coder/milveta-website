@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Terms & Conditions | Milveta International</title>
+
+    <link
+        rel="stylesheet"
+        href="css/terms.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         TOP ANNOUNCEMENT BAR
+    ====================================================== -->
+
+    <div class="top-bar">
+
+        <span>🌿 100%</span>
+
+        <span>|</span>
+
+        <span>🥣 22 Ingredients</span>
+
+        <span>|</span>
+
+        <span>🚫 No Added Sugar</span>
+
+        <span>|</span>
+
+        <span>✅ No Side Effects</span>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img
+                    src="images/millet.png"
+                    alt="Milveta Logo">
+
+                <div class="logo-text">
+
+                    <h1>MILVETA</h1>
+
+                    <p>INTERNATIONAL</p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+
+        <nav
+            class="nav-links"
+            id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#vision-mission">
+                Vision &amp; Mission
+            </a>
+
+            <a href="index.html#health-benefits">
+                Health Benefits
+            </a>
+
+            <a href="ingredients.html">
+                Ingredients
+            </a>
+
+            <a
+                href="contactus.html"
+                class="active">
+                Contact Us
+            </a>
+
+            <a href="buynow.html">
+                Buy Now
+            </a>
+
+        </nav>
+
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         TERMS & CONDITIONS
+    ====================================================== -->
+
+    <main class="terms-container">
+
+
+        <a
+            href="contactus.html"
+            class="back-home">
+
+            ← Back to Contact Us
+
+        </a>
+
+
+
+        <h1 class="terms-heading">
+
+            Terms &amp; Conditions
+
+        </h1>
+
+
+
+        <p class="terms-intro">
+
+            Please read the following Terms &amp; Conditions
+            carefully.
+
+        </p>
+
+
+
+        <!-- =================================================
+             TERMS IMAGES
+        ================================================== -->
+
+        <div class="terms-images">
+
+
+            <img
+                src="images/terms/1.jpg"
+                alt="Milveta Terms and Conditions Page 1"
+                class="terms-image">
+
+
+            <img
+                src="images/terms/2.jpg"
+                alt="Milveta Terms and Conditions Page 2"
+                class="terms-image">
+
+
+            <img
+                src="images/terms/3.jpg"
+                alt="Milveta Terms and Conditions Page 3"
+                class="terms-image">
+
+
+            <img
+                src="images/terms/4.jpg"
+                alt="Milveta Terms and Conditions Page 4"
+                class="terms-image">
+
+
+            <img
+                src="images/terms/5.jpg"
+                alt="Milveta Terms and Conditions Page 5"
+                class="terms-image">
+
+
+            <img
+                src="images/terms/6.jpg"
+                alt="Milveta Terms and Conditions Page 6"
+                class="terms-image">
+
+
+            <img
+                src="images/terms/7.jpg"
+                alt="Milveta Terms and Conditions Page 7"
+                class="terms-image">
+
+
+            <img
+                src="images/terms/8.jpg"
+                alt="Milveta Terms and Conditions Page 8"
+                class="terms-image">
+
+
+            <img
+                src="images/terms/9.jpg"
+                alt="Milveta Terms and Conditions Page 9"
+                class="terms-image">
+
+
+            <img
+                src="images/terms/10.jpg"
+                alt="Milveta Terms and Conditions Page 10"
+                class="terms-image">
+
+
+            <img
+                src="images/terms/11.jpg"
+                alt="Milveta Terms and Conditions Page 11"
+                class="terms-image">
+
+
+            <img
+                src="images/terms/12.jpg"
+                alt="Milveta Terms and Conditions Page 12"
+                class="terms-image">
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="terms-footer">
+
+        <p>
+            © 2026 Milveta International.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.toggle("show");
+
+
+                const isOpen =
+                    navLinks.classList.contains("show");
+
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
+
+            }
+        );
+
+
+        /*
+         * CLOSE MOBILE MENU
+         * AFTER CLICKING A LINK
+         */
+
+        const links =
+            navLinks.querySelectorAll("a");
+
+
+        links.forEach(
+            function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        navLinks.classList.remove("show");
+
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

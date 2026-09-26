@@ -1,0 +1,616 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HTML
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7faf3,
+            #eef5e8
+        );
+
+    color: #26351f;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.contact-header {
+
+    width: 100%;
+
+    min-height: 90px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px 30px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e4e9df;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.07);
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-button {
+
+    position: absolute;
+
+    left: 30px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    background: #0b5d35;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.back-button:hover {
+
+    background: #084a2a;
+
+    transform:
+        translateY(-50%)
+        translateX(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(11, 93, 53, 0.25);
+}
+
+
+/* =========================================================
+   HEADER TITLE
+========================================================= */
+
+.contact-title {
+
+    text-align: center;
+}
+
+
+.contact-title h1 {
+
+    color: #0b5d35;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+.contact-title p {
+
+    margin-top: 4px;
+
+    color: #777777;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.contact-main {
+
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding:
+        40px 25px 60px;
+}
+
+
+/* =========================================================
+   PAGE HEADING
+========================================================= */
+
+.page-heading {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.heading-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin:
+        0 auto 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dff0e5;
+
+    color: #0b5d35;
+
+    font-size: 23px;
+}
+
+
+.page-heading h2 {
+
+    color: #0b5d35;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    margin-bottom: 8px;
+}
+
+
+.page-heading p {
+
+    color: #6d7468;
+
+    font-size: 15px;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CANVA SECTION
+========================================================= */
+
+.canva-section {
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   CANVA CARD
+========================================================= */
+
+.canva-card {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 12px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.10);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CANVA CONTAINER
+========================================================= */
+
+.canva-container {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 0;
+
+    padding-top: 56.25%;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #f1f1f1;
+}
+
+
+/* =========================================================
+   CANVA IFRAME
+========================================================= */
+
+.canva-container iframe {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    margin: 0;
+
+    padding: 0;
+
+    display: block;
+}
+
+
+/* =========================================================
+   OPEN CANVA SECTION
+========================================================= */
+
+.canva-open-section {
+
+    text-align: center;
+
+    padding-top: 25px;
+}
+
+
+.canva-open-section p {
+
+    color: #6d7468;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   OPEN CANVA BUTTON
+========================================================= */
+
+.open-canva-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 12px 22px;
+
+    background: #0b5d35;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.open-canva-button:hover {
+
+    background: #084a2a;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 20px rgba(11, 93, 53, 0.25);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.contact-footer {
+
+    width: 100%;
+
+    padding: 22px;
+
+    text-align: center;
+
+    background: #0b5d35;
+
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-main {
+
+        padding:
+            30px 15px 45px;
+    }
+
+
+    .page-heading h2 {
+
+        font-size: 26px;
+    }
+
+
+    .canva-card {
+
+        padding: 8px;
+
+        border-radius: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .contact-header {
+
+        min-height: 120px;
+
+        padding:
+            55px 15px 18px;
+    }
+
+
+    .back-button {
+
+        top: 12px;
+
+        left: 15px;
+
+        transform: none;
+
+        padding:
+            8px 13px;
+
+        font-size: 12px;
+    }
+
+
+    .back-button:hover {
+
+        transform:
+            translateX(-2px);
+    }
+
+
+    .contact-title h1 {
+
+        font-size: 22px;
+    }
+
+
+    .contact-title p {
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .contact-main {
+
+        padding:
+            25px 8px 40px;
+    }
+
+
+    .heading-icon {
+
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 20px;
+    }
+
+
+    .page-heading {
+
+        margin-bottom: 20px;
+    }
+
+
+    .page-heading h2 {
+
+        font-size: 23px;
+    }
+
+
+    .page-heading p {
+
+        font-size: 13px;
+
+        padding:
+            0 10px;
+    }
+
+
+    /* CANVA */
+
+    .canva-card {
+
+        width: 100%;
+
+        padding: 3px;
+
+        border-radius: 8px;
+    }
+
+
+    .canva-container {
+
+        width: 100%;
+
+        padding-top: 56.25%;
+
+        border-radius: 6px;
+    }
+
+
+    .canva-container iframe {
+
+        width: 100%;
+
+        height: 100%;
+    }
+
+
+    /* OPEN CANVA */
+
+    .canva-open-section {
+
+        padding-top: 20px;
+    }
+
+
+    .open-canva-button {
+
+        padding:
+            10px 18px;
+
+        font-size: 13px;
+    }
+
+
+    /* FOOTER */
+
+    .contact-footer {
+
+        font-size: 11px;
+
+        padding:
+            18px 10px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .contact-title h1 {
+
+        font-size: 19px;
+    }
+
+
+    .page-heading h2 {
+
+        font-size: 20px;
+    }
+
+
+    .back-button {
+
+        font-size: 11px;
+
+        padding:
+            7px 11px;
+    }
+
+}

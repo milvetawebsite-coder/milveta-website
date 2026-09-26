@@ -1,0 +1,762 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #ffffff;
+
+    color: #222;
+
+    overflow-x: hidden;
+}
+
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.top-bar {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    background: #0d5c32;
+
+    color: #ffffff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 15px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+
+    width: 100%;
+
+    min-height: 90px;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 12px 4%;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+
+    z-index: 1000;
+}
+
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    text-decoration: none;
+}
+
+
+.logo img {
+
+    width: 62px;
+
+    height: 62px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+.logo-text h1 {
+
+    margin: 0;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #075b35;
+}
+
+
+.logo-text p {
+
+    margin-top: 3px;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #46657c;
+}
+
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: #263746;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: color 0.25s ease;
+}
+
+
+.nav-links a:hover {
+
+    color: #0d7a43;
+}
+
+
+.nav-links a.active {
+
+    color: #0d7a43;
+}
+
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: #075b35;
+
+    font-size: 34px;
+
+    cursor: pointer;
+}
+
+
+
+/* =========================================================
+   TERMS CONTAINER
+========================================================= */
+
+.terms-container {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 35px 20px 45px;
+
+    text-align: center;
+}
+
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-home {
+
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    padding: 10px 18px;
+
+    background: #0d5c32;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.25s ease,
+        transform 0.2s ease;
+}
+
+
+.back-home:hover {
+
+    background: #084824;
+
+    transform: translateY(-2px);
+}
+
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.terms-heading {
+
+    margin-bottom: 10px;
+
+    color: #075b35;
+
+    font-size: 38px;
+
+    font-weight: 800;
+}
+
+
+.terms-intro {
+
+    margin-bottom: 35px;
+
+    color: #555;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   TERMS IMAGES
+========================================================= */
+
+.terms-images {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.terms-image {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    height: auto;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.12);
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.terms-footer {
+
+    width: 100%;
+
+    padding: 12px 10px;
+
+    background: #0d5c32;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+
+.terms-footer p {
+
+    margin: 0;
+
+    line-height: 1.2;
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+
+        padding: 12px 3%;
+    }
+
+
+    .nav-links {
+
+        gap: 16px;
+    }
+
+
+    .nav-links a {
+
+        font-size: 13px;
+    }
+
+
+    .logo img {
+
+        width: 55px;
+
+        height: 55px;
+    }
+
+
+    .logo-text h1 {
+
+        font-size: 24px;
+    }
+
+
+    .terms-container {
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+
+    .top-bar {
+
+        min-height: 42px;
+
+        padding: 8px 5px;
+
+        gap: 5px;
+
+        font-size: 11px;
+
+        white-space: nowrap;
+    }
+
+
+
+    .navbar {
+
+        min-height: 92px;
+
+        padding: 10px 16px;
+    }
+
+
+    .logo a {
+
+        gap: 10px;
+    }
+
+
+    .logo img {
+
+        width: 58px;
+
+        height: 58px;
+    }
+
+
+    .logo-text h1 {
+
+        font-size: 25px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .logo-text p {
+
+        font-size: 8px;
+
+        letter-spacing: 3px;
+    }
+
+
+
+    /* HAMBURGER */
+
+    .menu-toggle {
+
+        display: block;
+
+        font-size: 34px;
+    }
+
+
+
+    /* MOBILE NAV */
+
+    .nav-links {
+
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #ffffff;
+
+        padding: 18px 20px;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 18px;
+
+        box-shadow:
+            0 8px 15px
+            rgba(0, 0, 0, 0.12);
+    }
+
+
+    .nav-links.show {
+
+        display: flex;
+    }
+
+
+    .nav-links a {
+
+        width: 100%;
+
+        text-align: center;
+
+        padding: 5px;
+
+        font-size: 15px;
+    }
+
+
+
+    /* TERMS */
+
+    .terms-container {
+
+        padding:
+            25px
+            10px
+            35px;
+    }
+
+
+    .terms-heading {
+
+        font-size: 28px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .terms-intro {
+
+        font-size: 14px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .back-home {
+
+        font-size: 13px;
+
+        padding: 9px 15px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .terms-images {
+
+        gap: 12px;
+    }
+
+
+    .terms-image {
+
+        width: 100%;
+
+        border-radius: 2px;
+
+        box-shadow:
+            0 3px 12px
+            rgba(0, 0, 0, 0.10);
+    }
+
+
+    .terms-footer {
+
+        padding: 10px 8px;
+
+        font-size: 10px;
+    }
+
+}
+
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+
+    .top-bar {
+
+        font-size: 10px;
+
+        gap: 4px;
+    }
+
+
+    .navbar {
+
+        min-height: 88px;
+
+        padding: 9px 14px;
+    }
+
+
+    .logo img {
+
+        width: 54px;
+
+        height: 54px;
+    }
+
+
+    .logo-text h1 {
+
+        font-size: 23px;
+    }
+
+
+    .logo-text p {
+
+        font-size: 7px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .menu-toggle {
+
+        font-size: 32px;
+    }
+
+
+    .terms-heading {
+
+        font-size: 24px;
+    }
+
+
+    .terms-intro {
+
+        font-size: 13px;
+    }
+
+
+    .terms-container {
+
+        padding-left: 6px;
+
+        padding-right: 6px;
+    }
+
+
+    .terms-images {
+
+        gap: 8px;
+    }
+
+
+    .terms-footer {
+
+        font-size: 9px;
+
+        padding: 8px 7px;
+    }
+
+}
+
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+
+    .top-bar {
+
+        font-size: 9px;
+    }
+
+
+    .logo img {
+
+        width: 48px;
+
+        height: 48px;
+    }
+
+
+    .logo-text h1 {
+
+        font-size: 20px;
+    }
+
+
+    .logo-text p {
+
+        font-size: 6px;
+    }
+
+
+    .menu-toggle {
+
+        font-size: 30px;
+    }
+
+
+    .terms-heading {
+
+        font-size: 22px;
+    }
+
+
+    .terms-container {
+
+        padding-left: 4px;
+
+        padding-right: 4px;
+    }
+
+
+    .terms-images {
+
+        gap: 5px;
+    }
+
+
+    .terms-footer {
+
+        font-size: 8px;
+
+        padding: 7px 5px;
+    }
+
+}
