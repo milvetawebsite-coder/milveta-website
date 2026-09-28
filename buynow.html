@@ -828,6 +828,153 @@ body.popup-open{overflow:hidden}
     .buy-section{padding-left:10px;padding-right:10px}
 }
 
+
+/* ===== FINAL MOBILE BUY CARD FIX ===== */
+@media (max-width: 768px){
+    .buy-grid{
+        display:grid !important;
+        grid-template-columns:1fr !important;
+        gap:16px !important;
+    }
+
+    .buy-card,
+    .buy-card.amazon,
+    .buy-card.flipkart,
+    .buy-card.jiomart,
+    .buy-card.official{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:stretch !important;
+        width:100% !important;
+        min-height:0 !important;
+        height:auto !important;
+        padding:18px 16px 16px !important;
+        gap:14px !important;
+        grid-template-columns:none !important;
+        grid-template-rows:none !important;
+        column-gap:0 !important;
+        row-gap:0 !important;
+    }
+
+    .buy-card .brand-area,
+    .buy-card .card-details,
+    .buy-card .buy-button{
+        width:100% !important;
+        min-width:0 !important;
+        grid-column:auto !important;
+        grid-row:auto !important;
+    }
+
+    .buy-card .brand-area{
+        min-height:82px !important;
+        height:auto !important;
+        flex:0 0 auto !important;
+        display:flex !important;
+        flex-direction:row !important;
+        align-items:center !important;
+        justify-content:center !important;
+        text-align:center !important;
+        overflow:visible !important;
+    }
+
+    .buy-card .brand-name,
+    .buy-card .amazon-logo,
+    .buy-card .flipkart-logo,
+    .buy-card .jio-logo{
+        position:static !important;
+        width:auto !important;
+        max-width:100% !important;
+        margin:0 !important;
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+        flex-wrap:nowrap !important;
+        line-height:1 !important;
+    }
+
+    .buy-card .card-details{
+        flex:0 0 auto !important;
+        align-self:stretch !important;
+        display:block !important;
+        margin:0 !important;
+        padding:0 !important;
+    }
+
+    .buy-card .card-details ul{
+        width:fit-content !important;
+        max-width:100% !important;
+        margin:0 auto !important;
+        padding:0 !important;
+        text-align:left !important;
+        font-size:15px !important;
+        line-height:1.65 !important;
+        white-space:normal !important;
+    }
+
+    .buy-card .card-details li{
+        margin:0 !important;
+        padding:0 !important;
+    }
+
+    .buy-card .buy-button{
+        flex:0 0 auto !important;
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+        min-height:48px !important;
+        height:48px !important;
+        margin:0 !important;
+        width:100% !important;
+    }
+
+    .buy-card .amazon-logo-img{
+        width:64px !important;
+        height:58px !important;
+        flex:0 0 64px !important;
+    }
+
+    .buy-card .amazon-logo span{
+        font-size:31px !important;
+        white-space:nowrap !important;
+    }
+
+    .buy-card .flipkart-logo-img{
+        width:60px !important;
+        height:58px !important;
+        flex:0 0 60px !important;
+    }
+
+    .buy-card .flipkart-logo span{
+        font-size:33px !important;
+        white-space:nowrap !important;
+    }
+
+    .buy-card .jiomart-logo-img{
+        width:190px !important;
+        height:64px !important;
+        max-width:100% !important;
+    }
+
+    .buy-card.official .brand-area{
+        flex-direction:column !important;
+        min-height:150px !important;
+        gap:8px !important;
+    }
+
+    .buy-card .store-title{
+        max-width:100% !important;
+        font-size:25px !important;
+        line-height:1.05 !important;
+        text-align:center !important;
+    }
+
+    .buy-card .official-store-logo-img{
+        width:88px !important;
+        height:88px !important;
+        flex:0 0 88px !important;
+    }
+}
+
 @media(prefers-reduced-motion:reduce){
     *,
     *::before,
