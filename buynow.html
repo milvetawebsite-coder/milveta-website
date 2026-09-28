@@ -1,755 +1,1085 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy Milveta | Milveta International</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy Milveta | Milveta International</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+    --green:#163A2A;
+    --green-dark:#0c281d;
+    --gold:#C99A3D;
+    --cream:#FAF7F0;
+    --orange:#E87500;
+    --purple:#6B0758;
+    --amazon:#FFC400;
+    --flipkart:#2874F0;
+    --jiomart:#E3262E;
+    --white:#fff;
+    --text:#151515;
+    --border:#d9d9d9;
+}
 
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+*{box-sizing:border-box}
 
-    <!-- ORIGINAL CSS -->
-    <link rel="stylesheet" href="css/buynow.css">
+html{scroll-behavior:smooth}
 
-    <!-- MATCHED NAVIGATION & HOTSPOT STYLES -->
-    <style>
-        /* TOP BAR */
-        .top-bar {
-            background-color: #163A2A;
-            color: #FAF7F0;
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            padding: 8px 16px;
-            text-align: center;
-            letter-spacing: 0.04em;
-        }
+body{
+    margin:0;
+    background:#fff;
+    color:var(--text);
+    font-family:Inter,Arial,sans-serif;
+}
 
-        /* NAVIGATION CONTAINER */
-        .design-nav {
-            background: #ffffff !important;
-            border-bottom: 1px solid rgba(22, 58, 42, 0.12);
-            position: relative;
-            z-index: 1000;
-        }
+body.popup-open{overflow:hidden}
 
-        .design-nav-inner {
-            max-width: 1600px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 18px;
-            min-height: 68px;
-            padding: 9px 20px;
-        }
+/* =========================
+   TOP BAR + NAVIGATION
+   ========================= */
+.top-bar{
+    background:#09202d;
+    color:#fff;
+    text-align:center;
+    padding:7px 14px;
+    font-size:14px;
+    font-weight:700;
+}
 
-        /* LOGO */
-        .design-logo {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            flex-shrink: 0;
-            margin-left: -6px;
-            text-decoration: none;
-        }
+.design-nav{
+    background:#fff;
+    border-bottom:1px solid rgba(22,58,42,.12);
+    position:relative;
+    z-index:1000;
+}
 
-        .design-logo-image {
-            width: 52px;
-            height: 52px;
-            flex: 0 0 52px;
-            object-fit: contain;
-            display: block;
-            border-radius: 50%;
-        }
+.design-nav-inner{
+    max-width:1600px;
+    min-height:68px;
+    margin:auto;
+    padding:8px 20px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
 
-        .design-logo-text {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            line-height: 1;
-            white-space: nowrap;
-        }
+.design-logo{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    flex-shrink:0;
+}
 
-        .design-logo-text strong {
-            display: block;
-            color: #163A2A;
-            font-family: "Playfair Display", serif;
-            font-size: 25px;
-            font-weight: 700;
-            letter-spacing: 1.4px;
-            line-height: 1;
-        }
+.design-logo-image{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    object-fit:contain;
+}
 
-        .design-logo-text small {
-            display: block;
-            margin-top: 6px;
-            color: #C99A3D;
-            font-family: "Poppins", sans-serif;
-            font-size: 8px;
-            font-weight: 700;
-            letter-spacing: 2.4px;
-            line-height: 1;
-        }
+.design-logo-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1;
+}
 
-        /* LINKS */
-        .design-nav-links {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex: 1 1 auto;
-            gap: 18px;
-            min-width: 0;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+.design-logo-text strong{
+    color:var(--green);
+    font-family:"Playfair Display",serif;
+    font-size:25px;
+    letter-spacing:1.4px;
+}
 
-        .design-nav-links li {
-            position: relative;
-        }
+.design-logo-text small{
+    margin-top:6px;
+    color:var(--gold);
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:2.4px;
+}
 
-        .design-nav-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            color: rgba(22, 58, 42, 0.86) !important;
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 0.09em;
-            text-decoration: none;
-            transition: color 0.2s ease;
-            cursor: pointer;
-        }
+.design-nav-links{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex:1;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
 
-        .design-nav-link:hover,
-        .design-nav-link.active {
-            color: #C99A3D !important;
-        }
+.design-nav-links li{position:relative}
 
-        .dropdown-caret {
-            font-size: 9px;
-            transition: transform 0.2s ease;
-        }
+.design-nav-link{
+    color:rgba(22,58,42,.86);
+    text-decoration:none;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.09em;
+    white-space:nowrap;
+}
 
-        /* DROPDOWNS */
-        .design-dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: #ffffff;
-            border: 1px solid rgba(22, 58, 42, 0.1);
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            padding: 10px 0;
-            min-width: 180px;
-            list-style: none;
-            display: none;
-            z-index: 1001;
-        }
+.design-nav-link:hover{color:var(--gold)}
 
-        .design-dropdown.mega {
-            min-width: 280px;
-            display: none;
-            padding: 16px 20px;
-            gap: 20px;
-        }
+.design-dropdown{
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:180px;
+    display:none;
+    padding:12px;
+    margin:0;
+    list-style:none;
+    background:#fff;
+    border:1px solid rgba(22,58,42,.1);
+    border-radius:8px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
 
-        .dropdown-col h4 {
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #C99A3D;
-            margin: 0 0 8px 0;
-        }
+.has-dropdown:hover>.design-dropdown{display:block}
 
-        .dropdown-col ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
+.design-dropdown a{
+    display:block;
+    padding:6px;
+    color:var(--green);
+    text-decoration:none;
+    font-size:13px;
+}
 
-        .design-dropdown a {
-            display: block;
-            color: #163A2A;
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
+.design-buy-btn{
+    border:0;
+    text-decoration:none;
+    background:var(--gold);
+    color:var(--green);
+    border-radius:50px;
+    padding:12px 26px;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:.08em;
+    white-space:nowrap;
+    cursor:pointer;
+    animation:headerPop 2.4s ease-in-out infinite;
+}
 
-        .design-dropdown a:hover {
-            color: #C99A3D;
-        }
+.design-buy-btn:hover{
+    animation:none;
+    transform:translateY(-2px) scale(1.04);
+    background:#B8862C;
+}
 
-        .has-dropdown:hover > .design-dropdown {
-            display: block;
-        }
+@keyframes headerPop{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.045)}
+}
 
-        .has-dropdown:hover > .design-dropdown.mega {
-            display: flex;
-        }
+.menu-toggle{
+    display:none;
+    border:0;
+    background:transparent;
+    color:var(--green);
+    font-size:22px;
+}
 
-        /* BUY NOW BUTTON */
-        @keyframes navBlinkPulse {
-            0% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(201, 154, 61, 0.7); }
-            50% { transform: scale(1.05); opacity: 0.9; box-shadow: 0 0 0 10px rgba(201, 154, 61, 0); }
-            100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(201, 154, 61, 0); }
-        }
+/* =========================
+   MAIN PRODUCT AREA
+   ========================= */
+.buy-page{
+    background:#fff;
+    min-height:calc(100vh - 110px);
+}
 
-        .design-buy-btn {
-            flex-shrink: 0;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 42px;
-            padding: 10px 24px !important;
-            background-color: #C99A3D !important;
-            color: #163A2A !important;
-            border-radius: 50px;
-            font-family: 'Inter', sans-serif;
-            font-size: 13px !important;
-            font-weight: 700 !important;
-            letter-spacing: 0.08em !important;
-            text-decoration: none;
-            white-space: nowrap;
-            animation: navBlinkPulse 1.8s infinite ease-in-out;
-            transition: background-color 0.2s ease, transform 0.2s ease;
-        }
+.product-area{
+    max-width:1250px;
+    margin:0 auto;
+    padding:46px 34px 24px;
+    display:grid;
+    grid-template-columns:46% 54%;
+    align-items:center;
+    gap:20px;
+}
 
-        .design-buy-btn:hover {
-            animation: none !important;
-            background-color: #B8862C !important;
-            color: #163A2A !important;
-            transform: translateY(-1px) scale(1.04);
-        }
+.product-photo-wrap{
+    min-height:620px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
 
-        /* MOBILE MENU TOGGLE BUTTON */
-        .menu-toggle {
-            display: none;
-            background: transparent;
-            border: none;
-            font-size: 20px;
-            color: #163A2A;
-            cursor: pointer;
-        }
+.product-photo{
+    width:min(100%,500px);
+    height:auto;
+    display:block;
+    object-fit:contain;
+    filter:drop-shadow(0 18px 18px rgba(0,0,0,.12));
+    animation:productFloat 4s ease-in-out infinite;
+}
 
-        /* =====================================================
-           CLICKABLE PLATFORM HOTSPOTS
-        ====================================================== */
-        .buy-page {
-            width: 100%;
-            background-color: #FAF7F0;
-        }
+@keyframes productFloat{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-8px)}
+}
 
-        /* DESKTOP BANNER CONTAINER */
-        .buy-banner-section {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 40px 20px 70px;
-        }
+.product-copy{
+    padding:8px 18px 20px 4px;
+}
 
-        .banner-wrapper {
-            position: relative;
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 16px 40px rgba(22, 58, 42, 0.12);
-        }
+.product-title{
+    margin:0;
+    color:#070707;
+    font-size:42px;
+    line-height:1.08;
+    font-weight:800;
+    letter-spacing:.01em;
+}
 
-        .shop-banner {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+.product-title span{
+    color:var(--purple);
+}
 
-        /* DESKTOP HOTSPOT ANCHORS */
-        .platform-hotspot {
-            position: absolute;
-            display: block;
-            z-index: 100;
-            cursor: pointer;
-            pointer-events: auto;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.001);
-            transition: outline 0.2s ease, background-color 0.2s ease;
-        }
+.product-tagline{
+    margin:18px 0 20px;
+    color:#B47C28;
+    font-size:18px;
+    font-weight:600;
+}
 
-        .platform-hotspot:hover,
-        .platform-hotspot:focus-visible {
-            outline: none;
-            background: transparent;
-        }
+.benefits{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin:10px 0 34px;
+}
 
-        /* DESKTOP HOTSPOTS — aligned to the actual vertical buttons in the banner. */
-        /* Coordinates are percentages of the FULL desktop banner image.
-           They are deliberately separated so one platform can never capture
-           a click intended for the next platform. */
-        .whatsapp-hotspot { top: 7.6%;  left: 78.4%; width: 18.1%; height: 9.0%; }
-        .amazon-hotspot   { top: 16.8%; left: 78.4%; width: 18.1%; height: 12.5%; }
-        .flipkart-hotspot { top: 33.2%; left: 78.4%; width: 18.1%; height: 9.4%; }
-        .jiomart-hotspot  { top: 46.0%; left: 78.4%; width: 18.1%; height: 9.4%; }
-        .bigbasket-hotspot{ top: 58.9%; left: 78.4%; width: 18.1%; height: 9.4%; }
-        .blinkit-hotspot  { top: 71.7%; left: 78.4%; width: 18.1%; height: 9.4%; }
-        .zepto-hotspot    { top: 84.6%; left: 78.4%; width: 18.1%; height: 9.4%; }
+.benefit{
+    text-align:center;
+}
 
-        /* These platforms are not displayed in the current desktop banner. */
-        .swiggy-hotspot,
-        .indiamart-hotspot { display: none; }
+.benefit-icon{
+    width:62px;
+    height:62px;
+    margin:0 auto 8px;
+    border:2px solid #d6b36b;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    color:var(--green);
+}
 
-        /* MOBILE BANNER CONTAINER */
-        .mobile-buy-banner {
-            display: none;
-            width: 100%;
-            padding: 16px 12px 30px;
-        }
+.benefit:nth-child(2) .benefit-icon{color:#C99A3D}
+.benefit:nth-child(3) .benefit-icon{color:#d6a32d}
+.benefit:nth-child(4) .benefit-icon{color:#111}
 
-        .mobile-banner-wrapper {
-            position: relative;
-            width: 100%;
-            margin: 0 auto;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(22, 58, 42, 0.1);
-        }
+.benefit strong,
+.benefit small{
+    display:block;
+    font-size:14px;
+    line-height:1.25;
+}
 
-        .mobile-banner-wrapper img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+.benefit small{font-size:13px}
 
-        /* MOBILE PLATFORM HOTSPOTS - MATCHED TO THE ACTUAL MOBILE BANNER IMAGE */
-        .mobile-platform-hotspot {
-            position: absolute !important;
-            display: block !important;
-            box-sizing: border-box !important;
-            z-index: 210 !important;
-            cursor: pointer;
-            background: transparent;
-            border: 0;
-            outline: 0;
-            padding: 0;
-            margin: 0;
-            pointer-events: auto !important;
-            touch-action: manipulation;
-            -webkit-tap-highlight-color: transparent;
-        }
+.about-title{
+    margin:0 0 14px;
+    font-size:21px;
+    font-weight:800;
+}
 
-        /* Coordinates are percentages of the FULL 1152 x 2048 image. */
-        @media (max-width: 768px) {
-            .mobile-whatsapp-hotspot { left: 56.0% !important; top: 20.3% !important; width: 36.0% !important; height: 6.0% !important; }
-            .mobile-amazon-hotspot   { left: 56.0% !important; top: 32.0% !important; width: 36.0% !important; height: 6.2% !important; }
-            .mobile-flipkart-hotspot { left: 56.0% !important; top: 44.0% !important; width: 36.0% !important; height: 6.0% !important; }
-            .mobile-jiomart-hotspot  { left: 56.0% !important; top: 56.0% !important; width: 36.0% !important; height: 7.0% !important; }
-            .mobile-bigbasket-hotspot{ left: 56.0% !important; top: 68.0% !important; width: 36.0% !important; height: 6.8% !important; }
-            .mobile-blinkit-hotspot  { left: 56.0% !important; top: 80.0% !important; width: 36.0% !important; height: 6.5% !important; }
-            .mobile-zepto-hotspot    { left: 56.0% !important; top: 91.3% !important; width: 36.0% !important; height: 6.8% !important; }
-        }
+.about-text{
+    max-width:620px;
+    margin:0;
+    font-size:18px;
+    line-height:1.45;
+}
 
-        .mobile-hidden-platform {
-            display: none !important;
-            pointer-events: none !important;
-        }
+/* =========================
+   BUY NOW SECTION
+   ========================= */
+.buy-section{
+    max-width:1170px;
+    margin:0 auto;
+    padding:16px 34px 70px;
+}
 
-        /* RESPONSIVE BREAKPOINTS */
-        @media (max-width: 1100px) {
-            .design-nav-inner { gap: 12px; padding-left: 16px; padding-right: 16px; }
-            .design-nav-links { gap: 12px; }
-            .design-nav-link { font-size: 10px; letter-spacing: 0.06em; }
-            .design-buy-btn { padding-left: 16px !important; padding-right: 16px !important; font-size: 11px !important; }
-        }
+.buy-heading{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    margin:0 0 12px;
+}
 
-        @media (max-width: 768px) {
-            .buy-banner-section { display: none; }
-            .mobile-buy-banner { display: block; }
+.buy-heading::before,
+.buy-heading::after{
+    content:"";
+    height:1px;
+    background:#cfcfcf;
+    flex:1;
+}
 
-            .design-nav-inner {
-                min-height: 78px;
-                padding: 8px 12px;
-                gap: 7px;
-            }
+.buy-heading h2{
+    margin:0;
+    color:var(--orange);
+    font-size:38px;
+    font-weight:800;
+}
 
-            .design-logo {
-                margin-left: -3px;
-                gap: 8px;
-                flex: 1 1 auto;
-                min-width: 0;
-            }
+.buy-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
 
-            .design-logo-image {
-                width: 45px;
-                height: 45px;
-                flex-basis: 45px;
-            }
+.buy-card{
+    min-height:165px;
+    padding:15px 18px 14px;
+    border:1px solid #cfcfcf;
+    border-radius:12px;
+    background:#fff;
+    display:grid;
+    grid-template-columns:42% 58%;
+    grid-template-rows:1fr auto;
+    column-gap:10px;
+    box-shadow:0 1px 2px rgba(0,0,0,.03);
+}
 
-            .design-logo-text strong { font-size: 21px; }
-            .design-logo-text small { font-size: 7px; letter-spacing: 2px; margin-top: 5px; }
+.brand-area{
+    grid-row:1 / span 2;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+}
 
-            .design-nav-links {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                display: none;
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0;
-                background: #ffffff;
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-                padding: 8px 0;
-                max-height: calc(100vh - 96px);
-                overflow-y: auto;
-                z-index: 1002;
-            }
+.brand-name{
+    font-size:31px;
+    font-weight:800;
+    line-height:1;
+}
 
-            .design-nav-links.active { display: flex; }
+.platform-logo{
+    display:block;
+    width:auto;
+    height:52px;
+    object-fit:contain;
+    border-radius:8px;
+}
 
-            .design-nav-links li { width: 100%; }
+.amazon-logo-img{height:48px; width:120px; object-fit:contain;}
+.official-store-logo-img{height:72px; width:92px; object-fit:contain; border-radius:50%;}
+.flipkart-logo-img{height:52px; width:58px; object-fit:contain;}
+.jiomart-logo-img{height:58px; width:178px; object-fit:contain; background:#fff;}
 
-            .design-nav-link {
-                display: block;
-                width: 100%;
-                padding: 14px 22px;
-                font-size: 13px;
-                color: #163A2A !important;
-            }
+.amazon-logo,.flipkart-logo,.jio-logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+}
 
-            .has-dropdown .design-dropdown,
-            .has-dropdown .design-dropdown.mega {
-                position: static;
-                display: none;
-                box-shadow: none;
-                border: none;
-                padding: 0 0 10px 32px;
-                background: #F7F5F0;
-            }
+.amazon-logo span{font-size:30px; font-weight:800; color:#111;}
+.flipkart-logo span{font-size:30px; font-weight:800; color:#2874F0;}
 
-            .has-dropdown.open .design-dropdown,
-            .has-dropdown.open .design-dropdown.mega {
-                display: block;
-            }
+.store-logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    font-size:25px;
+    font-weight:800;
+    color:#25D366;
+}
+.store-logo i{font-size:42px;}
 
-            .design-buy-btn {
-                display: inline-flex !important;
-                order: 2;
-                flex: 0 0 auto;
-                min-height: 40px;
-                height: 40px;
-                padding: 0 16px !important;
-                margin: 0 2px;
-                font-size: 11px !important;
-                letter-spacing: 0.06em !important;
-                animation: none;
-            }
 
-            .menu-toggle {
-                order: 3;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 44px;
-                height: 44px;
-                flex: 0 0 44px;
-                margin: 0;
-            }
-        }
+.amazon-logo{font-size:32px;letter-spacing:-1.5px}
+.amazon-logo i{font-size:28px}
 
-        @media (max-width: 480px) {
-            .design-nav-inner { min-height: 74px; padding: 7px 10px; }
-            .design-logo { gap: 6px; }
-            .design-logo-image { width: 41px; height: 41px; flex-basis: 41px; }
-            .design-logo-text strong { font-size: 19px; }
-            .design-logo-text small { font-size: 6.5px; letter-spacing: 1.7px; }
-            .design-buy-btn { height: 38px; min-height: 38px; padding: 0 13px !important; font-size: 10px !important; }
-            .menu-toggle { width: 41px; height: 41px; flex-basis: 41px; }
-        }
-    
+.flipkart-logo{
+    color:#2874F0;
+    font-size:30px;
+    font-style:italic;
+    font-weight:800;
+}
+
+.jio-logo{
+    color:#111;
+    font-size:20px;
+    font-weight:800;
+}
+
+.jio-bag{
+    width:44px;
+    height:44px;
+    margin-bottom:4px;
+    border-radius:10px 10px 14px 14px;
+    background:#e5262f;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+}
+
+.store-logo{
+    width:54px;
+    height:54px;
+    margin-top:6px;
+    border-radius:50%;
+    border:4px solid #2d513d;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#2d513d;
+    font-size:8px;
+    font-weight:900;
+    text-align:center;
+}
+
+.store-title{
+    color:#587348;
+    font-size:23px;
+    font-weight:800;
+}
+
+.card-details{
+    align-self:center;
+}
+
+.card-details ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    font-size:12px;
+    line-height:1.65;
+}
+
+.card-details li::before{
+    content:"✓";
+    margin-right:7px;
+    font-weight:800;
+}
+
+.buy-button{
+    grid-column:1 / -1;
+    width:100%;
+    min-height:38px;
+    margin-top:9px;
+    border:0;
+    border-radius:5px;
+    color:#111;
+    background:var(--amazon);
+    font:700 14px Inter,sans-serif;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition:transform .22s ease, box-shadow .22s ease, filter .22s ease;
+}
+
+.buy-button::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:55%;
+    height:100%;
+    background:linear-gradient(110deg,transparent,rgba(255,255,255,.7),transparent);
+    transform:skewX(-20deg);
+    animation:shine 3.2s infinite;
+}
+
+@keyframes shine{
+    0%{left:-120%}
+    35%,100%{left:140%}
+}
+
+.buy-button:hover{
+    transform:translateY(-3px) scale(1.015);
+    box-shadow:0 8px 18px rgba(0,0,0,.16);
+    filter:brightness(1.04);
+}
+
+.buy-button:active{
+    transform:scale(.98);
+}
+
+.amazon .buy-button{background:#FFC400}
+.flipkart .buy-button{background:#FFC400}
+.jiomart .buy-button{background:#E3262E;color:#fff}
+.official .buy-button{background:#218348;color:#fff}
+
+.official .brand-area{align-items:flex-start}
+
+/* =========================
+   POPUP
+   ========================= */
+.buy-popup{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:rgba(7,31,22,.68);
+    backdrop-filter:blur(5px);
+}
+
+.buy-popup.open{
+    display:flex;
+    animation:fadeIn .2s ease;
+}
+
+.popup-card{
+    width:min(440px,100%);
+    position:relative;
+    padding:32px 28px 28px;
+    border-radius:20px;
+    background:var(--cream);
+    text-align:center;
+    box-shadow:0 25px 80px rgba(0,0,0,.3);
+    animation:popupIn .3s cubic-bezier(.2,.8,.2,1);
+}
+
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes popupIn{
+    from{opacity:0;transform:translateY(20px) scale(.86)}
+    to{opacity:1;transform:translateY(0) scale(1)}
+}
+
+.popup-close{
+    position:absolute;
+    top:10px;
+    right:12px;
+    width:40px;
+    height:40px;
+    border:1px solid rgba(22,58,42,.25);
+    border-radius:50%;
+    background:#fff;
+    color:var(--green);
+    font-size:24px;
+    cursor:pointer;
+}
+
+.popup-close:hover{
+    background:var(--gold);
+    transform:rotate(90deg);
+}
+
+.popup-card h2{
+    margin:0 0 10px;
+    color:var(--green);
+    font:700 28px "Playfair Display",serif;
+}
+
+.popup-card p{
+    margin:0 0 22px;
+    color:#4c4c4c;
+    line-height:1.55;
+}
+
+.popup-continue{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:210px;
+    min-height:48px;
+    padding:0 25px;
+    border-radius:50px;
+    background:var(--gold);
+    color:var(--green);
+    text-decoration:none;
+    font-weight:800;
+    letter-spacing:.04em;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media(max-width:1050px){
+    .design-nav-links{gap:10px}
+    .product-area{grid-template-columns:44% 56%}
+    .product-title{font-size:36px}
+}
+
+@media(max-width:768px){
+    .design-nav-inner{
+        min-height:74px;
+        padding:7px 12px;
+    }
+
+    .design-logo-image{width:45px;height:45px}
+    .design-logo-text strong{font-size:21px}
+    .design-logo-text small{font-size:7px}
+
+    .design-nav-links{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:8px 0;
+        background:#fff;
+        box-shadow:0 8px 20px rgba(0,0,0,.12);
+    }
+
+    .design-nav-links.open{display:flex}
+    .design-nav-links li{width:100%}
+    .design-nav-link{
+        display:block;
+        width:100%;
+        padding:13px 22px;
+        font-size:13px;
+    }
+
+    .menu-toggle{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:42px;
+        height:42px;
+    }
+
+    .design-buy-btn{
+        padding:10px 15px;
+        font-size:10px;
+    }
+
+    .product-area{
+        grid-template-columns:1fr;
+        padding:25px 18px 10px;
+        gap:4px;
+    }
+
+    .product-photo-wrap{
+        min-height:auto;
+        padding:0;
+    }
+
+    .product-photo{width:min(100%,430px)}
+
+    .product-copy{
+        padding:0 4px 18px;
+        text-align:center;
+    }
+
+    .product-title{font-size:34px}
+    .product-tagline{font-size:16px}
+
+    .benefits{
+        gap:5px;
+        margin-bottom:25px;
+    }
+
+    .benefit-icon{
+        width:50px;
+        height:50px;
+        font-size:22px;
+    }
+
+    .benefit strong,.benefit small{font-size:11px}
+
+    .about-text{
+        font-size:16px;
+        max-width:none;
+    }
+
+    .buy-section{
+        padding:8px 14px 45px;
+    }
+
+    .buy-heading h2{font-size:30px}
+
+    .buy-grid{
+        grid-template-columns:1fr;
+    }
+
+    .buy-card{
+        min-height:150px;
+    }
+}
+
+@media(max-width:480px){
+    .top-bar{font-size:11px}
+
+    .design-logo-text strong{font-size:18px}
+    .design-logo-text small{font-size:6px}
+    .design-logo-image{width:40px;height:40px}
+
+    .design-buy-btn{
+        padding:9px 12px;
+        font-size:9px;
+    }
+
+    .product-title{font-size:29px}
+
+    .benefit-icon{
+        width:43px;
+        height:43px;
+        font-size:19px;
+    }
+
+    .benefit strong,.benefit small{font-size:9px}
+
+    .buy-card{
+        grid-template-columns:40% 60%;
+        padding:13px;
+    }
+
+    .buy-section{padding-left:10px;padding-right:10px}
+}
+
+@media(prefers-reduced-motion:reduce){
+    *,
+    *::before,
+    *::after{
+        animation:none !important;
+        scroll-behavior:auto !important;
+        transition:none !important;
+    }
+}
 </style>
-
 </head>
 
 <body>
 
-    <!-- =====================================================
-         TOP ANNOUNCEMENT BAR
-    ====================================================== -->
-    <div class="top-bar">
-        <span>Nourish your family’s future with the generations-proven power of Milveta.</span>
+<div class="top-bar">
+"WELCOME TO MILVETA — THE FUTURE SUPERFOOD"
+</div>
+
+<header>
+<nav class="design-nav">
+<div class="design-nav-inner">
+
+    <a href="index.html#home" class="design-logo" aria-label="Milveta International Home">
+        <img src="images/milveta-logo.webp" alt="Milveta International Logo" class="design-logo-image"
+             onerror="this.style.display='none'">
+        <span class="design-logo-text">
+            <strong>MILVETA</strong>
+            <small>INTERNATIONAL</small>
+        </span>
+    </a>
+
+    <ul class="design-nav-links" id="navLinks">
+        <li><a href="index.html#home" class="design-nav-link">HOME</a></li>
+
+        <li class="has-dropdown">
+            <a href="index.html#vision-mission" class="design-nav-link">ABOUT MILVETA</a>
+            <ul class="design-dropdown">
+                <li><a href="index.html#our-story">Our Story</a></li>
+                <li><a href="index.html#our-vision">Vision</a></li>
+                <li><a href="index.html#our-mission">Mission</a></li>
+                <li><a href="index.html#our-purpose">Our Purpose</a></li>
+            </ul>
+        </li>
+
+        <li><a href="index.html#health-benefits" class="design-nav-link">WHY MILVETA</a></li>
+
+        <li><a href="index.html#ingredients" class="design-nav-link">INGREDIENTS</a></li>
+
+        <li class="has-dropdown">
+            <a href="#" class="design-nav-link">HOW TO USE</a>
+            <ul class="design-dropdown">
+                <li><a href="howtouse-healthdrink.html">Health Drink</a></li>
+                <li><a href="howtouse-dosa.html">Dosa</a></li>
+                <li><a href="howtouse-idli.html">Idli</a></li>
+                <li><a href="howtouse-chapati.html">Chapati</a></li>
+            </ul>
+        </li>
+
+        <li><a href="index.html#milveta-people" class="design-nav-link">MILVETA PEOPLE</a></li>
+        <li><a href="index.html#journal" class="design-nav-link">JOURNAL</a></li>
+        <li><a href="index.html#faq" class="design-nav-link">FAQ</a></li>
+        <li><a href="index.html#contact" class="design-nav-link">CONTACT US</a></li>
+    </ul>
+
+    <a href="#buy-options" class="design-buy-btn">BUY NOW</a>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</div>
+</nav>
+</header>
+
+<main class="buy-page">
+
+<section class="product-area">
+
+    <div class="product-photo-wrap">
+        <img src="images/milveta.jpg"
+             class="product-photo"
+             alt="Milveta Multi Millet Powder product pack">
     </div>
 
-    <!-- =====================================================
-         NAVIGATION
-    ====================================================== -->
-    <header>
-        <nav class="design-nav">
-            <div class="design-nav-inner">
+    <div class="product-copy">
+        <h1 class="product-title">
+            MILVETA<br>
+            <span>MULTI MILLET<br>POWDER</span>
+        </h1>
 
-                <!-- LOGO -->
-                <a href="index.html#home" class="design-logo" aria-label="Milveta International Home">
-                    <img src="images/milveta-logo.webp" alt="Milveta International Logo" class="design-logo-image" onerror="this.src='images/millet.png';">
-                    <span class="design-logo-text">
-                        <strong>MILVETA</strong>
-                        <small>INTERNATIONAL</small>
-                    </span>
-                </a>
+        <p class="product-tagline">
+            Unstoppable energy from morning to night.
+        </p>
 
-                <!-- NAVIGATION LINKS -->
-                <ul class="design-nav-links" id="navLinks">
-                    <li>
-                        <a href="index.html#home" class="design-nav-link" data-section="home">Home</a>
-                    </li>
+        <div class="benefits">
 
-                    <li class="has-dropdown">
-                        <a href="index.html#vision-mission" class="design-nav-link dropdown-toggle" data-section="vision-mission" aria-haspopup="true" aria-expanded="false">
-                            About Milveta
-                            <i class="fa-solid fa-chevron-down dropdown-caret"></i>
-                        </a>
-                        <div class="design-dropdown mega">
-                            <div class="dropdown-col">
-                                <h4>The Brand</h4>
-                                <ul>
-                                    <li><a href="index.html#our-story">Our Story</a></li>
-                                    <li><a href="index.html#our-vision">Vision</a></li>
-                                    <li><a href="index.html#our-mission">Mission</a></li>
-                                    <li><a href="index.html#our-purpose">Our Purpose</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
+            <div class="benefit">
+                <div class="benefit-icon">🌿</div>
+                <strong>100%</strong>
+                <small>Natural</small>
+            </div>
 
-                    <li>
-                        <a href="index.html#health-benefits" class="design-nav-link" data-section="health-benefits">Why Milveta</a>
-                    </li>
+            <div class="benefit">
+                <div class="benefit-icon">🌾</div>
+                <strong>Gluten</strong>
+                <small>Free</small>
+            </div>
 
-                    <li class="has-dropdown">
-                        <a href="index.html#ingredients" class="design-nav-link dropdown-toggle" data-section="ingredients" aria-haspopup="true" aria-expanded="false">
-                            Ingredients
-                            <i class="fa-solid fa-chevron-down dropdown-caret"></i>
-                        </a>
-                        <ul class="design-dropdown">
-                            <li><a href="index.html#ingredients">22 Ingredients</a></li>
-                        </ul>
-                    </li>
+            <div class="benefit">
+                <div class="benefit-icon">💪</div>
+                <strong>High in Fiber</strong>
+                <small>&amp; Protein</small>
+            </div>
 
-                    <li class="has-dropdown">
-                        <a href="#" class="design-nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-                            How To Use
-                            <i class="fa-solid fa-chevron-down dropdown-caret"></i>
-                        </a>
-                        <div class="design-dropdown mega">
-                            <div class="dropdown-col">
-                                <h4>Recipes</h4>
-                                <ul>
-                                    <li><a href="howtouse-healthdrink.html">Health Drink</a></li>
-                                    <li><a href="howtouse-dosa.html">Dosa</a></li>
-                                    <li><a href="howtouse-idli.html">Idli</a></li>
-                                    <li><a href="howtouse-chapati.html">Chapati</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown-col">
-                                <h4>Guide</h4>
-                                <ul>
-                                    <li><a href="pdf/Milveta-User-Manual.pdf" class="pdf-link">User Manual</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
+            <div class="benefit">
+                <div class="benefit-icon">✓</div>
+                <strong>Diabetic</strong>
+                <small>Friendly</small>
+            </div>
 
-                    <li>
-                        <a href="index.html#milveta-people" class="design-nav-link" data-section="milveta-people">Milveta People</a>
-                    </li>
+        </div>
 
-                    <li class="has-dropdown">
-                        <a href="index.html#journal" class="design-nav-link dropdown-toggle" data-section="journal" aria-haspopup="true" aria-expanded="false">
-                            Journal
-                            <i class="fa-solid fa-chevron-down dropdown-caret"></i>
-                        </a>
-                        <ul class="design-dropdown">
-                            <li><a href="index.html#journal">Blogs</a></li>
-                            <li><a href="index.html#journal-videos">YouTube Videos</a></li>
-                        </ul>
-                    </li>
+        <h2 class="about-title">ABOUT THIS PRODUCT</h2>
 
-                    <li>
-                        <a href="index.html#faq" class="design-nav-link" data-section="faq">FAQ</a>
-                    </li>
+        <p class="about-text">
+            Milveta Multi Millet Powder is a nutritious blend of finest millets packed
+            with essential nutrients, fiber, and natural goodness. It supports energy,
+            digestion, immunity and overall well-being.
+        </p>
+    </div>
 
-                    <li>
-                        <a href="index.html#contact" class="design-nav-link" data-section="contact">Contact Us</a>
-                    </li>
+</section>
+
+<section class="buy-section" id="buy-options">
+
+    <div class="buy-heading">
+        <h2>Buy Now</h2>
+    </div>
+
+    <div class="buy-grid">
+
+        <!-- AMAZON -->
+        <article class="buy-card amazon">
+            <div class="brand-area">
+                <div class="brand-name amazon-logo">
+                    <img class="platform-logo amazon-logo-img" src="https://www.amazon.in/favicon.ico" alt="Amazon official logo">
+                    <span>Amazon</span>
+                </div>
+            </div>
+
+            <div class="card-details">
+                <ul>
+                    <li>100% Original Product</li>
+                    <li>Fast &amp; Reliable Delivery</li>
+                    <li>Easy Returns</li>
+                    <li>Secure Payments</li>
                 </ul>
-
-                <!-- BUY NOW -->
-                <a href="buynow.html" class="design-buy-btn">BUY NOW</a>
-
-                <!-- MOBILE MENU BUTTON -->
-                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-
             </div>
-        </nav>
-    </header>
 
-    <!-- =====================================================
-         BUY PAGE
-    ====================================================== -->
-    <main class="buy-page">
+            <button class="buy-button"
+                    type="button"
+                    data-platform="Amazon"
+                    data-url="https://www.amazon.in/dp/B0H7RRDGT1">
+                Buy on Amazon
+            </button>
+        </article>
 
-        <!-- =================================================
-             MOBILE BANNER
-        ================================================== -->
-        <section class="mobile-buy-banner" id="mobileBuyBanner">
-            <div class="mobile-banner-wrapper" id="mobileBannerWrapper">
-                <img src="images/mobile-banner.jpg" alt="Milveta Shopping Platforms" id="mobileBannerImage">
-
-                <!-- Each hotspot matches exactly one visible platform button in the image. -->
-                <a id="mobileWhatsAppLink"
-                   href="https://wa.me/917892029691?text=Hello%20Milveta!%20%F0%9F%91%8B%0AI%E2%80%99d%20like%20to%20order%20Milveta%20Multi%20Millet%20Powder.%20%F0%9F%8C%BE%0APlease%20share%20the%20available%20pack%20sizes%2C%20price%2C%20and%20ordering%20details.%20Thank%20you!%20%F0%9F%98%8A"
-                   class="mobile-platform-hotspot mobile-whatsapp-hotspot"
-                   target="_blank" rel="noopener noreferrer" aria-label="Order Milveta through WhatsApp"></a>
-
-                <a id="mobileAmazonLink"
-                   href="https://www.amazon.in/dp/B0H7RRDGT1"
-                   class="mobile-platform-hotspot mobile-amazon-hotspot"
-                   target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Amazon"></a>
-
-                <a id="mobileFlipkartLink"
-                   href="https://www.flipkart.com/product/p/itme?pid=RYMHQ4V9BT7EZMMG"
-                   class="mobile-platform-hotspot mobile-flipkart-hotspot"
-                   target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Flipkart"></a>
-
-                <a id="mobileJioMartLink"
-                   href="https://www.jiomart.com/"
-                   class="mobile-platform-hotspot mobile-jiomart-hotspot"
-                   target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on JioMart"></a>
-
-                <a id="mobileBigBasketLink"
-                   href="https://www.bigbasket.com/"
-                   class="mobile-platform-hotspot mobile-bigbasket-hotspot"
-                   target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on BigBasket"></a>
-
-                <a id="mobileBlinkitLink"
-                   href="https://blinkit.com/"
-                   class="mobile-platform-hotspot mobile-blinkit-hotspot"
-                   target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Blinkit"></a>
-
-                <a id="mobileZeptoLink"
-                   href="https://www.zeptonow.com/"
-                   class="mobile-platform-hotspot mobile-zepto-hotspot"
-                   target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Zepto"></a>
+        <!-- FLIPKART -->
+        <article class="buy-card flipkart">
+            <div class="brand-area">
+                <div class="brand-name flipkart-logo">
+                    <img class="platform-logo flipkart-logo-img" src="https://www.flipkart.com/favicon.ico" alt="Flipkart official logo">
+                    <span>Flipkart</span>
+                </div>
             </div>
-        </section>
 
-        <!-- =================================================
-             DESKTOP BANNER
-        ================================================== -->
-        <section class="buy-banner-section">
-            <div class="banner-wrapper">
-                <img src="images/shop-banner.jpg" alt="Milveta Multi Millet Powder" class="shop-banner">
-
-                <!-- DESKTOP HOTSPOTS -->
-                <a class="platform-hotspot amazon-hotspot" href="https://www.amazon.in/dp/B0H7RRDGT1" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Amazon"></a>
-                <a class="platform-hotspot flipkart-hotspot" href="https://www.flipkart.com/product/p/itme?pid=RYMHQ4V9BT7EZMMG" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Flipkart"></a>
-                <a class="platform-hotspot jiomart-hotspot" href="https://www.jiomart.com/" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on JioMart"></a>
-
-                <a class="platform-hotspot bigbasket-hotspot" href="https://www.bigbasket.com/" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on BigBasket"></a>
-                <a class="platform-hotspot blinkit-hotspot" href="https://blinkit.com/" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Blinkit"></a>
-                <a class="platform-hotspot zepto-hotspot" href="https://www.zeptonow.com/" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Zepto"></a>
-
-                <a class="platform-hotspot swiggy-hotspot" href="https://www.swiggy.com/instamart" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on Swiggy Instamart"></a>
-                <a class="platform-hotspot indiamart-hotspot" href="https://www.indiamart.com/" target="_blank" rel="noopener noreferrer" aria-label="Buy Milveta on IndiaMART"></a>
-                <a class="platform-hotspot whatsapp-hotspot" href="https://api.whatsapp.com/send?phone=917892029691&text=Hello%20Milveta!%20%F0%9F%91%8B%0AI%E2%80%99d%20like%20to%20order%20Milveta%20Multi%20Millet%20Powder.%20%F0%9F%8C%BE%0APlease%20share%20the%20available%20pack%20sizes%2C%20price%2C%20and%20ordering%20details.%20Thank%20you!%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer" aria-label="Order Milveta through WhatsApp"></a>
+            <div class="card-details">
+                <ul>
+                    <li>100% Original Product</li>
+                    <li>Fast &amp; Reliable Delivery</li>
+                    <li>Easy Returns</li>
+                    <li>Secure Payments</li>
+                </ul>
             </div>
-        </section>
 
-    </main>
+            <button class="buy-button"
+                    type="button"
+                    data-platform="Flipkart"
+                    data-url="https://www.flipkart.com/product/p/itme?pid=RYMHQ4V9BT7EZMMG">
+                Buy on Flipkart
+            </button>
+        </article>
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-    <footer class="footer">
-        <p>© 2026 Milveta International. All Rights Reserved.</p>
-    </footer>
+        <!-- JIOMART -->
+        <article class="buy-card jiomart">
+            <div class="brand-area">
+                <div class="brand-name jio-logo">
+                    <img class="platform-logo jiomart-logo-img" src="https://www.relianceretail.com/img/brands/larg/jio-mart-logo.jpg" alt="JioMart official logo">
+                </div>
+            </div>
 
-    <!-- =====================================================
-         SCRIPTS
-    ====================================================== -->
-    <script>
-        /* PLATFORM LINKS USE THEIR OWN <a> ELEMENTS.
-           No JavaScript redirects are used, preventing one platform
-           from accidentally redirecting to another. */
+            <div class="card-details">
+                <ul>
+                    <li>100% Original Product</li>
+                    <li>Best Prices</li>
+                    <li>Quick Delivery</li>
+                    <li>Secure Payments</li>
+                </ul>
+            </div>
 
-        /* NAVIGATION INTERACTION */
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuToggle = document.getElementById("menuToggle");
-            const navLinks = document.getElementById("navLinks");
-            const menuIcon = menuToggle ? menuToggle.querySelector("i") : null;
+            <button class="buy-button"
+                    type="button"
+                    data-platform="JioMart"
+                    data-url="https://www.jiomart.com/">
+                Buy on JioMart
+            </button>
+        </article>
 
-            if (menuToggle && navLinks) {
-                menuToggle.addEventListener("click", function () {
-                    navLinks.classList.toggle("active");
-                    const isOpen = navLinks.classList.contains("active");
-                    menuToggle.setAttribute("aria-expanded", isOpen);
+        <!-- OFFICIAL STORE -->
+        <article class="buy-card official">
+            <div class="brand-area">
+                <div class="store-title">Milveta Official Store</div>
+                <img class="platform-logo official-store-logo-img" src="images/milveta-logo.webp" alt="Milveta Official Store logo">
+            </div>
 
-                    if (menuIcon) {
-                        if (isOpen) {
-                            menuIcon.classList.remove("fa-bars");
-                            menuIcon.classList.add("fa-xmark");
-                        } else {
-                            menuIcon.classList.remove("fa-xmark");
-                            menuIcon.classList.add("fa-bars");
-                        }
-                    }
+            <div class="card-details">
+                <ul>
+                    <li>100% Original Product</li>
+                    <li>Direct from Brand</li>
+                    <li>Best Prices</li>
+                    <li>Secure Payments</li>
+                </ul>
+            </div>
 
-                    if (!isOpen) {
-                        document.querySelectorAll(".has-dropdown.open").forEach(function (li) {
-                            li.classList.remove("open");
-                        });
-                    }
-                });
-            }
+            <button class="buy-button"
+                    type="button"
+                    data-platform="WhatsApp"
+                    data-url="https://wa.me/917892029691?text=Hello%20Milveta!%20%F0%9F%91%8B%0AI%E2%80%99d%20like%20to%20order%20Milveta%20Multi%20Millet%20Powder.%20%F0%9F%8C%BE%0APlease%20share%20the%20available%20pack%20sizes%2C%20price%2C%20and%20ordering%20details.%20Thank%20you!%20%F0%9F%98%8A">
+                Order via WhatsApp
+            </button>
+        </article>
 
-            const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
-            dropdownToggles.forEach(function (toggle) {
-                toggle.addEventListener("click", function (event) {
-                    if (window.innerWidth > 768) return;
-                    const parentLi = toggle.closest(".has-dropdown");
-                    if (!parentLi) return;
+    </div>
+</section>
 
-                    event.preventDefault();
-                    const wasOpen = parentLi.classList.contains("open");
-                    document.querySelectorAll(".has-dropdown.open").forEach(function (li) {
-                        li.classList.remove("open");
-                    });
+</main>
 
-                    if (!wasOpen) {
-                        parentLi.classList.add("open");
-                    }
-                });
-            });
-        });
+<!-- POPUP -->
+<div class="buy-popup" id="buyPopup" aria-hidden="true">
+    <div class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
 
-    </script>
+        <button class="popup-close" id="popupClose" type="button" aria-label="Close">
+            &times;
+        </button>
+
+        <h2 id="popupTitle">Buy Milveta</h2>
+
+        <p id="popupMessage">
+            Continue to the selected shopping platform.
+        </p>
+
+        <a href="#" id="popupContinue" class="popup-continue"
+           target="_blank" rel="noopener noreferrer">
+            CONTINUE TO BUY
+        </a>
+
+    </div>
+</div>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+    const icon = menuToggle.querySelector("i");
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-xmark");
+});
+
+document.querySelectorAll(".design-nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {
+            navLinks.classList.remove("open");
+        }
+    });
+});
+
+const popup = document.getElementById("buyPopup");
+const popupTitle = document.getElementById("popupTitle");
+const popupMessage = document.getElementById("popupMessage");
+const popupContinue = document.getElementById("popupContinue");
+const popupClose = document.getElementById("popupClose");
+
+function openBuyPopup(platform, url){
+    popupTitle.textContent = "Buy Milveta on " + platform;
+    popupMessage.textContent = platform === "WhatsApp"
+        ? "You are about to open WhatsApp with a ready-to-send order message for Milveta Multi Millet Powder."
+        : "You are about to continue to " + platform +
+          " to buy Milveta Multi Millet Powder.";
+    popupContinue.href = url;
+popupContinue.textContent = platform === "WhatsApp" ? "OPEN WHATSAPP" : "CONTINUE TO BUY";
+
+    popup.classList.add("open");
+    popup.setAttribute("aria-hidden","false");
+    document.body.classList.add("popup-open");
+
+    setTimeout(() => popupClose.focus(), 50);
+}
+
+function closeBuyPopup(){
+    popup.classList.remove("open");
+    popup.setAttribute("aria-hidden","true");
+    document.body.classList.remove("popup-open");
+}
+
+document.querySelectorAll(".buy-button").forEach(button => {
+    button.addEventListener("click", () => {
+        openBuyPopup(
+            button.dataset.platform,
+            button.dataset.url
+        );
+    });
+});
+
+popupClose.addEventListener("click", closeBuyPopup);
+
+popup.addEventListener("click", event => {
+    if(event.target === popup){
+        closeBuyPopup();
+    }
+});
+
+document.addEventListener("keydown", event => {
+    if(event.key === "Escape" && popup.classList.contains("open")){
+        closeBuyPopup();
+    }
+});
+</script>
 
 </body>
-
 </html>
