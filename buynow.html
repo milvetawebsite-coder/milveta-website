@@ -706,8 +706,95 @@ body.popup-open{overflow:hidden}
         grid-template-columns:1fr;
     }
 
+    /* Mobile: stack each marketplace card so the logo, benefits and CTA never overlap. */
     .buy-card{
-        min-height:150px;
+        min-height:0;
+        padding:16px 16px 15px;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows:auto auto auto;
+        gap:10px;
+    }
+
+    .buy-card .brand-area{
+        grid-row:auto;
+        grid-column:1;
+        width:100%;
+        min-height:74px;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+    }
+
+    .buy-card .brand-name{
+        justify-content:center;
+        width:100%;
+    }
+
+    .buy-card .card-details{
+        grid-column:1;
+        width:100%;
+        align-self:auto;
+    }
+
+    .buy-card .card-details ul{
+        width:max-content;
+        max-width:100%;
+        margin:0 auto;
+        text-align:left;
+        font-size:14px;
+        line-height:1.55;
+    }
+
+    .buy-card .buy-button{
+        grid-column:1;
+        margin-top:2px;
+        min-height:48px;
+        font-size:16px;
+    }
+
+    .buy-card .amazon-logo-img{
+        width:72px;
+        height:58px;
+    }
+
+    .buy-card .amazon-logo span{
+        font-size:32px;
+    }
+
+    .buy-card .flipkart-logo-img{
+        width:62px;
+        height:58px;
+    }
+
+    .buy-card .flipkart-logo span{
+        font-size:34px;
+    }
+
+    .buy-card .jiomart-logo-img{
+        width:190px;
+        height:64px;
+    }
+
+    .buy-card.official .brand-area{
+        align-items:center;
+        justify-content:center;
+        gap:14px;
+    }
+
+    .buy-card .store-title{
+        font-size:22px;
+        line-height:1.08;
+        max-width:150px;
+        text-align:left;
+    }
+
+    .buy-card .official-store-logo-img{
+        width:78px;
+        height:78px;
+        flex:0 0 78px;
     }
 }
 
@@ -734,8 +821,8 @@ body.popup-open{overflow:hidden}
     .benefit strong,.benefit small{font-size:9px}
 
     .buy-card{
-        grid-template-columns:40% 60%;
-        padding:13px;
+        grid-template-columns:1fr;
+        padding:14px 12px;
     }
 
     .buy-section{padding-left:10px;padding-right:10px}
@@ -756,7 +843,7 @@ body.popup-open{overflow:hidden}
 <body>
 
 <div class="top-bar">
-"WELCOME TO MILVETA — THE FUTURE SUPERFOOD"
+    "WELCOME TO MILVETA — THE FUTURE SUPERFOOD"
 </div>
 
 <header>
@@ -963,7 +1050,7 @@ body.popup-open{overflow:hidden}
         <article class="buy-card official">
             <div class="brand-area">
                 <div class="store-title">Milveta Official Store</div>
-                <img class="platform-logo official-store-logo-img" src="images/milveta-logo.webp" alt="Milveta Official Store logo">
+                <img class="platform-logo official-store-logo-img" src="milveta-official-store-logo.webp" alt="Milveta Official Store logo">
             </div>
 
             <div class="card-details">
