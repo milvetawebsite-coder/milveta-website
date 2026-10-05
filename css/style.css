@@ -2664,3 +2664,59 @@ footer p {
         color: #C99A3D !important;
     }
 }
+/* =========================================================
+   FLOATING CALL BUTTON (MOBILE ONLY)
+========================================================= */
+.mobile-floating-call-btn {
+    display: none; /* Hidden by default on desktop/tablets */
+}
+
+@media (max-width: 768px) {
+    .mobile-floating-call-btn {
+        display: flex;
+        position: fixed;
+        bottom: 24px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: #C99A3D; /* Milveta Gold */
+        color: #FFFFFF;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        z-index: 99998; /* Just beneath modals/overlays */
+        box-shadow: 0 4px 18px rgba(22, 58, 42, 0.35), 0 0 0 0 rgba(201, 154, 61, 0.7);
+        transition: transform 0.25s ease, background-color 0.25s ease;
+        animation: callPulse 2s infinite ease-in-out;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-floating-call-btn i {
+        font-size: 22px;
+        line-height: 1;
+    }
+
+    .mobile-floating-call-btn:active {
+        transform: scale(0.92);
+        background-color: #B8862C;
+    }
+
+    @keyframes callPulse {
+        0% {
+            box-shadow: 0 4px 18px rgba(22, 58, 42, 0.35), 0 0 0 0 rgba(201, 154, 61, 0.6);
+        }
+        70% {
+            box-shadow: 0 4px 18px rgba(22, 58, 42, 0.35), 0 0 0 14px rgba(201, 154, 61, 0);
+        }
+        100% {
+            box-shadow: 0 4px 18px rgba(22, 58, 42, 0.35), 0 0 0 0 rgba(201, 154, 61, 0);
+        }
+    }
+
+    /* Hide call button when full-screen PDF viewer is active */
+    body.pdf-viewer-open .mobile-floating-call-btn,
+    body.overlay-active .mobile-floating-call-btn {
+        display: none !important;
+    }
+}
