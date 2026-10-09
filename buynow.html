@@ -165,6 +165,13 @@ body.popup-open{overflow:hidden}
     letter-spacing:.08em;
     white-space:nowrap;
     cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    line-height:1;
+    box-shadow:0 3px 10px rgba(201,154,61,.22);
+    transition:background .2s ease, transform .2s ease, box-shadow .2s ease;
     animation:headerPop 2.4s ease-in-out infinite;
 }
 
@@ -308,6 +315,7 @@ body.popup-open{overflow:hidden}
     max-width:1170px;
     margin:0 auto;
     padding:16px 34px 70px;
+    scroll-margin-top:16px;
 }
 
 .buy-heading{
@@ -349,6 +357,7 @@ body.popup-open{overflow:hidden}
     grid-template-rows:1fr auto;
     column-gap:10px;
     box-shadow:0 1px 2px rgba(0,0,0,.03);
+    overflow:hidden;
 }
 
 .brand-area{
@@ -357,6 +366,7 @@ body.popup-open{overflow:hidden}
     flex-direction:column;
     align-items:flex-start;
     justify-content:center;
+    min-width:0;
 }
 
 .brand-name{
@@ -373,10 +383,10 @@ body.popup-open{overflow:hidden}
     border-radius:8px;
 }
 
-.amazon-logo-img{height:48px; width:120px; object-fit:contain;}
+.amazon-logo-img{height:48px; width:48px; object-fit:contain;}
 .official-store-logo-img{height:72px; width:92px; object-fit:contain; border-radius:50%;}
 .flipkart-logo-img{height:52px; width:58px; object-fit:contain;}
-.jiomart-logo-img{height:58px; width:178px; object-fit:contain; background:#fff;}
+.jiomart-logo-img{height:58px; width:178px; max-width:100%; object-fit:contain; background:#fff;}
 
 .amazon-logo,.flipkart-logo,.jio-logo{
     display:flex;
@@ -398,7 +408,6 @@ body.popup-open{overflow:hidden}
     color:#25D366;
 }
 .store-logo i{font-size:42px;}
-
 
 .amazon-logo{font-size:32px;letter-spacing:-1.5px}
 .amazon-logo i{font-size:28px}
@@ -429,22 +438,6 @@ body.popup-open{overflow:hidden}
     font-size:22px;
 }
 
-.store-logo{
-    width:54px;
-    height:54px;
-    margin-top:6px;
-    border-radius:50%;
-    border:4px solid #2d513d;
-    background:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#2d513d;
-    font-size:8px;
-    font-weight:900;
-    text-align:center;
-}
-
 .store-title{
     color:#587348;
     font-size:23px;
@@ -453,6 +446,7 @@ body.popup-open{overflow:hidden}
 
 .card-details{
     align-self:center;
+    min-width:0;
 }
 
 .card-details ul{
@@ -602,8 +596,45 @@ body.popup-open{overflow:hidden}
     letter-spacing:.04em;
 }
 
+/* =========================================================
+   CONSTANT FLOATING CALL BUTTON (MOBILE ONLY)
+   ========================================================= */
+.mobile-floating-call-btn {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-floating-call-btn {
+        display: flex !important;
+        position: fixed !important;
+        bottom: calc(20px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 20px !important;
+        width: 58px !important;
+        height: 58px !important;
+        border-radius: 50% !important;
+        background-color: var(--gold) !important;
+        color: #FFFFFF !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-decoration: none !important;
+        z-index: 9999999 !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-floating-call-btn i {
+        font-size: 24px !important;
+        line-height: 1 !important;
+        color: #FFFFFF !important;
+    }
+
+    body.popup-open .mobile-floating-call-btn {
+        display: none !important;
+    }
+}
+
 /* =========================
-   RESPONSIVE
+   RESPONSIVE DESIGN
    ========================= */
 @media(max-width:1050px){
     .design-nav-links{gap:10px}
@@ -613,8 +644,17 @@ body.popup-open{overflow:hidden}
 
 @media(max-width:768px){
     .design-nav-inner{
-        min-height:74px;
-        padding:7px 12px;
+        min-height:72px !important;
+        padding:8px 16px !important;
+        display:flex !important;
+        align-items:center !important;
+        justify-content:space-between !important;
+        gap:10px !important;
+    }
+
+    .design-logo{
+        flex:0 0 auto !important;
+        margin:0 !important;
     }
 
     .design-logo-image{width:45px;height:45px}
@@ -633,6 +673,7 @@ body.popup-open{overflow:hidden}
         padding:8px 0;
         background:#fff;
         box-shadow:0 8px 20px rgba(0,0,0,.12);
+        z-index:1002;
     }
 
     .design-nav-links.open{display:flex}
@@ -644,17 +685,51 @@ body.popup-open{overflow:hidden}
         font-size:13px;
     }
 
-    .menu-toggle{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        width:42px;
-        height:42px;
+    /* RIGHT-ALIGNED BUY BUTTON & CIRCULAR HAMBURGER */
+    .design-buy-btn{
+        display:inline-flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+        flex:0 0 auto !important;
+        order:2 !important;
+        margin-left:auto !important;
+        margin-right:4px !important;
+        min-width:88px !important;
+        height:38px !important;
+        min-height:38px !important;
+        padding:0 15px !important;
+        font-size:11px !important;
+        line-height:1 !important;
+        letter-spacing:0.06em !important;
+        border-radius:50px !important;
+        white-space:nowrap !important;
+        text-align:center !important;
+        /* Keep the BUY NOW pop animation active on mobile too */
+        animation:headerPop 2.4s ease-in-out infinite !important;
+        will-change:transform;
     }
 
-    .design-buy-btn{
-        padding:10px 15px;
-        font-size:10px;
+    .menu-toggle{
+        display:flex !important;
+        order:3 !important;
+        flex:0 0 42px !important;
+        width:42px !important;
+        height:42px !important;
+        border-radius:50% !important;
+        background-color:var(--green) !important;
+        color:#FFFFFF !important;
+        border:none !important;
+        align-items:center !important;
+        justify-content:center !important;
+        padding:0 !important;
+        margin:0 !important;
+        cursor:pointer !important;
+        box-shadow:0 2px 8px rgba(22,58,42,.25) !important;
+    }
+
+    .menu-toggle i{
+        font-size:18px !important;
+        color:#FFFFFF !important;
     }
 
     .product-area{
@@ -706,95 +781,66 @@ body.popup-open{overflow:hidden}
         grid-template-columns:1fr;
     }
 
-    /* Mobile: stack each marketplace card so the logo, benefits and CTA never overlap. */
+    /* ===== FIX: BUY CARD LOGOS NO LONGER OVERLAP THE CHECKLIST ===== */
     .buy-card{
-        min-height:0;
-        padding:16px 16px 15px;
-        display:grid;
-        grid-template-columns:1fr;
-        grid-template-rows:auto auto auto;
-        gap:10px;
+        min-height:150px;
+        grid-template-columns:44% 56%;
+        column-gap:8px;
+        overflow:hidden;
     }
 
-    .buy-card .brand-area{
-        grid-row:auto;
-        grid-column:1;
+    .brand-area{
+        min-width:0;
         width:100%;
-        min-height:74px;
-        display:flex;
-        flex-direction:row;
         align-items:center;
         justify-content:center;
+    }
+
+    .brand-name{
+        width:100%;
+        max-width:100%;
+        justify-content:center;
+    }
+
+    /* icon on top, brand name underneath */
+    .amazon-logo,
+    .flipkart-logo{
+        flex-direction:column;
+        gap:6px;
         text-align:center;
     }
 
-    .buy-card .brand-name{
-        justify-content:center;
+    .amazon-logo span,
+    .flipkart-logo span{
+        font-size:22px;
+        line-height:1;
+    }
+
+    .amazon-logo-img,
+    .flipkart-logo-img{
+        width:44px;
+        height:44px;
+    }
+
+    .jiomart-logo-img{
         width:100%;
+        max-width:140px;
+        height:auto;
     }
 
-    .buy-card .card-details{
-        grid-column:1;
-        width:100%;
-        align-self:auto;
-    }
-
-    .buy-card .card-details ul{
-        width:max-content;
-        max-width:100%;
-        margin:0 auto;
-        text-align:left;
-        font-size:14px;
-        line-height:1.55;
-    }
-
-    .buy-card .buy-button{
-        grid-column:1;
-        margin-top:2px;
-        min-height:48px;
-        font-size:16px;
-    }
-
-    .buy-card .amazon-logo-img{
-        width:72px;
-        height:58px;
-    }
-
-    .buy-card .amazon-logo span{
-        font-size:32px;
-    }
-
-    .buy-card .flipkart-logo-img{
-        width:62px;
-        height:58px;
-    }
-
-    .buy-card .flipkart-logo span{
-        font-size:34px;
-    }
-
-    .buy-card .jiomart-logo-img{
-        width:190px;
+    .official-store-logo-img{
+        width:64px;
         height:64px;
     }
 
-    .buy-card.official .brand-area{
-        align-items:center;
-        justify-content:center;
-        gap:14px;
+    .store-title{
+        font-size:18px;
+        text-align:center;
     }
 
-    .buy-card .store-title{
-        font-size:22px;
-        line-height:1.08;
-        max-width:150px;
-        text-align:left;
-    }
-
-    .buy-card .official-store-logo-img{
-        width:78px;
-        height:78px;
-        flex:0 0 78px;
+    .card-details ul{
+        font-size:12px;
+        line-height:1.6;
     }
 }
 
@@ -806,8 +852,17 @@ body.popup-open{overflow:hidden}
     .design-logo-image{width:40px;height:40px}
 
     .design-buy-btn{
-        padding:9px 12px;
-        font-size:9px;
+        min-width:82px !important;
+        padding:0 11px !important;
+        font-size:10px !important;
+        height:34px !important;
+        min-height:34px !important;
+    }
+
+    .menu-toggle{
+        width:38px !important;
+        height:38px !important;
+        flex:0 0 38px !important;
     }
 
     .product-title{font-size:29px}
@@ -821,158 +876,18 @@ body.popup-open{overflow:hidden}
     .benefit strong,.benefit small{font-size:9px}
 
     .buy-card{
-        grid-template-columns:1fr;
-        padding:14px 12px;
+        grid-template-columns:44% 56%;
+        padding:13px;
     }
 
     .buy-section{padding-left:10px;padding-right:10px}
 }
 
+@media(max-width:380px){
+    .amazon-logo span,
+    .flipkart-logo span{font-size:19px}
 
-/* ===== FINAL MOBILE BUY CARD FIX ===== */
-@media (max-width: 768px){
-    .buy-grid{
-        display:grid !important;
-        grid-template-columns:1fr !important;
-        gap:16px !important;
-    }
-
-    .buy-card,
-    .buy-card.amazon,
-    .buy-card.flipkart,
-    .buy-card.jiomart,
-    .buy-card.official{
-        display:flex !important;
-        flex-direction:column !important;
-        align-items:stretch !important;
-        width:100% !important;
-        min-height:0 !important;
-        height:auto !important;
-        padding:18px 16px 16px !important;
-        gap:14px !important;
-        grid-template-columns:none !important;
-        grid-template-rows:none !important;
-        column-gap:0 !important;
-        row-gap:0 !important;
-    }
-
-    .buy-card .brand-area,
-    .buy-card .card-details,
-    .buy-card .buy-button{
-        width:100% !important;
-        min-width:0 !important;
-        grid-column:auto !important;
-        grid-row:auto !important;
-    }
-
-    .buy-card .brand-area{
-        min-height:82px !important;
-        height:auto !important;
-        flex:0 0 auto !important;
-        display:flex !important;
-        flex-direction:row !important;
-        align-items:center !important;
-        justify-content:center !important;
-        text-align:center !important;
-        overflow:visible !important;
-    }
-
-    .buy-card .brand-name,
-    .buy-card .amazon-logo,
-    .buy-card .flipkart-logo,
-    .buy-card .jio-logo{
-        position:static !important;
-        width:auto !important;
-        max-width:100% !important;
-        margin:0 !important;
-        display:flex !important;
-        align-items:center !important;
-        justify-content:center !important;
-        flex-wrap:nowrap !important;
-        line-height:1 !important;
-    }
-
-    .buy-card .card-details{
-        flex:0 0 auto !important;
-        align-self:stretch !important;
-        display:block !important;
-        margin:0 !important;
-        padding:0 !important;
-    }
-
-    .buy-card .card-details ul{
-        width:fit-content !important;
-        max-width:100% !important;
-        margin:0 auto !important;
-        padding:0 !important;
-        text-align:left !important;
-        font-size:15px !important;
-        line-height:1.65 !important;
-        white-space:normal !important;
-    }
-
-    .buy-card .card-details li{
-        margin:0 !important;
-        padding:0 !important;
-    }
-
-    .buy-card .buy-button{
-        flex:0 0 auto !important;
-        display:flex !important;
-        align-items:center !important;
-        justify-content:center !important;
-        min-height:48px !important;
-        height:48px !important;
-        margin:0 !important;
-        width:100% !important;
-    }
-
-    .buy-card .amazon-logo-img{
-        width:64px !important;
-        height:58px !important;
-        flex:0 0 64px !important;
-    }
-
-    .buy-card .amazon-logo span{
-        font-size:31px !important;
-        white-space:nowrap !important;
-    }
-
-    .buy-card .flipkart-logo-img{
-        width:60px !important;
-        height:58px !important;
-        flex:0 0 60px !important;
-    }
-
-    .buy-card .flipkart-logo span{
-        font-size:33px !important;
-        white-space:nowrap !important;
-    }
-
-    .buy-card .jiomart-logo-img{
-        width:190px !important;
-        height:64px !important;
-        max-width:100% !important;
-    }
-
-    .buy-card.official .brand-area{
-        flex-direction:column !important;
-        min-height:150px !important;
-        gap:8px !important;
-    }
-
-    .buy-card .store-title{
-        max-width:100% !important;
-        font-size:25px !important;
-        line-height:1.05 !important;
-        text-align:center !important;
-    }
-
-    .buy-card .official-store-logo-img{
-        width:88px !important;
-        height:88px !important;
-        flex:0 0 88px !important;
-    }
+    .card-details ul{font-size:11px}
 }
 
 @media(prefers-reduced-motion:reduce){
@@ -990,7 +905,7 @@ body.popup-open{overflow:hidden}
 <body>
 
 <div class="top-bar">
-    "WELCOME TO MILVETA — THE FUTURE SUPERFOOD"
+"WELCOME TO MILVETA — THE FUTURE SUPERFOOD"
 </div>
 
 <header>
@@ -1222,6 +1137,11 @@ body.popup-open{overflow:hidden}
 
 </main>
 
+<!-- FLOATING CALL BUTTON (MOBILE ONLY) -->
+<a href="tel:+917892029691" class="mobile-floating-call-btn" aria-label="Call Milveta Customer Support">
+    <i class="fa-solid fa-phone"></i>
+</a>
+
 <!-- POPUP -->
 <div class="buy-popup" id="buyPopup" aria-hidden="true">
     <div class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
@@ -1276,7 +1196,7 @@ function openBuyPopup(platform, url){
         : "You are about to continue to " + platform +
           " to buy Milveta Multi Millet Powder.";
     popupContinue.href = url;
-popupContinue.textContent = platform === "WhatsApp" ? "OPEN WHATSAPP" : "CONTINUE TO BUY";
+    popupContinue.textContent = platform === "WhatsApp" ? "OPEN WHATSAPP" : "CONTINUE TO BUY";
 
     popup.classList.add("open");
     popup.setAttribute("aria-hidden","false");
